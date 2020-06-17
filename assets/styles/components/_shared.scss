@@ -1,0 +1,181 @@
+// Shared components
+
+// Shared page section styles
+.page-section {
+  @include clearfix;
+  padding: grid(5) 0 grid(5);
+
+  .staggered-image {
+    position: relative;
+    z-index: z(image-front);
+  }
+
+  // Large headers
+  h2 {
+    @include h1;
+    margin: grid(1) 0 grid(2);
+
+    @include media-md {
+      margin: grid(5) 0 grid(5);
+    }
+  }
+  p {
+    @include p3;
+
+    @include media-md {
+      @include p1;
+    }
+  }
+}
+
+// CTA p
+p.cta {
+  a {
+    @extend %button;
+  }
+}
+
+// Big ol' stats
+.stats {
+  .figure {
+    dt {
+      @include stat;
+      margin: 0 0 grid(2);
+      .percent {
+        font-family: $font-sans-serif;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+
+    dd {
+      font-size: 22px;
+      line-height: 30px;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  @include media-md {
+    display: flex;
+    flex-flow: row wrap;
+    .figure {
+      flex: 0 1 columns(3);
+      padding-right: $global-padding;
+      dt {
+        .percent {
+          font-size: 42px;
+        }
+      }
+    }
+  }
+
+}
+
+
+div.divot {
+  display: block;
+  width: 46px;
+  height: 4px;
+  background: #fff;
+  margin: 0px 0 20px;
+}
+@media screen and (min-width: 750px) {
+  div.divot {
+    width: 80px;
+    height: 10px;
+  }
+}
+
+h3.divot {
+  &::after {
+    content: '—';
+    display: block;
+  }
+  font-size: 14px;
+  @include media-md {
+    font-size: 18px;
+  }
+}
+
+// Wrappers around buttons
+.actions {
+  padding: grid(2) 0;
+}
+
+// Decorative lines (switched to HTML instead of SVGs)
+.lines {
+  position: absolute;
+  &.-reveal {
+    // Disable image reveal transitions for lines container
+    opacity: 1;
+    transform: none;
+    transition: none;
+    @include media-md {
+      transform: none;
+    }
+  }
+  // Each <i> is a line
+  i {
+    display: block;
+    border-top: 1px solid color(pink);
+    margin-bottom: 29px;
+    opacity: 0;
+    will-change: opacity;
+  }
+  &.-active {
+    i {
+      animation: fadeIn 0.25s linear;
+      animation-fill-mode: forwards;
+    }
+  }
+  &.-large i {
+    margin-bottom: 59px;
+  }
+  &.-yellow i {
+    border-color: color(yellow);
+  }
+  &.-lightgray i {
+    border-color: color(lightgray);
+  }
+
+  // Staggered reveal animation
+  @for $i from 1 through 20 {
+    i:nth-child(#{$i}) {
+      animation-delay: #{0.5 + 0.05 *  $i}s;
+    }
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Image reveals
+.-reveal {
+  opacity: 0;
+  transform: translate3d(0, 50%, 0);
+  transition: transform 1.25s $cubic-ease2, opacity 0.5s $cubic-ease2;
+  will-change: transform, opacity;
+
+  &.-delay {
+    transition: transform 2s $cubic-ease2, opacity 0.5s $cubic-ease2;
+  }
+
+  @include media-md {
+    transform: translate3d(0, 30%, 0);
+  }
+
+  &.-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+

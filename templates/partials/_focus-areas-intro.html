@@ -1,0 +1,52 @@
+<div class="focus-areas-intro page-section">
+  <div class="container">
+
+    <div class="lines -one" aria-hidden="true">
+      {%- for i in 1..13 %}<i></i>{% endfor -%}
+    </div>
+
+    <div class="image-wrap">
+      <div class="staggered-image -reveal">
+        {% if entry.focusAreasIntro.image|length > 0 %}
+          {% set images = entry.focusAreasIntro.image.all() %}
+          <picture>
+            {% if images|length > 1 %}
+              {% set treatedImage = craft.imager.transformImage(images[1], { width: 960, height: 840, mode: 'crop' }) %}
+              {% if treatedImage %}
+                <source media="(max-width: 750px)" srcset="{{ treatedImage.getUrl() }}">
+              {% endif %}
+            {% endif %}
+            {% set treatedImage = craft.imager.transformImage(images[0], { mode: 'crop', width: 1560, height: 980, }) %}
+            {% if treatedImage %}
+              <img src="{{ treatedImage.getUrl() }}" alt="{{ images[0].title }}">
+            {% endif %}
+          </picture>
+        {% endif %}
+      </div>
+
+      <div class="wrap">
+        <div class="header-wrap">
+          <div class="divot"></div>
+          <h2 class="h1">{{ entry.focusAreasIntro.headline }}</h2>
+          <div class="user-content">
+            {{ entry.focusAreasIntro.body }}
+          </div>
+        </div>
+
+        <div class="body-wrap">
+          <ol>
+          {% for focusArea in entry.focusAreasIntro.focusAreas %}
+            <li>
+              <h4>{{ focusArea.title }}</h4>
+              <p>
+                {{ focusArea.description}}
+              </p>
+            </li>
+          {% endfor %}
+          </ol>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

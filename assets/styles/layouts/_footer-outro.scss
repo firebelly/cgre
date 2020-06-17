@@ -1,0 +1,15 @@
+// Footer Outro
+
+.footer-outro {
+  @include clearfix;
+  background: color(pink);
+  color: color(white);
+  padding: grid(4) 0 grid(8);
+
+  // Desktop styles
+  @include media-md {
+    .header-wrap {
+      width: columns(5);
+    }
+  }
+}

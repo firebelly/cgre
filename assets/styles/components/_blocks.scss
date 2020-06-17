@@ -1,0 +1,39 @@
+// Page blocks
+
+.page-blocks {
+  > .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 $global-padding;
+  }
+}
+
+// Full width/half width areas
+.block-text,
+.block-quote,
+.block-image {
+  flex: 0 1 100%;
+  img {
+    width: 100%;
+    display: block;
+    max-width: none;
+  }
+
+  @include media-md {
+    &.halfWidthOnTheRight {
+      > .-inner {
+        width: columns(4);
+        float: right;
+      }
+    }
+    &.halfWidthOnTheLeft {
+      > .-inner {
+        padding-right: calc(#{columns(5)} + #{$global-padding});
+      }
+    }
+    &.halfWidth {
+      // clear: none;
+      flex: 0 1 50%;
+    }
+  }
+}

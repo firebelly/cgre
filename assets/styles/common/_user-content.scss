@@ -1,0 +1,85 @@
+// Styling of content that is editable in wysiwyg
+
+.user-content {
+  @include clearfix();
+
+  * + * {
+    margin-top: grid(2);
+    @include media-md {
+      margin-top: grid(3);
+    }
+  }
+
+  h2 {
+    font-weight: bold;
+    letter-spacing: 0;
+    + p {
+      margin-top: grid(1);
+      @include media-md {
+        margin-top: grid(2);
+      }
+    }
+  }
+
+  p.cta {
+    a {
+      @extend %button;
+    }
+  }
+
+  a:not(.button) {
+    @include inline-link;
+  }
+  .button a,
+  a.button {
+    border: none;
+    margin-right: grid(1);
+  }
+
+  ol,
+  ul {
+    @include p2;
+    padding: 0 0 0 3.6em;
+    li {
+      margin: 0 0 grid(2);
+      > ul {
+        margin-top: grid(2);
+      }
+    }
+  }
+
+  blockquote {
+    margin: grid(4) 0;
+    padding: 0 $global-padding;
+    border-left: 2px solid color(black);
+  }
+
+  // Custom bullets
+  ul li {
+    list-style-type: none;
+    position: relative;
+    &:before {
+      content: '';
+      background: url('/user/themes/cgre/images/bullet.svg');
+      position: absolute;
+      left: -2em;
+      top: 0.25em;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  hr {
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid color(black);
+  }
+
+  // em {
+  //   font-style: italic;
+  // }
+
+  strong {
+    font-weight: bold;
+  }
+}

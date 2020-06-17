@@ -1,0 +1,271 @@
+// Nav
+
+.header {
+  .container {
+    z-index: z(header);
+  }
+  height: grid(5);
+
+  // Desktop styles
+  @include media-nav {
+    height: grid(10);
+  }
+
+  button {
+    top: 30px;
+    left: 23px;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    background: none;
+    border: none;
+    padding: 0;
+
+    @include media-nav {
+      display: none;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 25px;
+    right: grid(3);
+    width: 205px;
+    height: 59px;
+    img {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    @include media-nav {
+      top: 0;
+      right: 0;
+      width: 354px;
+      height: 103px;
+    }
+  }
+
+  .logo-full {
+    @include media-md {
+      @include transition(opacity, transform);
+    }
+  }
+  .logo-small {
+    opacity: 0;
+
+    @include media-nav {
+      @include transition(all);
+      transform: translateY(20px);
+    }
+  }
+}
+
+// Nav is stuck
+body.nav-stuck {
+  #top {
+    margin-top: 45px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: color(cream);
+    padding: 4px 0;
+    z-index: z(nav);
+    background: color(tan);
+    .logo-full {
+      opacity: 0;
+    }
+    .logo-small {
+      opacity: 1;
+    }
+    @include drop-shadow;
+
+    .hamburger {
+      top: 0;
+    }
+    .logo {
+      top: 5px;
+    }
+  }
+
+  // Desktop styles
+  @include media-nav {
+    #top {
+      margin-top: 52px;
+      padding-top: 120px;
+    }
+    .logo-small {
+      transform: translateY(0);
+    }
+    .logo-full {
+      top: -5px;
+      transform: translateY(-20px);
+    }
+    .header {
+      padding: 5px 0;
+    }
+    .header {
+      .logo {
+        top: -2px;
+      }
+    }
+  }
+}
+
+// Nav is open for hambusiness
+body.nav-open {
+  .hamburger {
+    opacity: 0;
+  }
+  .nav-main {
+    transform: translateX(0);
+    .logo-stacked {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  // Mobile-only
+  @include max-screen($breakpoint-nav) {
+    .nav-main .logo-stacked {
+      transition: all 0.2s 0.25s ease-out;
+    }
+  }
+}
+
+// Primary nav container
+.nav-main {
+  @include clearfix;
+  @include h4;
+  font-size: 12px;
+  text-transform: uppercase;
+  @include transition(transform);
+  letter-spacing: 0.1em;
+  .logo-stacked {
+    display: none;
+  }
+
+  // Mobile only styles
+  @include max-screen($breakpoint-nav) {
+    font-size: 16px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    transform: translateX(-100%);
+    background: color(darkgray);
+    padding: grid(3);
+    margin: 0;
+
+    .logo-stacked {
+      transition: all 0.15s 0 ease-out;
+      opacity: 0;
+      transform: translateY(-20px);
+      display: block;
+      position: absolute;
+      bottom: grid(3);
+      left: grid(3);
+      &::before {
+        content: '';
+        position: absolute;
+        top: grid(-6);
+        left: 0;
+        width: 60px;
+        height: 5px;
+        background: color(pink);
+      }
+    }
+    ul {
+      padding-top: grid(6);
+      height: 55%;
+      display: flex;
+      flex-flow: column;
+      li {
+        flex: 1;
+      }
+    }
+    a {
+      color: color(lightgray);
+      display: flex;
+      align-items: center;
+      height: 100%;
+      span {
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+  // Desktop styles
+  @include media-nav {
+    ul {
+      li {
+        display: inline-block;
+        margin-right: grid(3);
+      }
+    }
+
+    a {
+      position: relative;
+      &::before,
+      &::after {
+        @include transition(height);
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        width: 20px;
+        height: 0;
+        background: color(pink);
+        transform: translateX(-50%);
+      }
+      &:after {
+        top: auto;
+        bottom: -10px;
+      }
+      // Duplicate of nav labels for expanding letter-spacing hover effect
+      span {
+        position: relative;
+        &::after {
+          @include transition(all);
+          top: -6px;
+          left: 50%;
+          z-index: 1;
+          white-space: nowrap;
+          position: absolute;
+          letter-spacing: 0.1em;
+          background-color: color(cream);
+          content: attr(data-title);
+          transform: translateX(-50%);
+        }
+
+      }
+      &:hover,
+      &:focus,
+      &.active {
+        span {
+          &::after {
+            letter-spacing: 0.25em;
+          }
+        }
+        &::before,
+        &::after {
+          height: 3px;
+        }
+      }
+    }
+  }
+
+  // Second desktop breakpoint
+  @include media-nav {
+  }
+}

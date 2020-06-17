@@ -1,0 +1,128 @@
+// Footer
+
+footer {
+  @include clearfix;
+  background: color(darkgray);
+  color: color(lightgray);
+  padding: grid(4) 0 grid(8);
+
+  p {
+    @include p3;
+    @extend %smooth;
+    font-size: 14px;
+  }
+
+  h4.divot {
+    font-size: 12px;
+    &::after {
+      content: '—';
+      font-weight: normal;
+      display: block;
+      margin: grid(1) 0 grid(2);
+    }
+    @include media-md {
+      font-size: 21px;
+      &::after {
+        margin: grid(2) 0;
+      }
+    }
+  }
+
+  p a {
+    @include transition(all);
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-bottom: 1px solid color(pink);
+    }
+  }
+
+  .privacy {
+    margin-top: grid(8);
+
+    a {
+      svg {
+        @include transition(all);
+        margin-left: 10px;
+        vertical-align: middle;
+        width: 10px;
+        fill: color(lightgray);
+      }
+
+      &:hover {
+        svg {
+          fill: color(pink);
+        }
+      }
+    }
+  }
+
+  form {
+    input[type=email] {
+      font-size: 14px;
+      line-height: 1;
+      border: none;
+      border-bottom: 1px solid color(lightgray);
+      padding: grid(0.5) 0;
+      margin: 0;
+      &::placeholder {
+        color: color(lightgray);
+      }
+    }
+    button.button {
+      font-size: 14px;
+      padding: grid(1) grid(2);
+      font-weight: normal;
+      vertical-align: bottom;
+    }
+  }
+  .logo {
+    .divot {
+      display: block;
+      width: 46px;
+      height: 4px;
+      background: color(pink);
+      margin: grid(8) 0 grid(4);
+    }
+    .logo-stacked {
+      width: 121px;
+    }
+  }
+
+  // Desktop styles
+  @include media-md {
+    .logo {
+      width: columns(8);
+      float: left;
+      .divot {
+        width: 80px;
+        height: 10px;
+        margin: grid(1) 0 grid(13);
+      }
+      .logo-stacked {
+        width: 180px;
+      }
+    }
+
+    .block.contact {
+      width: columns(2);
+      float: right;
+    }
+
+    form {
+      .form-field:nth-child(1) {
+        flex: 1 1 75%;
+      }
+      .form-field:nth-child(2) {
+        flex: 1 1 25%;
+      }
+    }
+
+    .block.newsletter {
+      width: columns(4);
+      float: right;
+    }
+
+    padding: grid(10) 0 grid(20);
+  }
+}

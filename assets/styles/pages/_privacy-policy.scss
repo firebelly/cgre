@@ -1,0 +1,41 @@
+// Privacy Policy
+
+
+.page-privacy-policy {
+
+  h1.divot {
+    margin-bottom: grid(4);
+    &::before {
+      content: '';
+      display: block;
+      width: 46px;
+      height: 4px;
+      background: color(pink);
+      margin: grid(4) 0 grid(4);
+    }
+  }
+
+  #body .container {
+    padding-top: grid(4);
+    padding-bottom: grid(10);
+  }
+
+  @include media-md {
+    #body .container {
+      padding-top: grid(4);
+      padding-bottom: grid(10);
+    }
+    h1.divot {
+      margin-bottom: grid(8);
+      &::before {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 10px;
+        background: color(pink);
+        margin: grid(1) 0 grid(6);
+      }
+    }
+  }
+
+}

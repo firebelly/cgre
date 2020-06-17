@@ -1,0 +1,25 @@
+<header class="image-header">
+
+  <div class="lines -one" aria-hidden="true">
+    {%- for i in 1..13 %}<i></i>{% endfor -%}
+  </div>
+
+  <div class="image-wrap">
+    <div class="staggered-image -reveal">
+      <picture>
+        <source media="(max-width: 750px)" srcset="/user/images/cgre-mob-header-back.jpg">
+        <img src="/user/images/cgre-header-back.jpg" alt="Women protesting">
+      </picture>
+    </div>
+    <div class="staggered-image -reveal -delay">
+      <picture>
+        <source media="(max-width: 750px)" srcset="/user/images/cgre-mob-header-front.jpg">
+        <img src="/user/images/cgre-header-front.jpg" alt="Mother and child">
+      </picture>
+      <div class="lines -two" aria-hidden="true">
+        {%- for i in 1..3 %}<i></i>{% endfor -%}
+      </div>
+    </div>
+  </div>
+
+</header>

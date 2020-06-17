@@ -1,0 +1,131 @@
+// Focus Areas
+
+.page#focus-areas {
+
+  background: color(darkgray);
+  color: color(lightgray);
+  h3 {
+    color: color(yellow);
+  }
+  p {
+    @extend %smooth;
+  }
+  .header-wrap {
+    margin-top: grid(-2);
+    .lines {
+      width: 30px;
+      position: relative;
+    }
+  }
+
+  @include media-md {
+    padding-bottom: grid(25);
+    .header-wrap {
+      width: columns(4);
+      margin-top: 0;
+      .lines {
+        display: none;
+      }
+    }
+  }
+
+  .focus-area {
+    @include clearfix;
+    h2 {
+      color: color(yellow);
+    }
+    .lines {
+      display: none;
+      @include media-md {
+        display: block;
+      }
+    }
+
+    //////////////////////////
+    // focus 01
+    &.-one {
+      > h2 {
+        width: columns(6);
+      }
+      .image-wrap {
+        margin: grid(3) 0 grid(2);
+      }
+
+      // Desktop styles
+      @include media-md {
+        .lines {
+          width: 270px;
+          left: columns(-1, 4);
+          top: grid(-12);
+        }
+        .image-wrap {
+          float: left;
+          width: columns(4);
+          margin: grid(20) 0 0 columns(1);
+        }
+        .body-wrap {
+          margin-top: grid(27);
+          width: columns(4);
+          float: right;
+        }
+      }
+    }
+
+    //////////////////////////
+    // focus 02
+    &.-two {
+      .lines {
+        width: 180px;
+        right: columns(-1, 4);
+        top: grid(-9);
+      }
+
+      .image-wrap {
+        margin: grid(5) 0 grid(2) 0;
+      }
+
+      // Desktop styles
+      @include media-md {
+        .body-wrap {
+          margin-top: grid(32);
+          width: columns(4);
+          float: left;
+        }
+        .image-wrap {
+          width: columns(4);
+          margin: grid(22) columns(1) 0 columns(1);
+          float: right;
+        }
+
+      }
+    }
+
+    //////////////////////////
+    // focus 03
+    &.-three {
+      .image-wrap {
+        margin: grid(4) 0 grid(2) 0;
+      }
+
+      // Desktop styles
+      @include media-md {
+        .lines {
+          width: 290px;
+          left: columns(-1, 4);
+          bottom: -119px;
+        }
+        .body-wrap {
+          margin-top: grid(31);
+          width: columns(4);
+          float: right;
+        }
+        .image-wrap {
+          float: left;
+          width: columns(4);
+          margin: grid(18) columns(1) 0 columns(1);
+        }
+      }
+    }
+  }
+
+}

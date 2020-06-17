@@ -1,0 +1,221 @@
+// Typography
+
+@font-face {
+    font-family: 'Central Avenue';
+    src: url('../fonts/central-avenue-bold.eot');
+    src: url('../fonts/central-avenue-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/central-avenue-bold.woff2') format('woff2'),
+         url('../fonts/central-avenue-bold.woff') format('woff'),
+         url('../fonts/central-avenue-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garnett';
+    src: url('../fonts/Garnett-Light.eot');
+    src: url('../fonts/Garnett-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Garnett-Light.woff2') format('woff2'),
+         url('../fonts/Garnett-Light.woff') format('woff'),
+         url('../fonts/Garnett-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Garnett';
+    src: url('../fonts/Garnett-LightItalic.eot');
+    src: url('../fonts/Garnett-LightItalic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Garnett-LightItalic.woff2') format('woff2'),
+         url('../fonts/Garnett-LightItalic.woff') format('woff'),
+         url('../fonts/Garnett-LightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Garnett';
+    src: url('../fonts/Garnett-Bold.eot');
+    src: url('../fonts/Garnett-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Garnett-Bold.woff2') format('woff2'),
+         url('../fonts/Garnett-Bold.woff') format('woff'),
+         url('../fonts/Garnett-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Garnett';
+    src: url('../fonts/Garnett-BoldItalic.eot');
+    src: url('../fonts/Garnett-BoldItalic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Garnett-BoldItalic.woff2') format('woff2'),
+         url('../fonts/Garnett-BoldItalic.woff') format('woff'),
+         url('../fonts/Garnett-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+// Fonts
+$font-sans-serif: 'Garnett', sans-serif;
+$font-sans-serif-alt: 'Central Avenue', serif;
+
+@mixin font-regular {
+  font-weight: normal;
+  font-family: $font-sans-serif;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+@mixin font-header {
+  // @include smooth;
+  font-weight: normal;
+  font-family: $font-sans-serif;
+  letter-spacing: -0.02em;
+  margin: 0.5em 0;
+}
+
+@mixin stat {
+  @include font-header;
+  font-family: $font-sans-serif-alt;
+  font-weight: bold;
+  font-size: 62px;
+  line-height: 62px;
+  letter-spacing: -0.02em;
+
+  @include media-md {
+    font-size: 96px;
+    line-height: 96px;
+  }
+}
+
+@mixin h1 {
+  @include font-header;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  margin: 1em 0;
+
+  @include media-md {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+@mixin h2 {
+  @include font-header;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -1.4px;
+}
+@mixin h3 {
+  @include font-header;
+  font-family: $font-sans-serif-alt;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  font-size: 18px;
+  line-height: 20px;
+  @extend %smooth;
+
+  @include media-md {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+@mixin h4 {
+  @include font-header;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+}
+@mixin h4-mobile {
+  @include font-header;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+@mixin p1 {
+  @include font-regular;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+}
+%p1,
+.p1 {
+  @include p1;
+}
+
+@mixin p2 {
+  @include font-regular;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+}
+%p2,
+.p2 {
+  @include p2;
+}
+
+@mixin p3 {
+ @include font-regular;
+ font-size: 16px;
+ line-height: 20px;
+ letter-spacing: -0.02em;
+}
+%p3,
+.p3 {
+  @include p3;
+}
+
+// @mixin p4 {
+//  @include font-regular;
+//  font-size: 14px;
+//  line-height: 18px;
+//  letter-spacing: -0.02em;
+// }
+// %p4,
+// .p4 {
+//   @include p4;
+// }
+
+// Global header styles
+%h1,.h1,h1 {
+  @include h1;
+}
+%h2,.h2,h2 {
+  @include h2;
+}
+
+%h3,.h3,h3 {
+  @include h3;
+}
+%h4,.h4,h4 {
+  @include h4;
+}
+// %h5,.h5,h5 {
+//   @include h5;
+// }
+
+// Reset all margins
+dl,
+dt,
+dd,
+p,
+ol,
+ul,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+
+// Basic paragraph styles
+address,
+p,
+figcaption {
+  @include p2;
+  em {
+   font-style: italic;
+  }
+}

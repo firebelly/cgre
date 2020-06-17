@@ -1,0 +1,12 @@
+{% if entry.pageHeader|length %}
+  {% set pageHeader = entry.pageHeader.one() %}
+  {% set tag = headerTag ?? 'h1' %}
+  <header class="text-header">
+    <div class="container">
+      <div class="title">
+        <{{ tag }}>{{ headline ?? pageHeader.headline }}</{{ tag }}>
+        <h4 class="subhead">{{ subhead ?? pageHeader.subhead }}</h4>
+      </div>
+    </div>
+  </header>
+{% endif %}

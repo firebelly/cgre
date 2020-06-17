@@ -1,0 +1,24 @@
+/.env
+/.idea
+/vendor
+.DS_Store
+
+# from yarn/webpack assets
+.cache-loader
+dist
+node_modules
+npm-debug.log
+yarn-error.log
+resources/assets/config-local.json
+
+/web/uploads
+/web/imager
+
+# Server files
+php.ini
+
+# Fab
+*.pyc
+
+# Fonts
+assets/fonts/*

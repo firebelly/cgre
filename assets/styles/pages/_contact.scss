@@ -1,0 +1,136 @@
+// Contact
+
+.page#contact {
+  padding-top: grid(6);
+
+  h3 {
+    color: color(pink);
+  }
+
+  // Lines along right edge on mobile
+  .lines.-one {
+    top: grid(3);
+    width: 30px;
+    position: absolute;
+    right: 50%;
+    transform: translate(50vw, grid(-6));
+    i:nth-child(n+4) {
+      display: none;
+    }
+  }
+
+  .form-wrap {
+    padding-top: grid(2);
+
+    // Form feedback
+    .notices {
+      border: none;
+      background: none;
+      color: color(darkgray);
+      padding: 0;
+      &::before {
+        content: '';
+        display: block;
+        width: 46px;
+        height: 4px;
+        background: color(pink);
+        margin: 0 0 grid(4);
+      }
+      p {
+        @include p3;
+      }
+
+      // Desktop styles
+      @include media-md {
+        padding: 0 0 grid(8) columns(4, 8);
+        &::before {
+          width: 80px;
+          height: 10px;
+          margin: 0 0 grid(5);
+        }
+        p {
+          @include p1;
+        }
+      }
+    }
+    form {
+      @include transition(max-height);
+      overflow: hidden;
+      max-height: 1500px;
+    }
+    &.-success {
+      padding-top: 0;
+      form {
+        max-height: 0;
+      }
+    }
+    .form-response {
+      &.-active {
+        display: block;
+      }
+    }
+
+    .lines {
+      display: none;
+    }
+  }
+
+  // Form buttons
+  .buttons {
+    text-align: right;
+    .button {
+      width: 100%;
+      color: color(darkgray);
+      border: 1px solid color(darkgray);
+      text-align: left;
+      background: transparent url('/user/themes/cgre/images/arrow.svg') 83% 50% no-repeat;
+      @include transition(background);
+      &:hover {
+        background: color(pink) url('/user/themes/cgre/images/arrow-white.svg') 95% 50% no-repeat;
+        color: color(white);
+      }
+    }
+  }
+  textarea {
+    height: 150px;
+  }
+
+  @include media-md {
+    // SVG along left edge
+    .lines.-one {
+      width: 70px;
+      position: absolute;
+      left: 50%;
+      top: auto;
+      transform: translate(-50vw, grid(-6));
+      i:nth-child(n+4) {
+        display: block;
+      }
+    }
+
+    // Lines below form
+    .form-wrap {
+      padding: grid(4) 0 grid(12) columns(2);
+      .lines {
+        display: block;
+        right: 0;
+        width: 180px;
+        position: absolute;
+        top: calc(100% - #{grid(8)});
+      }
+    }
+
+    .body-wrap {
+      width: columns(3);
+    }
+    textarea {
+      height: 220px;
+    }
+    .buttons {
+      // Line up submit button with form fields
+      .button {
+        width: calc(50% - #{$gutter / 2});
+      }
+    }
+  }
+}

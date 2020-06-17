@@ -1,0 +1,70 @@
+// Values
+
+.page#values {
+
+  h2 {
+    color: color(yellow);
+  }
+  .lines.-one {
+    width: 30px;
+    position: absolute;
+    top: 0;
+    left: $mobile-global-padding;
+
+  }
+  .image-wrap {
+    @include clearfix;
+    .staggered-image {
+      float: right;
+      width: columns(7);
+      &:nth-child(2) {
+        float: left;
+        width: columns(4);
+        margin-top: grid(-10);
+      }
+    }
+  }
+  .body-wrap {
+    .lines {
+      display: none;
+    }
+    margin-top: grid(3);
+  }
+
+  // Desktop styles
+  @include media-md {
+    .lines.-one {
+      display: none;
+    }
+    .image-wrap {
+      width: columns(5);
+      float: right;
+      margin: grid(10) 0 0 columns(1);
+      .staggered-image {
+        width: columns(4, 5);
+        &:nth-child(2) {
+          width: columns(3, 5);
+          float: left;
+          margin-top: grid(-12);
+        }
+      }
+      .lines {
+        display: block;
+        width: 157px;
+        left: calc(#{columns(2, 5)} + #{$gutter});
+        bottom: -119px;
+      }
+    }
+    .body-wrap {
+      .lines {
+        display: block;
+        width: 70px;
+        left: 0;
+        top: grid(-3);
+      }
+      margin-top: grid(22);
+      width: columns(4);
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+// CGRE 2020
+
+// Vendor
+// @import "~flickity/css/flickity.css";
+
+// Variables
+@import "common/variables";
+
+// Common
+@import "common/normalize";
+@import "common/mixins";
+@import "common/typography";
+@import "common/grid";
+@import "common/base";
+@import "common/user-content";
+@import "common/utility";
+
+// Components
+@import "components/buttons";
+@import "components/shared";
+@import "components/forms";
+@import "components/page-headers";
+@import "components/blocks";
+
+// Layout elements
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/footer-outro";
+
+// Page specifics
+@import "pages/home";
+@import "pages/about-us";
+@import "pages/focus-areas";
+@import "pages/grants";
+@import "pages/privacy-policy";
+@import "pages/contact";
