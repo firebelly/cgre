@@ -251,7 +251,7 @@ body.nav-open {
       }
       &:hover,
       &:focus,
-      &.active {
+      &.-active {
         span {
           &::after {
             letter-spacing: 0.25em;

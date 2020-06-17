@@ -23,7 +23,7 @@
         </button>
         <ul>
           {% for navItem in navItems %}
-            <li class="nav-{{ navItem.slug }}{{ entry is defined and entry.slug == navItem.slug or craft.app.request.getSegment(1) == navItem.slug ? ' -current' : '' }}"><a href="/{{ navItem.slug }}">{{ navItem.name }}</a></li>
+            <li class="nav-{{ navItem.slug }}"><a{{ entry is defined and entry.slug == navItem.slug or craft.app.request.getSegment(1) == navItem.slug ? ' class="-active"'|raw : '' }} href="/{{ navItem.slug }}"><span data-title="{{ navItem.name }}">{{ navItem.name }}</span></a></li>
           {% endfor %}
         </ul>
     </nav>
