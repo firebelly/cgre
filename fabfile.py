@@ -1,20 +1,17 @@
 from fabric.api import *
 import os
 
-env.hosts = ['staging.thisisonward.com']
-env.user = 'caitlinmccorkle'
-env.path = '~/Firebelly/onward'
-env.remotepath = '/home/onward/apps/onward-staging'
+env.hosts = ['cgre.firebelly.co']
+env.user = 'firebelly'
+env.remotepath = '/home/firebelly/webapps/cgre-staging'
 env.git_branch = 'master'
 env.warn_only = True
-env.remote_protocol = 'http'
 
 def production():
-  env.hosts = ['thisisonward.com']
-  env.user = 'onward'
-  env.remotepath = '/home/onward/apps/onward-production'
+  env.hosts = ['cgre.com']
+  env.user = 'cgre'
+  env.remotepath = '/home/cgre/apps/cgre-production'
   env.git_branch = 'master'
-  env.remote_protocol = 'https'
 
 def devsetup():
   print("Installing composer, yarn...\n")
