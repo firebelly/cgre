@@ -10,6 +10,18 @@
   @include media-md {
     .header-wrap {
       width: columns(5);
+      h2.h1 {
+        margin-bottom: grid(10);
+      }
+    }
+    p.cta {
+      width: columns(4);
+      float: right;
+      margin-top: grid(3);
+      a {
+        border-color: color(white);
+        color: color(white);
+      }
     }
   }
 }

@@ -22,6 +22,7 @@
 
   &:hover {
     background: color(pink) url('/assets/dist/images/arrow-white.svg') 95% 50% no-repeat;
+    background-size: 53px 16px !important;
     color: color(white);
     text-decoration: none;
   }

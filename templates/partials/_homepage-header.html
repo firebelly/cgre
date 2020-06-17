@@ -51,10 +51,16 @@
         <h2 class="h1">{{ entry.pageHeader.headline }}</h2>
       </div>
 
-      <div class="body-wrap">
+      <div class="body-wrap user-content">
         {{ entry.pageHeader.body }}
       </div>
     </div>
+
+    {% if entry.pageHeader.cta|length and entry.pageHeader.cta[0].url and entry.pageHeader.cta[0].text %}
+      <p class="cta">
+        <a href="{{ entry.pageHeader.cta[0].url }}">{{ entry.pageHeader.cta[0].text }}</a>
+      </p>
+    {% endif %}
 
   </div>
 </div>

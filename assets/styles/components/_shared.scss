@@ -11,7 +11,7 @@
   }
 
   // Large headers
-  h2 {
+  h2.h1 {
     @include h1;
     margin: grid(1) 0 grid(2);
 

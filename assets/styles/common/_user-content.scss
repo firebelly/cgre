@@ -21,12 +21,6 @@
     }
   }
 
-  p.cta {
-    a {
-      @extend %button;
-    }
-  }
-
   a:not(.button) {
     @include inline-link;
   }
@@ -34,6 +28,12 @@
   a.button {
     border: none;
     margin-right: grid(1);
+  }
+
+  p.cta {
+    a {
+      @extend %button;
+    }
   }
 
   ol,

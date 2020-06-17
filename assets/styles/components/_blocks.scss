@@ -20,6 +20,9 @@
   }
 
   @include media-md {
+    h2 {
+      @include h1;
+    }
     &.halfWidthOnTheRight {
       > .-inner {
         width: columns(4);
