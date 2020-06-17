@@ -32,6 +32,7 @@ return [
     'dev' => [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
         'devMode' => true,
+        'enableTemplateCaching' => false,
     ],
 
     // Staging environment settings
