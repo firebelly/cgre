@@ -1,1 +1,47 @@
 // Page headers
+
+.image-header {
+  h3.divot {
+    color: color(pink);
+  }
+  .user-content {
+    ul li {
+      &::before {
+        background: url('/assets/dist/images/bullet-lightgray.svg');
+      }
+    }
+  }
+  .wrap {
+    background: color(darkgray);
+    color: color(lightgray);
+    position: relative;
+
+    @include media-md {
+      width: columns(8);
+      margin: grid(8) columns(-1);
+      padding: grid(5) columns(2) grid(6) columns(1);
+      .image-wrap {
+        img {
+          display: block;
+        }
+        position: absolute;
+        bottom: 0;
+        width: columns(5,8);
+        left: calc(100% - #{columns(1)});
+
+        .lines.-one {
+          width: columns(4, 5);
+          position: absolute;
+          left: 0;
+          bottom: 100%;
+        }
+      }
+      .lines.-two {
+        width: columns(1);
+        position: absolute;
+        top: calc(100% + #{grid(3)});
+        right: columns(-2);
+      }
+    }
+  }
+}
