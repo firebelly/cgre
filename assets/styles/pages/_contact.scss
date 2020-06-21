@@ -1,11 +1,7 @@
 // Contact
 
-.page#contact {
-  padding-top: grid(6);
-
-  h3 {
-    color: color(pink);
-  }
+.page-contact {
+  @include page-colors(lavender, plum);
 
   // Lines along right edge on mobile
   .lines.-one {
