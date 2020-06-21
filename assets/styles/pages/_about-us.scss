@@ -1,4 +1,107 @@
 // About Us
 
-body.about-us {
+body.page-about {
+  @include page-colors(lightgray, darkgray);
+
+  .page-blocks {
+    .divot {
+      background: color(pink);
+    }
+  }
+}
+
+// History + Values
+.history-values.page-section {
+  h3.divot {
+    color: color(pink);
+  }
+
+  // Logos block
+  .logos {
+    ul {
+      margin: 0 -20px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      li {
+        flex: 0 1 50%;
+        padding: 0 20px;
+      }
+    }
+    @include media-md {
+      ul {
+        li {
+          flex: 0 1 20%;
+        }
+      }
+    }
+  }
+
+  .outro {
+    @include media-md {
+      margin: grid(5) 0;
+      width: columns(5);
+      margin-left: columns(5);
+    }
+  }
+
+  .lines.-two {
+    position: relative;
+    @include media-md {
+      width: columns(1);
+      margin-left: columns(5);
+    }
+  }
+
+  .wrap {
+    background: color(darkgray);
+    color: color(lightgray);
+    position: relative;
+
+    @include media-md {
+      width: columns(8);
+      margin: grid(8) columns(-1) grid(6) columns(3);
+      padding: grid(7) columns(1) grid(6) columns(2);
+      .image-wrap {
+        img {
+          display: block;
+        }
+        position: absolute;
+        bottom: 0;
+        width: columns(5,8);
+        right: calc(100% - #{columns(1)});
+
+        .lines.-one {
+          width: columns(4, 5);
+          position: absolute;
+          right: 0;
+          bottom: 100%;
+        }
+      }
+      .header-wrap {
+        width: columns(4, 5);
+      }
+      .body-wrap {
+        width: columns(4, 5);
+        p {
+          @include p3;
+        }
+      }
+      .lines.-two {
+        width: columns(1);
+        position: absolute;
+        top: calc(100% + #{grid(3)});
+        left: columns(-2);
+      }
+    }
+  }
+}
+
+.our-team {
+  background: color(darkgray);
+  color: color(lightgray);
+  h3.name,
+  h4 {
+    color: color(yellow);
+  }
 }
