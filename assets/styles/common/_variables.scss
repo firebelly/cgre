@@ -9,10 +9,11 @@ $colors: (
 	"yellow": #FCAF17,
 	"fuschia": #8E0B54,
 	"purple": #5759BC,
-	"gray": #DCD3DE,
+	"lavender": #DCD3DE,
 	"lightgray": #DEE2DF,
 	"offwhite": #E5E5E5,
-	"cream": #F6F8F3,
+	"coolgray": #F6F8F3,
+	"plum": #8E0B54,
 );
 @function color($color-name) {
   @return map-get($colors, #{''+$color-name+''});
