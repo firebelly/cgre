@@ -20,6 +20,27 @@
     padding-bottom: grid(10);
   }
 
+  // More spacious text in privacy
+  .user-content {
+    * + * {
+      margin-top: grid(2);
+      @include media-md {
+        margin-top: grid(3);
+      }
+    }
+    ol,
+    ul {
+      @include p2;
+      padding: 0 0 0 3.6em;
+      li {
+        margin: 0 0 grid(2);
+        > ul {
+          margin-top: grid(2);
+        }
+      }
+    }
+  }
+
   @include media-md {
     #body .container {
       padding-top: grid(4);
