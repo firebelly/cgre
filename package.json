@@ -38,7 +38,7 @@
     "autosize": "^4.0.2",
     "body-scroll-lock": "^2.6.4",
     "fitvids": "^2.0.0",
-    "jquery": "^3.4",
+    "jquery": "^3.5",
     "zenscroll": "^4.0.2"
   }
 }
