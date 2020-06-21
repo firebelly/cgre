@@ -7,6 +7,30 @@
   transition-timing-function: $transition-easing;
 }
 
+@mixin page-colors($background, $text) {
+  background: color($background);
+  // color: color(lightgray);
+  .nav-main a span::after {
+    background: color($background);
+  }
+  .nav-main a,
+  .nav-main a:hover,
+  .nav-main a.-active {
+    &::after,
+    &::before {
+      background: color($text);
+    }
+  }
+  &.nav-stuck .header {
+    background: color($background);
+  }
+  .page-blocks {
+    div.divot {
+      background: color($background);
+    }
+  }
+}
+
 // Animated hover for user-content links
 @mixin inline-link($slide-target:'&') {
   #{$slide-target} {

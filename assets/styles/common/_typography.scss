@@ -91,6 +91,7 @@ $font-sans-serif-alt: 'Central Avenue', serif;
   font-size: 20px;
   line-height: 20px;
   margin: 1em 0;
+  @include smooth;
 
   @include media-md {
     font-size: 45px;
@@ -103,6 +104,7 @@ $font-sans-serif-alt: 'Central Avenue', serif;
   font-size: 22px;
   line-height: 30px;
   letter-spacing: -1.4px;
+  @include smooth;
 }
 @mixin h3 {
   @include font-header;
@@ -112,7 +114,7 @@ $font-sans-serif-alt: 'Central Avenue', serif;
   letter-spacing: 0.02em;
   font-size: 18px;
   line-height: 20px;
-  @extend %smooth;
+  @include smooth;
 
   @include media-md {
     font-size: 18px;
@@ -124,6 +126,7 @@ $font-sans-serif-alt: 'Central Avenue', serif;
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
+  @include smooth;
 }
 @mixin h4-mobile {
   @include font-header;
