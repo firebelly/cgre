@@ -4,7 +4,6 @@
   > .container {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 $global-padding;
   }
 }
 
@@ -23,6 +22,14 @@
     h2 {
       @include h1;
     }
+    &.fullWidth {
+      h2 {
+        padding-right: columns(1);
+      }
+      p.cta {
+        width: columns(4);
+      }
+    }
     &.halfWidthOnTheRight {
       > .-inner {
         width: columns(4);
@@ -37,6 +44,20 @@
     &.halfWidth {
       // clear: none;
       flex: 0 1 50%;
+    }
+  }
+}
+
+// Text block grids
+.block-text-grid {
+  @include media-md {
+    padding: grid(10) 0;
+    margin-left: columns(2);
+    p {
+      @include p3;
+    }
+    .text-block {
+      padding-right: grid(5);
     }
   }
 }
