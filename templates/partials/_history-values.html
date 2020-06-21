@@ -1,0 +1,67 @@
+<div class="history-values page-section">
+  <div class="container">
+
+    <div class="wrap">
+      <div class="header-wrap">
+        <h3 class="divot">{{ entry.historyValues.subhead }}</h3>
+        <h2 class="h1">{{ entry.historyValues.headline }}</h2>
+      </div>
+
+      <div class="body-wrap user-content">
+        {{ entry.historyValues.body }}
+      </div>
+
+      {% if entry.historyValues.cta|length and entry.historyValues.cta[0].url and entry.historyValues.cta[0].text %}
+        <p class="cta">
+          <a href="{{ entry.historyValues.cta[0].url }}">{{ entry.historyValues.cta[0].text }}</a>
+        </p>
+      {% endif %}
+
+      <div class="image-wrap">
+        <div class="lines -large -one" aria-hidden="true">
+          {%- for i in 1..4 %}<i></i>{% endfor -%}
+        </div>
+
+        <div class="staggered-image -reveal">
+          {% if entry.historyValues.image|length > 0 %}
+            {% set images = entry.historyValues.image.all() %}
+            <picture>
+              {% if images|length > 1 %}
+                {% set treatedImage = craft.imager.transformImage(images[1], { width: 600, height: 580, mode: 'crop' }) %}
+                {% if treatedImage %}
+                  <source media="(max-width: 750px)" srcset="{{ treatedImage.getUrl() }}">
+                {% endif %}
+              {% endif %}
+              {% set treatedImage = craft.imager.transformImage(images[0], { mode: 'crop', width: 960, height: 920, }) %}
+              {% if treatedImage %}
+                <img src="{{ treatedImage.getUrl() }}" alt="{{ images[0].title }}">
+              {% endif %}
+            </picture>
+          {% endif %}
+        </div>
+      </div>
+
+    </div><!-- /.wrap -->
+
+    {% if entry.historyValues.logos|length %}
+      <div class="logos">
+        <ul>
+        {% for logo in entry.historyValues.logos %}
+          <li><img src="{{ logo.getUrl() }}" alt="{{ logo.title }}"></li>
+        {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    {% if entry.historyValues.outro %}
+      <div class="outro">
+        {{ entry.historyValues.outro }}
+      </div>
+    {% endif %}
+
+    <div class="lines -two" aria-hidden="true">
+      {%- for i in 1..3 %}<i></i>{% endfor -%}
+    </div>
+
+  </div>
+</div>
