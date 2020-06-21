@@ -1,0 +1,41 @@
+<div class="our-team page-section">
+  <div class="container">
+
+    <h3 class="divot">Our Team</h3>
+
+    <h4>staff</h4>
+
+    <div class="people">
+      {% for person in entry.staff.all() %}
+        <div class="person">
+          <h3 class="name">{{ person.personName }}</h3>
+          <h3 class="pronouns">{{ person.pronouns }}</h3>
+          <h3 class="title">{{ person.personTitle }}</h3>
+          <div class="bio">
+            <p>
+              {{ person.bio }}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+      <div class="person -thanks">
+        {# Final "person" is consultants #}
+        <h3 class="name">{{ entry.consultants.headline }}</h3>
+        {{ entry.consultants.body }}
+      </div>
+    </div>
+
+    <h4>advisory committee</h4>
+
+    <ul class="committee">
+      {% for advisor in entry.advisoryCommittee.all() %}
+        <li>
+          {% if advisor.advisorUrl %}<a rel="noopener" target="_blank" href="{{ advisor.advisorUrl }}">{% endif %}
+          {{ advisor.advisorName }}
+          {% if advisor.advisorUrl %}</a>{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</div>
