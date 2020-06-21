@@ -1,4 +1,74 @@
 // Grants
 
-body.grants {
+body.page-grants {
+  @include page-colors(yellow, white);
+
+  .page-blocks {
+    background: color(yellow);
+    div.divot {
+      background: color(white);
+    }
+    &,
+    h3 {
+      color: color(darkgray);
+    }
+  }
+  .grantees,
+  .proposals {
+    background: color(coolgray);
+  }
+
+  .image-header {
+    .wrap {
+      background: color(coolgray);
+      color: color(darkgray);
+      h3.divot {
+        color: color(darkgray);
+      }
+      .lines i {
+        border-color: color(darkgray);
+      }
+    }
+  }
+
+  h3 {
+    color: color(yellow);
+  }
+
+  // Grantees block
+  .grantees {
+    h4 {
+      padding: grid(2) 0 grid(4);
+      border-top: 1px solid color(darkgray);
+    }
+    ul {
+      @include p3;
+      li {
+        margin: 5px 0;
+      }
+    }
+    a {
+      @include inline-link();
+      display: inline-block;
+      padding: 5px 0;
+      svg {
+        margin-left: 5px;
+        width: 12px;
+        height: 12px;
+        fill: color(darkgray);
+      }
+    }
+
+    // Desktop styles
+    @include media-md {
+      padding-top: grid(6);
+      h4 {
+        padding: grid(2) 0 grid(6);
+      }
+      ul {
+        columns: 3;
+      }
+    }
+  }
+
 }

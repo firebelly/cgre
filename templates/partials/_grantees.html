@@ -1,0 +1,19 @@
+<div class="grantees page-section">
+  <div class="container">
+
+    <h4>grantees</h4>
+
+    {% set grantees = craft.entries.section('grantees').all() %}
+    <ul>
+    {% for grantee in grantees %}
+      <li>
+        <a href="{{ grantee.granteeInfo.granteeUrl }}">
+          {{ grantee.title }} {{ grantee.granteeInfo.city }}, {{ grantee.granteeInfo.state }}
+          <svg class="sprite sprite-external-link" aria-hidden="true"><use xlink:href="#sprite-external-link"/></svg>
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+
+  </div>
+</div>
