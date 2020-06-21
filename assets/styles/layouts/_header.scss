@@ -73,7 +73,7 @@ body.nav-stuck {
     top: 0;
     width: 100%;
     height: 50px;
-    background: color(cream);
+    background: color(coolgray);
     padding: 4px 0;
     z-index: z(nav);
     background: color(tan);
@@ -243,7 +243,7 @@ body.nav-open {
           white-space: nowrap;
           position: absolute;
           letter-spacing: 0.1em;
-          background-color: color(cream);
+          background-color: color(coolgray);
           content: attr(data-title);
           transform: translateX(-50%);
         }

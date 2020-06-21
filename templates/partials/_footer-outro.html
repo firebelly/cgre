@@ -1,52 +1,55 @@
 {% set substitutions = {
-  '>': '<span class="gt">&gt;</span>',
+  '&lt;': '<span class="qualifier -lt"><svg class="sprite sprite-gt"><use xlink:href="#sprite-gt"/></svg></span>',
+  '&gt;': '<span class="qualifier -gt"><svg class="sprite sprite-gt"><use xlink:href="#sprite-gt"/></svg></span>',
   '%': '<span class="percent">%</span>'
 } %}
-<div class="footer-outro page-section">
-  <div class="container">
+{% if entry.footerOutro.subhead or entry.footerOutro.headline or entry.footerOutro.body %}
+  <div class="footer-outro page-section">
+    <div class="container">
 
-    <div class="lines -one" aria-hidden="true">
-      {%- for i in 1..13 %}<i></i>{% endfor -%}
+      <div class="lines -one" aria-hidden="true">
+        {%- for i in 1..13 %}<i></i>{% endfor -%}
+      </div>
+
+      <div class="wrap">
+
+        <div class="header-wrap">
+          {% if entry.footerOutro.subhead %}
+            <h3 class="divot">{{ entry.footerOutro.subhead }}</h3>
+          {% endif %}
+          {% if entry.footerOutro.headline %}
+            <h2 class="h1">{{ entry.footerOutro.headline }}</h2>
+          {% endif %}
+          {% if entry.footerOutro.body %}
+            <div class="user-content">
+              {{ entry.footerOutro.body }}
+            </div>
+          {% endif %}
+        </div>
+
+        {% if entry.footerOutro.stats|length %}
+        <div class="stats">
+          {% for stat in entry.footerOutro.stats %}
+            <dl class="figure">
+              <dt{{ stat.figure|length > 8 ? ' class="-verbose"' : '' }}>{{ stat.figure|escape|replace(substitutions)|raw }}</dt>
+              <dd>{{ stat.label }}</dd>
+            </dl>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if entry.footerOutro.cta|length and entry.footerOutro.cta[0].url and entry.footerOutro.cta[0].text %}
+          <p class="cta">
+            <a href="{{ entry.footerOutro.cta[0].url }}">{{ entry.footerOutro.cta[0].text }}</a>
+          </p>
+        {% endif %}
+
+        <div class="lines -two" aria-hidden="true">
+          {%- for i in 1..3 %}<i></i>{% endfor -%}
+        </div>
+
+      </div>
+
     </div>
-
-    <div class="wrap">
-
-      <div class="header-wrap">
-        {% if entry.footerOutro.subhead %}
-          <h3 class="divot">{{ entry.footerOutro.subhead }}</h3>
-        {% endif %}
-        {% if entry.footerOutro.headline %}
-          <h2 class="h1">{{ entry.footerOutro.headline }}</h2>
-        {% endif %}
-        {% if entry.footerOutro.body %}
-          <div class="user-content">
-            {{ entry.footerOutro.body }}
-          </div>
-        {% endif %}
-      </div>
-
-      {% if entry.footerOutro.stats|length %}
-      <div class="stats">
-        {% for stat in entry.footerOutro.stats %}
-          <dl class="figure">
-            <dt{{ stat.figure|length > 8 ? ' class="-verbose"' : '' }}>{{ stat.figure|escape|replace(substitutions)|raw }}</dt>
-            <dd>{{ stat.label }}</dd>
-          </dl>
-        {% endfor %}
-      </div>
-      {% endif %}
-
-      {% if entry.footerOutro.cta|length and entry.footerOutro.cta[0].url and entry.footerOutro.cta[0].text %}
-        <p class="cta">
-          <a href="{{ entry.footerOutro.cta[0].url }}">{{ entry.footerOutro.cta[0].text }}</a>
-        </p>
-      {% endif %}
-
-      <div class="lines -two" aria-hidden="true">
-        {%- for i in 1..3 %}<i></i>{% endfor -%}
-      </div>
-
-    </div>
-
   </div>
-</div>
+{% endif %}

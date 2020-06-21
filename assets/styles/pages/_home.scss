@@ -149,7 +149,7 @@ body.page-home {
       counter-reset: rotundog;
       li {
         counter-increment: rotundog;
-        margin: 0 0 grid(5);
+        margin: 0 0 grid(4);
         &::before {
           content: "0" counter(rotundog);
           @include h4-mobile;

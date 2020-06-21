@@ -12,6 +12,21 @@
       {% if not blockWrapped %}<div class="container">{% set blockWrapped = true %}{% endif %}
       {% include "blocks/_images" with { block: block } %}
 
+    {% case 'textGrid' %}
+	    {% if not blockWrapped %}<div class="container">{% set blockWrapped = true %}{% endif %}
+      <div class="block-text-grid">
+        <ul class="text-blocks grid">
+          {% for textBlock in block.textBlocks.all() %}
+            <li class="text-block grid-item one-half">
+              <h4 class="divot">{{ textBlock.headline }}</h4>
+              <div class="body user-content">
+                {{ textBlock.body }}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
   {% endswitch %}
 {% endfor %}
 

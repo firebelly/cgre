@@ -3,7 +3,7 @@
 // Shared page section styles
 .page-section {
   @include clearfix;
-  padding: grid(5) 0 grid(5);
+  padding: grid(5) 0 grid(4);
 
   .staggered-image {
     position: relative;
@@ -41,6 +41,13 @@ p.cta {
     dt {
       @include stat;
       margin: 0 0 grid(2);
+      .qualifier {
+        .sprite {
+          width: 20px;
+          height: 30px;
+          vertical-align: middle;
+        }
+      }
       .percent {
         font-family: $font-sans-serif;
         font-weight: normal;
@@ -87,11 +94,14 @@ div.divot {
   }
 }
 
+h4.divot,
 h3.divot {
   &::after {
     content: '—';
     display: block;
   }
+}
+h3.divot {
   font-size: 14px;
   @include media-md {
     font-size: 18px;
