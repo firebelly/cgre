@@ -1,30 +1,33 @@
 // Focus Areas
 
-.page#focus-areas {
-
-  background: color(darkgray);
+body.page-focus-areas {
+  @include page-colors(darkgray, white);
   color: color(lightgray);
+
   h3 {
     color: color(yellow);
   }
   p {
     @extend %smooth;
   }
-  .header-wrap {
-    margin-top: grid(-2);
-    .lines {
-      width: 30px;
-      position: relative;
-    }
-  }
 
-  @include media-md {
-    padding-bottom: grid(25);
+  .focus-areas-header {
     .header-wrap {
-      width: columns(4);
-      margin-top: 0;
+      margin-top: grid(-2);
       .lines {
-        display: none;
+        width: 30px;
+        position: relative;
+      }
+    }
+
+    @include media-md {
+      padding-bottom: grid(25);
+      .header-wrap {
+        width: columns(4);
+        margin-top: 0;
+        .lines {
+          display: none;
+        }
       }
     }
   }
@@ -34,6 +37,24 @@
     h2 {
       color: color(yellow);
     }
+
+    // Large headers
+    h2 {
+      @include h1;
+      margin: grid(1) 0 grid(2);
+
+      @include media-md {
+        margin: grid(5) 0 grid(5);
+      }
+    }
+    p {
+      @include p3;
+
+      @include media-md {
+        @include p1;
+      }
+    }
+
     .lines {
       display: none;
       @include media-md {
@@ -43,7 +64,7 @@
 
     //////////////////////////
     // focus 01
-    &.-one {
+    &.-number-1 {
       > h2 {
         width: columns(6);
       }
@@ -73,7 +94,7 @@
 
     //////////////////////////
     // focus 02
-    &.-two {
+    &.-number-2 {
       .lines {
         width: 180px;
         right: columns(-1, 4);
@@ -102,7 +123,7 @@
 
     //////////////////////////
     // focus 03
-    &.-three {
+    &.-number-3 {
       .image-wrap {
         margin: grid(4) 0 grid(2) 0;
       }
@@ -123,6 +144,30 @@
           float: left;
           width: columns(4);
           margin: grid(18) columns(1) 0 columns(1);
+        }
+      }
+    }
+  }
+
+  // Footer
+  .footer-outro {
+    background: color(yellow);
+    &,
+    h3.divot {
+      color: color(darkgray);
+    }
+    .header-wrap {
+      width: columns(5);
+    }
+    h2.h1 {
+      color: color(white);
+    }
+    p.cta {
+      a {
+        border-color: color(darkgray);
+        color: color(darkgray);
+        &:hover {
+          color: color(white);
         }
       }
     }

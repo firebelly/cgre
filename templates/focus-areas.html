@@ -8,7 +8,11 @@
 {% block content %}
   {% cache unless currentUser %}
 
-  {% include 'partials/_image-header' %}
+  {% include 'partials/_text-header' %}
+
+  {% include 'partials/_focus-areas' %}
+
+  {% include 'partials/_footer-outro' %}
 
   {% endcache %}
 {% endblock content %}
