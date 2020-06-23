@@ -78,6 +78,10 @@ svg.icon {
   }
 }
 
+#page:focus {
+  outline: none;
+}
+
 // This allows js to determine breakpoint
 #breakpoint-indicator {
   width: 0;

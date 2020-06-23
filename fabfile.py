@@ -3,7 +3,7 @@ import os
 
 env.hosts = ['cgre.firebelly.co']
 env.user = 'firebelly'
-env.remotepath = '/home/firebelly/webapps/cgre-staging'
+env.remotepath = '/home/firebelly/webapps/cgre_staging'
 env.git_branch = 'master'
 env.warn_only = True
 
