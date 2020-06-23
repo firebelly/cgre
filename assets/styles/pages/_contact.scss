@@ -51,6 +51,7 @@
     }
     form {
       @include transition(max-height);
+      width: 100%;
       overflow: hidden;
       max-height: 1500px;
     }
@@ -72,26 +73,51 @@
   }
 
   // Form buttons
-  .buttons {
+  .actions {
     text-align: right;
-    .button {
-      width: 100%;
-      color: color(darkgray);
-      border: 1px solid color(darkgray);
-      text-align: left;
-      background: transparent url('/user/themes/cgre/images/arrow.svg') 83% 50% no-repeat;
-      @include transition(background);
-      &:hover {
-        background: color(pink) url('/user/themes/cgre/images/arrow-white.svg') 95% 50% no-repeat;
-        color: color(white);
-      }
-    }
   }
   textarea {
     height: 150px;
   }
 
+  // Footer
+  .footer-outro {
+    background: color(plum);
+    color: color(coolgray);
+    &,
+    h3.divot {
+      color: color(coolgray);
+    }
+    .header-wrap {
+      width: columns(5);
+    }
+    h2.h1 {
+      color: color(coolgray);
+    }
+    p.cta {
+      a {
+        border-color: color(coolgray);
+        color: color(coolgray);
+        &:hover {
+          color: color(coolgray);
+        }
+      }
+    }
+  }
+
+  footer.site-footer {
+    div.divot {
+      background: color(plum);
+    }
+  }
+
+  // Desktop styles
   @include media-md {
+    .page-header {
+      .header-wrap {
+        width: columns(5);
+      }
+    }
     // SVG along left edge
     .lines.-one {
       width: 70px;
@@ -101,6 +127,12 @@
       transform: translate(-50vw, grid(-6));
       i:nth-child(n+4) {
         display: block;
+      }
+    }
+    .grid-wrap {
+      margin: 0 -10px;
+      .one-half {
+        padding: 0 10px;
       }
     }
 
@@ -122,11 +154,12 @@
     textarea {
       height: 220px;
     }
-    .buttons {
+    .actions {
       // Line up submit button with form fields
       .button {
         width: calc(50% - #{$gutter / 2});
       }
     }
   }
+
 }
