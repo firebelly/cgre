@@ -90,6 +90,11 @@ form {
     margin-top: grid(4);
   }
 
+  // Hide honeypot
+  input[name=botsLoveTheHoney] {
+    display: none;
+  }
+
   // Feedback from submitting form
   .status {
     display: none;
@@ -119,28 +124,20 @@ form {
 }
 
 // Dropdowns
-.form-select-wrapper {
+.select-wrap {
   position: relative;
   display: inline-block;
   width: 100%;
 
   // Dropdown arrow
-  &::after {
-    content: '';
+  svg {
+    width: 30px;
+    height: 16px;
     position: absolute;
-    top: 15px;
     right: 20px;
-    z-index: 1000;
-    width: 22px;
-    height: 14px;
-    background: url('/user/themes/cgre/images/down-arrow.svg') no-repeat;
-    background-size: contain;
+    top: 50%;
+    transform: translateY(-50%);
     pointer-events: none;
-    @include media-md {
-      width: 30px;
-      height: 18px;
-      top: 24px;
-    }
   }
 
   select {
@@ -151,7 +148,6 @@ form {
     padding: 5px 10px;
     display: block;
     width: 100%;
-    margin-bottom: grid(4);
     color: color(darkgray);
     border-radius: 0;
     cursor: pointer;

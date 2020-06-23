@@ -1,0 +1,93 @@
+{% macro errorList(errors) %}
+  {% if errors %}
+    <ul class="errors">
+      {% for error in errors %}
+        <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{% from _self import errorList %}
+
+<div class="contact-form -reveal -delay">
+  <div class="container">
+
+    <div class="form-wrap">
+      <div class="form-response"></div>
+
+      <form class="-light" method="post" action="/contact" autocomplete="on" name="contact-form" id="contact-form">
+        <fieldset>
+          <div class="row">
+            <div class="input-wrap">
+              <label for="from-name">Name</label>
+              <input id="from-name" type="text" name="fromName" value="{{ message.fromName ?? '' }}">
+              {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-wrap">
+              <label for="from-email">Email</label>
+              <input required id="from-email" type="email" name="fromEmail" value="{{ message.fromEmail ?? '' }}">
+              {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
+            </div>
+          </div>
+          <div class="grid-wrap">
+            <div class="grid">
+              <div class="one-half">
+                <div class="input-wrap">
+                  <label for="organization">Organization</label>
+                  <input id="organization" type="text" name="message[From Organization]" value="{{ message.message.fromOrganization ?? '' }}">
+                  {{ message is defined and message ? errorList(message.getErrors('message.message.fromOrganization')) }}
+                </div>
+              </div>
+              <div class="one-half">
+                <div class="input-wrap">
+                  <label for="focus-area">Focus Area</label>
+                  <div class="select-wrap">
+                    <svg class="sprite sprite-dropdown-arrow" aria-hidden="true"><use xlink:href="#sprite-dropdown-arrow"/></svg>
+                    <select id="focus-area" name="message[Focus]">
+                      <option value=""></option>
+                      {% for option in entry.contactFormOptions.focusOptions %}
+                        <option value="{{ option.option }}"{{ message.focus is defined and message.focus==option.option ? ' selected' : '' }}>{{ option.option }}</option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                  {{ message is defined and message ? errorList(message.getErrors('foundUsHow')) }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-wrap">
+            <label for="message[Query]">Message</label>
+            <textarea required rows="10" cols="40" id="message[Query]" name="message[Query]">{{ message.message.query ?? '' }}</textarea>
+          </div>
+        </fieldset>
+
+        <div class="status">{{ entry.contactFormOptions.successMessage ?? craft.app.getModule('contact-form').getSettings().successFlashMessage }}</div>
+
+        <div class="actions">
+          {{ csrfInput() }}
+          <input name="botsLoveTheHoney" type="text">
+          <input type="hidden" name="action" value="contact-form/send">
+          <input type="hidden" name="toEmail" value="{{ entry.contactFormOptions.toEmail ? entry.contactFormOptions.toEmail|hash : craft.app.getModule('contact-form').getSettings().toEmail|hash }}">
+          <input type="hidden" name="subject" value="Firebelly Contact Submission" data-original-value="Firebelly Contact Submission">
+          <input type="hidden" name="message[formName]" value="Firebelly Contact">
+
+          {{ craft.contactFormExtensions.recaptcha | raw }}
+
+          <button class="button -white -small hollow">Submit <svg class="sprite sprite-arrow" aria-hidden="true"><use xlink:href="#sprite-arrow"/></svg></button>
+          <p class="recaptcha-note" style="font-size: 10px; color: #666; margin-top: 30px;">
+            This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <div class="lines -large" aria-hidden="true">
+      {%- for i in 1..3 %}<i></i>{% endfor -%}
+    </div>
+
+  </div>
+</div><!-- /.contact-form -->
