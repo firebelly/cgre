@@ -13,9 +13,18 @@ body.page-grants {
       color: color(darkgray);
     }
   }
+
+  // Grantees
   .grantees,
   .proposals {
     background: color(coolgray);
+  }
+
+  // Proposals
+  .proposals {
+    h3.divot {
+      color: color(yellow);
+    }
   }
 
   .image-header {
@@ -52,10 +61,11 @@ body.page-grants {
       display: inline-block;
       padding: 5px 0;
       svg {
-        margin-left: 5px;
+        margin: 0 0 1px 5px;
         width: 12px;
         height: 12px;
-        fill: color(darkgray);
+        stroke: color(darkgray);
+        vertical-align: bottom;
       }
     }
 
