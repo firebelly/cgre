@@ -8,7 +8,6 @@ let $body,
 
 const common = {
   init() {
-    console.log('foo');
     // JavaScript to be fired on all pages
     $body = $('body');
     $window = $(window);
