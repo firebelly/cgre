@@ -16,11 +16,43 @@ body.page-home {
     }
   }
 
+  // Page blocks
+  .page-blocks {
+    background: color(lightgray);
+  }
+
+  // Footer outro overrides
+  .footer-outro {
+    .stats {
+      dt {
+        color: color(darkgray);
+      }
+    }
+    p.cta {
+      a {
+        border-color: color(white);
+        color: color(white);
+        background: transparent url('/assets/dist/images/arrow-white.svg') 83% 50% no-repeat;
+        &:hover {
+          background: color(darkgray) url('/assets/dist/images/arrow-white.svg') 95% 50% no-repeat;
+        }
+      }
+    }
+  }
+
   // Desktop styles
   @include media-md {
     .block-text {
       &.-halfWidth {
         clear: left;
+      }
+    }
+    .footer-outro {
+      h2.h1 {
+        margin-bottom: grid(10);
+      }
+      .header-wrap {
+        width: columns(3);
       }
     }
   }
@@ -128,11 +160,6 @@ body.page-home {
 
 }
 
-// Page blocks
-.page-blocks {
-  background: color(lightgray);
-}
-
 // Focus areas intro block only on homepage
 .focus-areas-intro {
   background: color(darkgray);
@@ -182,23 +209,6 @@ body.page-home {
       width: columns(3);
       float: left;
       padding-top: grid(16);
-    }
-  }
-}
-
-
-// Footer outro overrides
-.footer-outro {
-  .stats {
-    dt {
-      color: color(darkgray);
-    }
-  }
-
-  // Desktop styles
-  @include media-md {
-    .header-wrap {
-      width: columns(3);
     }
   }
 }
