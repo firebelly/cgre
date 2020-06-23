@@ -6,11 +6,11 @@
 
     {% case "text" %}
       {% if not blockWrapped %}<div class="container">{% set blockWrapped = true %}{% endif %}
-      {% include "blocks/_text" with { block: block } %}
+      {% include "page-blocks/_text" with { block: block } %}
 
     {% case "image" %}
       {% if not blockWrapped %}<div class="container">{% set blockWrapped = true %}{% endif %}
-      {% include "blocks/_images" with { block: block } %}
+      {% include "page-blocks/_images" with { block: block } %}
 
     {% case 'textGrid' %}
 	    {% if not blockWrapped %}<div class="container">{% set blockWrapped = true %}{% endif %}

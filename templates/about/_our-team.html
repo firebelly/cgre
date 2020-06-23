@@ -3,7 +3,7 @@
 
     <h3 class="divot">Our Team</h3>
 
-    <h4>staff</h4>
+    <h4 class="divider">staff</h4>
 
     <div class="people">
       {% for person in entry.staff.all() %}
@@ -25,17 +25,19 @@
       </div>
     </div>
 
-    <h4>advisory committee</h4>
+    <div class="committee">
+      <h4 class="divider">advisory committee</h4>
 
-    <ul class="committee">
-      {% for advisor in entry.advisoryCommittee.all() %}
-        <li>
-          {% if advisor.advisorUrl %}<a rel="noopener" target="_blank" href="{{ advisor.advisorUrl }}">{% endif %}
-          {{ advisor.advisorName }}
-          {% if advisor.advisorUrl %}</a>{% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+      <ul>
+        {% for advisor in entry.advisoryCommittee.all() %}
+          <li>
+            {% if advisor.advisorUrl %}<a rel="noopener" target="_blank" href="{{ advisor.advisorUrl }}"><span>{% endif -%}
+            {{ advisor.advisorName }}
+            {%- if advisor.advisorUrl %}</span> <svg class="sprite sprite-external-link" aria-hidden="true"><use xlink:href="#sprite-external-link"/></svg> </a>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
 
   </div>
 </div>

@@ -1,4 +1,4 @@
-{% extends (craft.app.request.isAjax and not craft.app.request.isLivePreview) ? '_ajax-layout' : '_layout' %}
+{% extends (craft.app.request.isAjax and not craft.app.request.isLivePreview) ? 'layouts/_ajax-layout' : 'layouts/_layout' %}
 
 {% set title = entry.title %}
 {% set bodyClass = 'common-page' %}
@@ -11,7 +11,7 @@
 
   {% include 'partials/_text-header' %}
 
-  {% include 'blocks/_page-blocks' %}
+  {% include 'partials/_page-blocks' %}
 
   {% endcache %}
 {% endblock %}

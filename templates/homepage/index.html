@@ -1,4 +1,4 @@
-{% extends (craft.app.request.isAjax and not craft.app.request.isLivePreview) ? '_ajax-layout' : '_layout' %}
+{% extends (craft.app.request.isAjax and not craft.app.request.isLivePreview) ? 'layouts/_ajax-layout' : 'layouts/_layout' %}
 
 {% set title = entry.title %}
 {% if entry.seoTitle %}{% set seoTitle = entry.seoTitle %}{% endif %}
@@ -8,11 +8,11 @@
 {% block content %}
   {% cache unless currentUser %}
 
-  {% include 'partials/_homepage-header' %}
+  {% include 'homepage/_homepage-header' %}
 
-  {% include 'blocks/_page-blocks' %}
+  {% include 'partials/_page-blocks' %}
 
-  {% include 'partials/_focus-areas-intro' %}
+  {% include 'homepage/_focus-areas-intro' %}
 
   {% include 'partials/_footer-outro' %}
 

@@ -1,0 +1,16 @@
+<div class="grantees page-section">
+  <div class="container">
+
+    <h4>grantees</h4>
+
+    {% set grantees = craft.entries.section('grantees').all() %}
+    <ul>
+    {% for grantee in grantees %}
+      <li>
+        {{ grantee.title }} {{ grantee.granteeInfo.city }}, {{ grantee.granteeInfo.state }}
+      </li>
+    {% endfor %}
+    </ul>
+
+  </div>
+</div>
