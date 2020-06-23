@@ -8,6 +8,15 @@ body.page-about {
       background: color(pink);
     }
   }
+
+  // Footer outro
+  .footer-outro {
+    background: color(coolgray);
+    color: color(darkgray);
+    h3.divot {
+      color: color(pink);
+    }
+  }
 }
 
 // History + Values
@@ -97,11 +106,91 @@ body.page-about {
   }
 }
 
+// Our Team
+
 .our-team {
   background: color(darkgray);
   color: color(lightgray);
+  @include smooth;
+  h3.divot {
+    margin-bottom: grid(4);
+  }
   h3.name,
   h4 {
     color: color(yellow);
   }
+  h4.divider {
+    margin: grid(2) 0;
+    padding-bottom: grid(2);
+    border-bottom: 1px solid color(coolgray);
+  }
+
+  // Staff
+  .person {
+    p {
+      @include p2;
+    }
+    .bio {
+      margin-top: grid(2);
+    }
+    margin-bottom: grid(3);
+    &::after {
+      content: '';
+      display: block;
+      width: 15px;
+      border-top: 1px solid color(yellow);
+      height: 1px;
+      margin: grid(3) 0;
+    }
+    &.-thanks {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  // Our Committee
+  .committee {
+    margin-top: grid(6);
+    @include p2;
+    a {
+      @include inline-link(span);
+      svg {
+        width: 12px;
+        height: 12px;
+        stroke: color(coolgray);
+        vertical-align: bottom;
+        margin: 0 0 1px 3px;
+      }
+    }
+  }
+
+  // Desktop styles
+  @include media-md {
+    h3.divot {
+      margin-bottom: grid(8);
+    }
+    .people {
+      columns: 2;
+      column-gap: $global-padding;
+      .person {
+        break-inside: avoid;
+        margin-bottom: grid(6);
+        // Remove mobile divider
+        &::after {
+          display: none;
+        }
+        // Add divider above bio
+        .bio::before {
+          content: '';
+          display: block;
+          width: 15px;
+          border-top: 1px solid color(yellow);
+          height: 1px;
+          margin: grid(3) 0;
+        }
+      }
+    }
+  }
+
 }
+
