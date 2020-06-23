@@ -2,7 +2,7 @@
 
 %button,
 .button {
-  @include h4;
+  @include h4-mobile;
   font-size: 12px;
   display: inline-block;
   text-align: left;
@@ -38,7 +38,7 @@
   }
 
   @include media-md {
+    @include h4;
     padding: grid(2) grid(3);
-    font-size: 21px;
   }
 }

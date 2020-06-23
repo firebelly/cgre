@@ -19,13 +19,26 @@ body.page-home {
   // Page blocks
   .page-blocks {
     background: color(lightgray);
+    div.divot {
+      background: color(pink);
+    }
+    @include media-md {
+      padding-top: grid(12);
+    }
   }
 
   // Footer outro overrides
   .footer-outro {
+    h2.h1 {
+      margin-bottom: grid(4);
+    }
+    padding-bottom: grid(12);
     .stats {
       dt {
         color: color(darkgray);
+      }
+      .figure {
+        margin-bottom: grid(3);
       }
     }
     p.cta {
@@ -48,11 +61,15 @@ body.page-home {
       }
     }
     .footer-outro {
+      padding-bottom: grid(3);
       h2.h1 {
         margin-bottom: grid(10);
       }
       .header-wrap {
         width: columns(3);
+      }
+      .figure {
+        margin: 0;
       }
     }
   }
@@ -119,13 +136,12 @@ body.page-home {
     .lines.-two {
       display: block;
       width: 70px;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: grid(-12);
+      left: 0;
+      bottom: grid(-16);
     }
 
     .image-wrap {
-      margin-bottom: grid(6);
+      margin: 0 columns(-1) grid(10) columns(-1);
     }
     .staggered-image:nth-child(1) {
       width: columns(7);
@@ -133,7 +149,7 @@ body.page-home {
     .staggered-image:nth-child(2) {
       right: 0;
       width: columns(4);
-      bottom: grid(-20);
+      bottom: grid(-14);
     }
 
     .header-wrap {
@@ -142,18 +158,13 @@ body.page-home {
 
     .body-wrap {
       float: right;
-      width: columns(4);
+      width: calc(#{columns(4)} - #{$gutter});
       margin-top: 0;
     }
 
     p.cta {
-      width: columns(4);
+      width: calc(#{columns(4)} - #{$gutter});
       float: right;
-      margin-top: grid(3);
-      // a {
-      //   border-color: color(white);
-      //   color: color(white);
-      // }
     }
 
   }
@@ -167,8 +178,12 @@ body.page-home {
   @include clearfix;
   .header-wrap {
     div.divot {
+      margin: grid(3) 0 grid(4);
       background: color(pink);
     }
+  }
+  .lines {
+    display: none;
   }
   .body-wrap {
     ol {
@@ -176,7 +191,7 @@ body.page-home {
       counter-reset: rotundog;
       li {
         counter-increment: rotundog;
-        margin: 0 0 grid(4);
+        margin: grid(4) 0 ;
         &::before {
           content: "0" counter(rotundog);
           @include h4-mobile;
@@ -185,10 +200,11 @@ body.page-home {
           margin: 0 0 grid(1);
         }
         h4 {
+          @include h4-mobile;
           margin: 0 0 grid(1);
         }
         p {
-          @include p3;
+          @include p4;
         }
       }
     }
@@ -196,6 +212,13 @@ body.page-home {
 
   // Desktop styles
   @include media-md {
+    .lines {
+      display: block;
+      width: 100vw;
+      left: 50%;
+      transform: translate(-50vw, grid(8));
+      border-color: color(pink);
+    }
     .header-wrap {
       width: columns(4);
       margin-right: columns(2);
@@ -209,6 +232,19 @@ body.page-home {
       width: columns(3);
       float: left;
       padding-top: grid(16);
+      ol {
+        li {
+          + li {
+            margin-top: grid(4);
+          }
+          h4 {
+            @include h4;
+          }
+          p {
+            @include p3;
+          }
+        }
+      }
     }
   }
 }

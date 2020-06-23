@@ -11,18 +11,23 @@
   }
 
   // Large headers
+  .user-content h2,
   h2.h1 {
     @include h1;
     margin: grid(1) 0 grid(2);
-
-    @include media-md {
-      margin: grid(5) 0 grid(5);
-    }
   }
   p {
     @include p3;
+  }
 
-    @include media-md {
+  // Desktop styles
+  @include media-md {
+    padding: grid(10) 0;
+    .user-content h2,
+    h2.h1 {
+      margin: grid(5) 0 grid(5);
+    }
+    p {
       @include p1;
     }
   }
@@ -33,6 +38,11 @@ p.cta {
   a {
     @extend %button;
   }
+  margin-top: grid(3);
+
+  @include media-md {
+    margin-top: grid(5);
+  }
 }
 
 // Big ol' stats
@@ -40,7 +50,7 @@ p.cta {
   .figure {
     dt {
       @include stat;
-      margin: 0 0 grid(2);
+      margin: 0;
       .qualifier {
         .sprite {
           width: 20px;
@@ -49,17 +59,11 @@ p.cta {
         }
       }
       .percent {
-        font-family: $font-sans-serif;
-        font-weight: normal;
-        font-size: 30px;
-        line-height: 30px;
+        font: normal 30px/30px $font-sans-serif;
       }
     }
-
     dd {
-      font-size: 22px;
-      line-height: 30px;
-      letter-spacing: -0.02em;
+      @include p2;
     }
   }
 
@@ -70,9 +74,13 @@ p.cta {
       flex: 0 1 columns(3);
       padding-right: $global-padding;
       dt {
+        margin: 0 0 grid(2);
         .percent {
           font-size: 42px;
         }
+      }
+      dd {
+        @include p1;
       }
     }
   }
@@ -82,8 +90,8 @@ p.cta {
 
 div.divot {
   display: block;
-  width: 46px;
-  height: 4px;
+  width: 50px;
+  height: 5px;
   background: #fff;
   margin: 0px 0 20px;
 }

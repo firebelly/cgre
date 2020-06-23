@@ -5,17 +5,53 @@
   background: color(pink);
   color: color(white);
   padding: grid(4) 0;
+  .lines {
+    &.-one {
+      display: none;
+    }
+    &.-two {
+      width: 30px;
+      bottom: grid(-12);
+      right: $mobile-global-padding;
+      i {
+        border-color: color(white);
+      }
+    }
+  }
+
 
   // Desktop styles
   @include media-md {
     padding: grid(4) 0 grid(8);
+    .lines {
+      display: block;
+      width: 70px;
+      &.-one {
+        right: 50%;
+        transform: translate(50vw, grid(2));
+        i {
+          border-color: color(white);
+        }
+      }
+      &.-two {
+        width: 80px;
+        left: columns(8);
+        bottom: grid(-7);
+        i {
+          border-color: color(darkgray);
+        }
+      }
+    }
+    .wrap {
+      padding-bottom: grid(6);
+      margin-bottom: grid(6);
+    }
     .header-wrap {
       width: columns(5);
     }
     p.cta {
       width: columns(4);
       float: right;
-      margin-top: grid(3);
     }
   }
 }
