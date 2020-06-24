@@ -4,7 +4,7 @@
   '%': '<span class="percent">%</span>'
 } %}
 {% if entry.footerOutro.subhead or entry.footerOutro.headline or entry.footerOutro.body %}
-  <div class="footer-outro page-section">
+  <div class="footer-outro page-section{{ entry.footerOutro.stats|length ? ' -has-stats' : '' }}">
     <div class="container">
 
       <div class="lines -one" aria-hidden="true">
@@ -42,11 +42,11 @@
           <p class="cta">
             <a href="{{ entry.footerOutro.cta[0].url }}">{{ entry.footerOutro.cta[0].text }}</a>
           </p>
-        {% endif %}
 
-        <div class="lines -two" aria-hidden="true">
-          {%- for i in 1..3 %}<i></i>{% endfor -%}
-        </div>
+          <div class="lines -two" aria-hidden="true">
+            {%- for i in 1..3 %}<i></i>{% endfor -%}
+          </div>
+        {% endif %}
 
       </div>
 
