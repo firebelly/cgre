@@ -10,6 +10,10 @@
     z-index: z(image-front);
   }
 
+  .image-wrap {
+    position: relative;
+  }
+
   // Large headers
   .user-content h2,
   h2.h1 {
@@ -50,13 +54,14 @@ p.cta {
     margin-top: grid(5);
   }
 }
-
 // Big ol' stats
 .stats {
   .figure {
+    margin-bottom: grid(3);
     dt {
+      color: color(darkgray);
       @include stat;
-      margin: 0;
+      margin: 0 0 5px;
       .qualifier {
         .sprite {
           width: 20px;

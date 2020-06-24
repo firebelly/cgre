@@ -1,4 +1,4 @@
-<div class="page-section">
+<div class="page-section focus-areas">
   <div class="container">
     <div class="focus-areas-header">
       <div class="header-wrap">
@@ -6,7 +6,7 @@
           {%- for i in 1..3 %}<i></i>{% endfor -%}
         </div>
         <h3 class="divot">Focus Areas</h3>
-        <h2>{{ entry.focusAreasHeadline }}</h2>
+        <h2 class="h1">{{ entry.focusAreasHeadline }}</h2>
       </div>
     </div>
 
@@ -27,7 +27,7 @@
                   <source media="(max-width: 750px)" srcset="{{ treatedImage.getUrl() }}">
                 {% endif %}
               {% endif %}
-              {% set treatedImage = craft.imager.transformImage(images[0], { mode: 'crop', width: 960, height: 920, }) %}
+              {% set treatedImage = craft.imager.transformImage(images[0], { mode: 'crop', width: 760, height: 1100, }) %}
               {% if treatedImage %}
                 <img src="{{ treatedImage.getUrl() }}" alt="{{ images[0].title }}">
               {% endif %}

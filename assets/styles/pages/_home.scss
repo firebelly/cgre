@@ -5,6 +5,12 @@ body.page-home {
   &:not(.nav-stuck) .header {
     height: grid(10);
   }
+  &.nav-stuck {
+    #top {
+      // Offset for header height when nav is fixed
+      margin-top: grid(10);
+    }
+  }
   // Homepage gets different logo
   .header {
     .hamburger svg {
@@ -52,9 +58,6 @@ body.page-home {
 
   // Footer outro overrides
   .footer-outro {
-    h2.h1 {
-      margin-bottom: grid(4);
-    }
     padding-bottom: grid(12);
     .stats {
       dt {
@@ -81,16 +84,6 @@ body.page-home {
     .block-text {
       &.-halfWidth {
         clear: left;
-      }
-    }
-    .footer-outro {
-      padding-bottom: grid(3);
-      .header-wrap {
-        width: columns(3);
-        margin-bottom: grid(6);
-      }
-      .figure {
-        margin: 0;
       }
     }
   }
