@@ -6,7 +6,7 @@
     flex-wrap: wrap;
   }
   [class^="block-"] + [class^="block-"] {
-    padding-top: grid(4);
+    padding-top: grid(2);
     @include media-md {
       padding-top: grid(8);
     }
