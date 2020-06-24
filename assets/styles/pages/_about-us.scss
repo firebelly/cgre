@@ -17,30 +17,6 @@ body.page-about {
 
   // Mobile-only styles
   @include max-screen($breakpoint-md) {
-    // Pull out image header bg
-    .history-values,
-    .image-header {
-      .container:first-child {
-        margin: grid(-2) grid(-2) 50vw grid(-2);
-        .wrap {
-          padding: grid(2) grid(2) 40vw;
-        }
-      }
-      .image-wrap {
-        width: calc(100vw - #{grid(6)});
-        position: absolute;
-        top: calc(100% - 35vw);
-      }
-    }
-
-    .image-header {
-      .lines.-two {
-        width: 30px;
-        position: absolute;
-        top: 100%;
-        right: 0;
-      }
-    }
     .history-values {
       .lines.-two {
         margin-top: grid(4);
@@ -104,6 +80,24 @@ body.page-about {
     }
   }
 
+  // Mobile-only styles
+  @include max-screen($breakpoint-md) {
+    // Pull out image header bg
+    .container:first-child {
+      margin: grid(-2) grid(-2) 50vw grid(-2);
+      .wrap {
+        padding: grid(2) grid(2) 40vw;
+      }
+    }
+    .image-wrap {
+      width: calc(100vw - #{grid(6)});
+      position: absolute;
+      top: calc(100% - 35vw);
+    }
+  }
+
+
+  // Opposite layout of .image-header
   .wrap {
     background: color(darkgray);
     color: color(lightgray);

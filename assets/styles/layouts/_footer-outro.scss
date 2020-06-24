@@ -5,24 +5,29 @@
   background: color(pink);
   color: color(white);
   padding: grid(4) 0;
+  .wrap {
+    @include clearfix;
+  }
   .lines {
     &.-one {
       display: none;
     }
     &.-two {
       width: 30px;
-      bottom: grid(-12);
+      top: calc(100% + #{grid(3)});
       right: $mobile-global-padding;
       i {
         border-color: color(white);
       }
     }
   }
-
+  .header-wrap {
+    margin-bottom: grid(4);
+  }
 
   // Desktop styles
   @include media-md {
-    padding: grid(4) 0 grid(8);
+    // padding: grid(4) 0 grid(8);
     .lines {
       display: block;
       width: 70px;
@@ -36,18 +41,35 @@
       &.-two {
         width: 80px;
         left: columns(8);
-        bottom: grid(-7);
+        bottom: grid(-4);
         i {
           border-color: color(darkgray);
         }
       }
     }
-    .wrap {
-      padding-bottom: grid(6);
-      margin-bottom: grid(6);
+
+    // Make room for lines at bottom of stat-outros
+    &.-has-stats {
+      .wrap {
+        padding-bottom: grid(6);
+        margin-bottom: grid(6);
+      }
+      .lines.-one {
+        display: block;
+      }
+      padding-bottom: grid(3);
+      .header-wrap {
+        width: columns(3);
+        margin-bottom: grid(6);
+      }
+      .figure {
+        margin: 0;
+      }
     }
+
     .header-wrap {
       width: columns(5);
+      margin-bottom: grid(4);
     }
     p.cta {
       width: columns(4);

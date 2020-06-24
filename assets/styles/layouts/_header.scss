@@ -95,7 +95,8 @@
 // Nav is stuck
 body.nav-stuck {
   #top {
-    margin-top: 45px;
+    // Offset for header height when nav is fixed
+    margin-top: grid(15);
   }
 
   .header {
@@ -116,7 +117,7 @@ body.nav-stuck {
     @include drop-shadow;
 
     .hamburger {
-      top: 0;
+      top: 12px;
     }
     .logo {
       top: 5px;

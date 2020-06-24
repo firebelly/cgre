@@ -12,6 +12,31 @@
       }
     }
   }
+
+  // Mobile-only styles
+  @include max-screen($breakpoint-md) {
+    // Pull out image header bg
+    .container:first-child {
+      // Make room at bottom for pos:abs image + lines
+      margin: grid(-2) grid(-2) calc(50vw + #{grid(5)}) grid(-2);
+      .wrap {
+        padding: grid(2) grid(2) 40vw;
+      }
+    }
+    .image-wrap {
+      width: calc(100vw - #{grid(6)});
+      position: absolute;
+      top: calc(100% - 35vw);
+    }
+
+    .lines.-two {
+      width: 30px;
+      position: absolute;
+      top: calc(100% + 20px);
+      right: 0;
+    }
+  }
+
   .wrap {
     background: color(darkgray);
     color: color(lightgray);
