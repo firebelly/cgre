@@ -9,6 +9,9 @@ body.page-home {
     #top {
       // Offset for header height when nav is fixed
       margin-top: grid(10);
+      @include media-nav {
+        margin-top: 52px;
+      }
     }
   }
   // Homepage gets different logo
