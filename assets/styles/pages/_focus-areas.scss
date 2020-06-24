@@ -1,14 +1,22 @@
 // Focus Areas
 
 body.page-focus-areas {
-  @include page-colors(darkgray, white);
+  @include page-colors(darkgray, white, yellow);
   color: color(lightgray);
-
+  .header .logo svg {
+    fill: color(yellow);
+  }
   h3 {
     color: color(yellow);
   }
   p {
     @extend %smooth;
+  }
+
+  .header {
+    .hamburger svg {
+      fill: color(yellow);
+    }
   }
 
   .focus-areas-header {

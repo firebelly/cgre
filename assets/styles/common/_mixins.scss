@@ -7,7 +7,7 @@
   transition-timing-function: $transition-easing;
 }
 
-@mixin page-colors($background, $text) {
+@mixin page-colors($background, $text, $accent) {
   background: color($background);
   // color: color(lightgray);
   .nav-main a span::after {
@@ -18,8 +18,11 @@
   .nav-main a.-active {
     &::after,
     &::before {
-      background: color($text);
+      background: color($accent);
     }
+  }
+  .header .logo svg {
+    fill: color($accent);
   }
   &.nav-stuck .header {
     background: color($background);

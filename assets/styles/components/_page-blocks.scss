@@ -5,6 +5,12 @@
     display: flex;
     flex-wrap: wrap;
   }
+  [class^="block-"] + [class^="block-"] {
+    padding-top: grid(4);
+    @include media-md {
+      padding-top: grid(8);
+    }
+  }
 }
 
 // Full width/half width areas
@@ -51,7 +57,7 @@
 // Text block grids
 .block-text-grid {
   @include media-md {
-    padding: grid(10) 0;
+    // padding: grid(10) 0;
     margin-left: columns(2);
     p {
       @include p3;

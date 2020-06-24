@@ -16,16 +16,22 @@
     @include h1;
     margin: grid(1) 0 grid(2);
   }
+  h4 {
+    @include h4-mobile;
+  }
   p {
     @include p3;
   }
 
   // Desktop styles
   @include media-md {
-    padding: grid(10) 0;
+    // padding: grid(10) 0;
     .user-content h2,
     h2.h1 {
       margin: grid(5) 0 grid(5);
+    }
+    h4 {
+      @include h4;
     }
     p {
       @include p1;

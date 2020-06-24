@@ -8,28 +8,36 @@
 <div class="header">
   <div class="container">
     <button class="toggle-nav hamburger">
-        <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="30" height="3" fill="#FC4F60"/>
-            <rect y="7.5" width="30" height="3" fill="#FC4F60"/>
-            <rect y="15" width="15" height="3" fill="#FC4F60"/>
-        </svg>
+      <svg viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="30" height="3"/>
+        <rect y="7.5" width="30" height="3" />
+        <rect y="15" width="15" height="3" />
+      </svg>
     </button>
     <nav class="nav-main" aria-live="polite">
-        <button class="close-nav">
-            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="38.4997" height="3.85008" transform="matrix(0.70865 -0.705561 0.703041 0.71115 0.720703 28.0933)" fill="#FC4F60"/>
-                <rect width="38.5003" height="3.85003" transform="matrix(-0.705851 -0.708361 0.705851 -0.708361 27.8857 30.8306)" fill="#FC4F60"/>
-            </svg>
-        </button>
-        <ul>
-          {% for navItem in navItems %}
-            <li class="nav-{{ navItem.slug }}"><a{{ entry is defined and entry.slug == navItem.slug or craft.app.request.getSegment(1) == navItem.slug ? ' class="-active"'|raw : '' }} href="/{{ navItem.slug }}"><span data-title="{{ navItem.name }}">{{ navItem.name }}</span></a></li>
-          {% endfor %}
-        </ul>
+      <button class="close-nav">
+        <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="38.4997" height="3.85008" transform="matrix(0.70865 -0.705561 0.703041 0.71115 0.720703 28.0933)" />
+          <rect width="38.5003" height="3.85003" transform="matrix(-0.705851 -0.708361 0.705851 -0.708361 27.8857 30.8306)" />
+        </svg>
+      </button>
+      <ul>
+        {% for navItem in navItems %}
+          <li class="nav-{{ navItem.slug }}"><a{{ entry is defined and entry.slug == navItem.slug or craft.app.request.getSegment(1) == navItem.slug ? ' class="-active"'|raw : '' }} href="/{{ navItem.slug }}"><span data-title="{{ navItem.name }}">{{ navItem.name }}</span></a></li>
+        {% endfor %}
+      </ul>
     </nav>
     <a class="logo" href="/">
-        <img class="logo-full" src="/assets/dist/images/cgre-logo.svg" alt="CGRE logo">
-        <img class="logo-small" src="/assets/dist/images/cgre-logo-small.svg" alt="CGRE logo small" aria-hidden="true">
+      <span class="logo-full">
+        {% if craft.app.request.getUrl() == '/' %}
+          {% include 'partials/_cgre-logo' %}
+        {% else %}
+          {% include 'partials/_cgre-logo-right-aligned' %}
+        {% endif %}
+      </span>
+      <span class="logo-small" aria-hidden="true">
+        {% include 'partials/_cgre-logo-small' %}
+      </span>
     </a>
   </div>
 </div>

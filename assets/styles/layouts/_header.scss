@@ -4,7 +4,7 @@
   .container {
     z-index: z(header);
   }
-  height: grid(10);
+  height: grid(15);
 
   // Desktop styles
   @include media-nav {
@@ -13,7 +13,7 @@
 
   button {
     top: 30px;
-    left: 23px;
+    left: 30px;
     width: 45px;
     height: 45px;
     position: absolute;
@@ -26,24 +26,52 @@
     }
   }
 
+  .close-nav {
+    width: 31px;
+    height: 31px;
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: color(pink);
+    }
+  }
+  .hamburger {
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: color(darkgray);
+    }
+    width: 30px;
+    height: 18px;
+  }
+
   .logo {
     position: absolute;
     top: 25px;
     right: grid(3);
-    width: 205px;
-    height: 59px;
-    img {
+    width: 140px;
+    height: 83px;
+    span {
       display: block;
       position: absolute;
       top: 0;
       right: 0;
     }
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: color(darkgray);
+    }
 
     @include media-nav {
       top: 0;
       right: 0;
-      width: 354px;
-      height: 103px;
+      width: 204px;
+      height: 122px;
+    }
+
+    @include media-lg {
+      right: columns(-1);
     }
   }
 
@@ -54,6 +82,8 @@
   }
   .logo-small {
     opacity: 0;
+    width: 80px;
+    height: 32px;
 
     @include media-nav {
       @include transition(all);

@@ -1,7 +1,7 @@
 // Contact
 
 .page-contact {
-  @include page-colors(lavender, plum);
+  @include page-colors(lavender, plum, plum);
 
   // Lines along right edge on mobile
   .lines.-one {
@@ -13,6 +13,10 @@
     i:nth-child(n+4) {
       display: none;
     }
+  }
+
+  .header .logo svg {
+    fill: color(darkgray);
   }
 
   .form-wrap {
@@ -102,6 +106,10 @@
           color: color(coolgray);
         }
       }
+    }
+    .wrap {
+      margin: 0;
+      padding: 0;
     }
   }
 

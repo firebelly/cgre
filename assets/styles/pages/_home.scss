@@ -1,6 +1,26 @@
 // Homepage
 
 body.page-home {
+  // Homepage gets different logo
+  .header {
+    height: grid(10);
+    .hamburger svg {
+      fill: color(pink);
+    }
+    .logo {
+      width: 205px;
+      height: 59px;
+      svg {
+        fill: color(pink);
+      }
+
+      @include media-nav {
+        width: 354px;
+        height: 103px;
+      }
+    }
+  }
+
   .wrap {
     @include clearfix;
   }

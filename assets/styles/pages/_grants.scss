@@ -1,7 +1,7 @@
 // Grants
 
 body.page-grants {
-  @include page-colors(yellow, white);
+  @include page-colors(yellow, white, white);
 
   .page-blocks {
     background: color(yellow);
@@ -12,6 +12,11 @@ body.page-grants {
     h3 {
       color: color(darkgray);
     }
+  }
+
+  // Logo color
+  .header .logo svg {
+    fill: color(darkgray);
   }
 
   // Grantees

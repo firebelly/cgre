@@ -2,10 +2,6 @@
   {% set image = image.one() %}
   {% set embeddedAsset = craft.embeddedAssets.get(image) %}
 
-  {% if tapeTag is defined and tapeTag != '' %}
-    {% include 'partials/blocks/_tapeTag' with { tagline: tapeTag } %}
-  {% endif %}
-
   {% if embeddedAsset %}
     <div class="embedded-asset">
       {{ embeddedAsset.html }}
@@ -21,17 +17,7 @@
 
     {% if treatedImage %}
       <figure class="image -reveal{% if caption is defined and caption != '' %} -has-caption{% endif %}">
-        {% if tapeTag is not defined or tapeTag == '' %}
-          <svg class="icon sprite-slash" aria-hidden="true"><use xlink:href="#sprite-slash"/></svg>
-        {% endif %}
-        {% if image.filename matches '/(gif|png|svg)$/' or treated %}
-          <img src="{{ treatedImage.getUrl() }}" alt="{{ image.title }}">
-        {% else %}
-          <div class="color-massage">
-            <div class="hands"></div>
-            <img src="{{ treatedImage.getUrl() }}" alt="{{ image.title }}">
-          </div>
-        {% endif %}
+        <img src="{{ treatedImage.getUrl() }}" alt="{{ image.title }}">
         {% if caption is defined and caption != '' %}
           {% if caption %}
             <figcaption>{{ caption }}</figcaption>
