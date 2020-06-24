@@ -1,6 +1,7 @@
 // Page headers
 
 .image-header {
+  @include clearfix;
   h3.divot {
     color: color(pink);
   }
@@ -37,10 +38,10 @@
         }
       }
       .lines.-two {
-        width: columns(1);
+        width: 80px;
         position: absolute;
         top: calc(100% + #{grid(3)});
-        right: columns(-2);
+        left: columns(3);
       }
     }
   }

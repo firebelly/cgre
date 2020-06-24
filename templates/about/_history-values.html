@@ -40,26 +40,29 @@
         </div>
       </div>
     </div><!-- /.wrap -->
-
-  {% if entry.historyValues.logos|length %}
-    <div class="logos">
-      <ul>
-      {% for logo in entry.historyValues.logos %}
-        <li><img src="{{ logo.getUrl() }}" alt="{{ logo.title }}"></li>
-      {% endfor %}
-      </ul>
-    </div>
-  {% endif %}
-
-  {% if entry.historyValues.outro %}
-    <div class="outro">
-      {{ entry.historyValues.outro }}
-    </div>
-  {% endif %}
-
-  <div class="lines -two" aria-hidden="true">
-    {%- for i in 1..3 %}<i></i>{% endfor -%}
   </div>
+
+  <div class="container">
+
+    {% if entry.historyValues.logos|length %}
+      <div class="logos">
+        <ul>
+        {% for logo in entry.historyValues.logos %}
+          <li><img src="{{ logo.getUrl() }}" alt="{{ logo.title }}"></li>
+        {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    {% if entry.historyValues.outro %}
+      <div class="outro">
+        {{ entry.historyValues.outro }}
+      </div>
+    {% endif %}
+
+    <div class="lines -two" aria-hidden="true">
+      {%- for i in 1..3 %}<i></i>{% endfor -%}
+    </div>
 
   </div>
 </div>

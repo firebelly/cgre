@@ -15,9 +15,12 @@ body.page-about {
     fill: color(darkgray);
   }
 
+  // Mobile-only styles
   @include max-screen($breakpoint-md) {
+    // Pull out image header bg
+    .history-values,
     .image-header {
-      .container {
+      .container:first-child {
         margin: grid(-2) grid(-2) 50vw grid(-2);
         .wrap {
           padding: grid(2) grid(2) 40vw;
@@ -27,6 +30,21 @@ body.page-about {
         width: calc(100vw - #{grid(6)});
         position: absolute;
         top: calc(100% - 35vw);
+      }
+    }
+
+    .image-header {
+      .lines.-two {
+        width: 30px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+      }
+    }
+    .history-values {
+      .lines.-two {
+        margin-top: grid(4);
+        width: 30px;
       }
     }
   }
@@ -43,12 +61,14 @@ body.page-about {
 
 // History + Values
 .history-values.page-section {
+  @include clearfix;
   h3.divot {
     color: color(pink);
   }
 
   // Logos block
   .logos {
+    padding: grid(2) 0;
     ul {
       margin: 0 -20px;
       display: flex;
@@ -56,7 +76,7 @@ body.page-about {
       justify-content: center;
       li {
         flex: 0 1 50%;
-        padding: 0 20px;
+        padding: 10px 20px;
       }
     }
     @include media-md {
@@ -173,7 +193,7 @@ body.page-about {
   // Our Committee
   .committee {
     margin-top: grid(6);
-    @include p2;
+    @include p4;
     ul {
       columns: 225px 2;
       column-gap: $gutter;
@@ -183,12 +203,14 @@ body.page-about {
     }
     a {
       @include inline-link(span);
+      display: inline-block;
+      padding: 5px 0;
       svg {
         width: 12px;
         height: 12px;
         stroke: color(coolgray);
         vertical-align: bottom;
-        margin: 0 0 1px 3px;
+        margin: 0 0 2px 3px;
       }
     }
 

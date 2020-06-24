@@ -1,9 +1,12 @@
 // Homepage
 
 body.page-home {
+  // Non-nav-stuck header is different height on homepage
+  &:not(.nav-stuck) .header {
+    height: grid(10);
+  }
   // Homepage gets different logo
   .header {
-    height: grid(10);
     .hamburger svg {
       fill: color(pink);
     }
@@ -82,11 +85,9 @@ body.page-home {
     }
     .footer-outro {
       padding-bottom: grid(3);
-      h2.h1 {
-        margin-bottom: grid(10);
-      }
       .header-wrap {
         width: columns(3);
+        margin-bottom: grid(6);
       }
       .figure {
         margin: 0;
