@@ -19,19 +19,35 @@ body.page-focus-areas {
     }
   }
 
+  // Spacious header
+  .text-header {
+    margin-top: grid(5);
+    @include media-md {
+      margin-top: grid(14);
+    }
+  }
+
+  // Make room for lines on desktop
+  .page-section.focus-areas {
+    @include media-md {
+      padding-bottom: grid(25);
+    }
+  }
+
+  // Intro headers to Focus Areas
   .focus-areas-header {
     .header-wrap {
       margin-top: grid(-2);
       .lines {
         width: 30px;
         position: relative;
+        margin-bottom: grid(3);
       }
     }
 
     @include media-md {
-      padding-bottom: grid(25);
       .header-wrap {
-        width: columns(4);
+        width: columns(5);
         margin-top: 0;
         .lines {
           display: none;
@@ -40,6 +56,7 @@ body.page-focus-areas {
     }
   }
 
+  // Focus areas
   .focus-area {
     @include clearfix;
     h2 {
