@@ -108,18 +108,23 @@ $font-sans-serif-alt: 'Central Avenue', serif;
 }
 @mixin h3 {
   @include font-header;
+  @include smooth;
   font-family: $font-sans-serif-alt;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.02em;
   font-size: 18px;
   line-height: 20px;
+}
+@mixin h3-mobile {
+  @include font-header;
   @include smooth;
-
-  @include media-md {
-    font-size: 18px;
-    line-height: 20px;
-  }
+  font-family: $font-sans-serif-alt;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+  line-height: 20px;
 }
 @mixin h4 {
   @include font-header;

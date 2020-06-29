@@ -3,14 +3,29 @@
 
     <h4>organizations currently funded</h4>
 
-    {% set grantees = craft.entries.section('grantees').all() %}
-    <ul>
-    {% for grantee in grantees %}
-      <li>
-        {{ grantee.title }} {{ grantee.granteeInfo.city }}, {{ grantee.granteeInfo.state }}
-      </li>
-    {% endfor %}
-    </ul>
+    {% set grantees = craft.entries.section('grantees').organizationType('state').all() %}
+    {% if grantees|length %}
+      <h3>State-based Partners</h3>
+      <ul class="grantees -state">
+      {% for grantee in grantees %}
+        <li>
+          {{ grantee.title }}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% set grantees = craft.entries.section('grantees').organizationType('national').all() %}
+    {% if grantees|length %}
+      <h3>National-based Partners</h3>
+      <ul class="grantees -state">
+      {% for grantee in grantees %}
+        <li>
+          {{ grantee.title }}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
 
   </div>
 </div>

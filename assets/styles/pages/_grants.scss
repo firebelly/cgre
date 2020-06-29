@@ -53,13 +53,26 @@ body.page-grants {
   .grantees {
     padding-top: grid(1);
     h4 {
-      padding: grid(2) 0 grid(4);
+      padding: grid(2) 0;
       border-top: 1px solid color(darkgray);
+    }
+    h3 {
+      @include h3-mobile;
+      color: color(darkgray);
     }
     ul {
       @include p3;
+      margin: 0;
       li {
-        margin: 5px 0;
+        margin: 0;
+        padding: grid(1) 0;
+        + li {
+          border-top: 1px solid color(yellow);
+        }
+      }
+      // Space between state/national lists
+      + h3 {
+        margin-top: grid(4);
       }
     }
     a {
@@ -77,12 +90,26 @@ body.page-grants {
 
     // Desktop styles
     @include media-md {
-      padding-top: grid(6);
       h4 {
         padding: grid(2) 0 grid(6);
       }
+      h3 {
+        @include h3;
+      }
       ul {
-        columns: 3;
+        margin: grid(2) 0;
+        columns: 2;
+        li {
+          + li {
+            border-top: none;
+          }
+          border-bottom: 1px solid color(yellow);
+          padding: grid(2) 0;
+        }
+        // Space between state/national lists
+        + h3 {
+          margin-top: grid(10);
+        }
       }
     }
   }
