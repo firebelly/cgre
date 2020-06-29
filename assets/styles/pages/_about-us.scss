@@ -37,6 +37,14 @@ body.page-about {
           flex-flow: row nowrap;
           border-top: 1px solid color(darkgray);
           border-bottom: 1px solid color(darkgray);
+          @include transition(all);
+          &:hover {
+            background: color(darkgray);
+            color: color(coolgray);
+            svg {
+              stroke: color(coolgray);
+            }
+          }
           span {
             padding: 10px;
             flex: 1;
@@ -47,6 +55,7 @@ body.page-about {
           }
         }
         svg {
+          @include transition(stroke);
           width: 13px;
           height: 13px;
           stroke: color(darkgray);
