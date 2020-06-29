@@ -38,6 +38,25 @@
         </div>
         {% endif %}
 
+        {% if positions is defined and positions|length %}
+        <div class="positions">
+          <h4>available positions</h4>
+          <ul>
+            {% for position in positions.all() %}
+              <li>
+                <a rel="noopener" target="_blank" href="{{ position.positionUrl }}">
+                  <span class="title">{{ position.positionTitle }}</span>
+                  <span class="details">{{ position.details }}</span>
+                  <span class="icon">
+                    <svg class="sprite sprite-external-link-clean" aria-hidden="true"><use xlink:href="#sprite-external-link-clean"/></svg>
+                  </span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
         {% if entry.footerOutro.cta|length and entry.footerOutro.cta[0].url and entry.footerOutro.cta[0].text %}
           <p class="cta">
             <a href="{{ entry.footerOutro.cta[0].url }}">{{ entry.footerOutro.cta[0].text }}</a>

@@ -16,7 +16,7 @@
 
   {% include 'about/_our-team' %}
 
-  {% include 'partials/_footer-outro' %}
+  {% include 'partials/_footer-outro' with { positions: entry.positions } %}
 
   {% endcache %}
 {% endblock content %}

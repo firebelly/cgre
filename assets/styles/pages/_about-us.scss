@@ -25,6 +25,51 @@ body.page-about {
     }
   }
 
+  // Positions
+  .positions {
+    margin: grid(4) 0;
+    ul {
+      margin: grid(2) 0 0;
+      li {
+        a {
+          @include p3;
+          display: flex;
+          flex-flow: row nowrap;
+          border-top: 1px solid color(darkgray);
+          border-bottom: 1px solid color(darkgray);
+          span {
+            padding: 10px;
+            flex: 1;
+            &.icon {
+              flex: 0 1 20px;
+              align-self: center;
+            }
+          }
+        }
+        svg {
+          width: 13px;
+          height: 13px;
+          stroke: color(darkgray);
+          vertical-align: middle;
+        }
+        + li a {
+          border-top: none;
+        }
+      }
+    }
+
+    @include media-md {
+      margin: grid(8) 0;
+      ul {
+        li {
+          a {
+            padding: grid(1) 0;
+          }
+        }
+      }
+    }
+  }
+
   // Footer outro
   .footer-outro {
     background: color(coolgray);
@@ -143,7 +188,6 @@ body.page-about {
 }
 
 // Our Team
-
 .our-team {
   background: color(darkgray);
   color: color(lightgray);
