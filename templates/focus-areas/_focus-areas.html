@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    {% for focusArea in entry.focusAreas %}
+    {% for focusArea in entry.focusAreas.all() %}
       <div class="focus-area -number-{{ loop.index }}">
         <div class="image-wrap">
           <div class="lines -one -yellow -large show-for-medium-up" aria-hidden="true">

@@ -47,7 +47,7 @@
     {% if entry.historyValues.logos|length %}
       <div class="logos">
         <ul>
-        {% for logo in entry.historyValues.logos %}
+        {% for logo in entry.historyValues.logos.all() %}
           <li><img src="{{ logo.getUrl() }}" alt="{{ logo.title }}"></li>
         {% endfor %}
         </ul>
