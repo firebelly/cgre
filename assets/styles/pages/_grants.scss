@@ -32,6 +32,7 @@ body.page-grants {
     }
   }
 
+  // Image header
   .image-header {
     .wrap {
       background: color(coolgray);
@@ -65,7 +66,7 @@ body.page-grants {
       margin: 0;
       li {
         margin: 0;
-        padding: grid(1) 0;
+        padding: grid(1);
         + li {
           border-top: 1px solid color(yellow);
         }
@@ -104,7 +105,7 @@ body.page-grants {
             border-top: none;
           }
           border-bottom: 1px solid color(yellow);
-          padding: grid(2) 0;
+          padding: grid(2) grid(1);
         }
         // Space between state/national lists
         + h3 {
