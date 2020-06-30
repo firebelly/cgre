@@ -13,7 +13,7 @@
 
       <div class="wrap">
 
-        <div class="header-wrap">
+        <div class="header-wrap -reveal">
           {% if entry.footerOutro.subhead %}
             <h3 class="divot">{{ entry.footerOutro.subhead }}</h3>
           {% endif %}
@@ -30,7 +30,7 @@
         {% if entry.footerOutro.stats|length %}
         <div class="stats">
           {% for stat in entry.footerOutro.stats %}
-            <dl class="figure">
+            <dl class="figure -reveal -delay{{ loop.index }}">
               <dt{{ stat.figure|length > 8 ? ' class="-verbose"' : '' }}>{{ stat.figure|escape|replace(substitutions)|raw }}</dt>
               <dd>{{ stat.label }}</dd>
             </dl>
@@ -57,10 +57,18 @@
         </div>
         {% endif %}
 
+
         {% if entry.footerOutro.cta|length and entry.footerOutro.cta[0].url and entry.footerOutro.cta[0].text %}
-          <p class="cta">
-            <a href="{{ entry.footerOutro.cta[0].url }}">{{ entry.footerOutro.cta[0].text }}</a>
-          </p>
+          <div class="cta-wrap">
+            {% if entry.footerOutro.ctaIntro %}
+              <p class="cta-intro">
+                {{ entry.footerOutro.ctaIntro }}
+              </p>
+            {% endif %}
+            <p class="cta">
+              <a href="{{ entry.footerOutro.cta[0].url }}">{{ entry.footerOutro.cta[0].text }}</a>
+            </p>
+          </div>
 
           <div class="lines -two" aria-hidden="true">
             {%- for i in 1..3 %}<i></i>{% endfor -%}
