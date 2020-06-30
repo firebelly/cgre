@@ -13,7 +13,7 @@
   h2 {
     font-weight: bold;
     letter-spacing: 0;
-    + p {
+    + p:not(.cta) {
       margin-top: grid(1);
       @include media-md {
         margin-top: grid(2);

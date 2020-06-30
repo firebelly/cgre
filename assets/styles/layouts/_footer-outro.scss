@@ -24,10 +24,13 @@
   .header-wrap {
     margin-bottom: grid(4);
   }
+  &.-has-stats {
+    padding-bottom: grid(12);
+  }
 
   // Desktop styles
   @include media-md {
-    // padding: grid(4) 0 grid(8);
+    padding: grid(8);
     .lines {
       display: block;
       width: 70px;
@@ -40,19 +43,16 @@
       }
       &.-two {
         width: 80px;
+        top: calc(100% + #{grid(4)});
+        right: auto;
         left: columns(8);
-        bottom: grid(-4);
-        i {
-          border-color: color(darkgray);
-        }
       }
     }
 
     // Make room for lines at bottom of stat-outros
     &.-has-stats {
       .wrap {
-        padding-bottom: grid(6);
-        margin-bottom: grid(6);
+        margin-bottom: grid(12);
       }
       .lines.-one {
         display: block;

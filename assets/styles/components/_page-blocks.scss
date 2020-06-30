@@ -8,7 +8,7 @@
   [class^="block-"] + [class^="block-"] {
     padding-top: grid(2);
     @include media-md {
-      padding-top: grid(8);
+      padding-top: grid(4);
     }
   }
 }
@@ -28,7 +28,12 @@
     h2 {
       @include h1;
     }
-    &.fullWidth {
+    &.-accent {
+      h2 {
+        margin: grid(4) 0 0;
+      }
+    }
+    &.-fullWidth {
       h2 {
         padding-right: columns(1);
       }
@@ -36,19 +41,18 @@
         width: columns(4);
       }
     }
-    &.halfWidthOnTheRight {
+    &.-halfWidthOnTheRight {
       > .-inner {
         width: columns(4);
         float: right;
       }
     }
-    &.halfWidthOnTheLeft {
+    &.-halfWidthOnTheLeft {
       > .-inner {
         padding-right: calc(#{columns(5)} + #{$global-padding});
       }
     }
-    &.halfWidth {
-      // clear: none;
+    &.-halfWidth {
       flex: 0 1 50%;
     }
   }

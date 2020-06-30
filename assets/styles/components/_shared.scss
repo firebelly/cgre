@@ -29,7 +29,7 @@
 
   // Desktop styles
   @include media-md {
-    .user-content h2,
+    padding: grid(8) 0;
     h2.h1 {
       margin: grid(5) 0 grid(5);
     }

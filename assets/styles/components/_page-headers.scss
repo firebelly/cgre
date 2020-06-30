@@ -8,7 +8,7 @@
   .user-content {
     ul li {
       &::before {
-        background: url('/assets/dist/images/bullet-lightgray.svg');
+        background: url('/assets/dist/images/bullet.svg');
       }
     }
   }
@@ -46,6 +46,9 @@
       width: columns(8);
       margin: grid(8) columns(-1);
       padding: grid(5) columns(2) grid(6) columns(1);
+      h2.h1 {
+        margin: 50px 0;
+      }
       .image-wrap {
         img {
           display: block;

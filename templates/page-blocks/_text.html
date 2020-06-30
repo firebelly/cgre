@@ -1,4 +1,4 @@
-<div class="block-text user-content {{ block.width }} -reveal">
+<div class="block-text user-content -reveal -{{ block.width }}{{ block.accent ? ' -accent' : '' }}">
   <div class="-inner">
   	{% if block.accent %}<div class="divot"></div>{% endif %}
     {{ block.body }}

@@ -30,6 +30,7 @@ body.page-focus-areas {
   // Make room for lines on desktop
   .page-section.focus-areas {
     @include media-md {
+      padding-top: grid(7);
       padding-bottom: grid(25);
     }
   }
