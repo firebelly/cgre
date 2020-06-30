@@ -1,4 +1,4 @@
-dateModified: 1593555625
+dateModified: 1593556005
 email:
   fromEmail: nate@firebellydesign.com
   fromName: CGRE
@@ -970,6 +970,22 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.1
+    settings:
+      confirmationSubject: 'CGRE Contact'
+      confirmationTemplate: contact/contact-email.html
+      enableConfirmationEmail: '1'
+      enableDatabase: '1'
+      enableTemplateOverwrite: '1'
+      notificationTemplate: contact/contact-email-shop.html
+      recaptcha: '1'
+      recaptchaDataBadge: bottomright
+      recaptchaDebug: ''
+      recaptchaHideBadge: '1'
+      recaptchaSecretKey: $RECAPTCHA_SECRET_KEY
+      recaptchaSiteKey: $RECAPTCHA_SITE_KEY
+      recaptchaThreshold: '0.5'
+      recaptchaTimeout: '5'
+      recaptchaVersion: '3'
   contact-form-honeypot:
     edition: standard
     enabled: true
