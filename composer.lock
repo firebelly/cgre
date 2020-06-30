@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "06b2e278e7b77d43bca248cdf137495b",
+    "content-hash": "6e53c308e922b2d3e48d91eec46c6d1e",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -200,99 +200,6 @@
                 "sdk"
             ],
             "time": "2020-06-12T18:16:31+00:00"
-        },
-        {
-            "name": "cakephp/core",
-            "version": "3.9.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/core/zipball/76b9450dc68c81f93bca7827cfbb42a53a5f7737",
-                "reference": "76b9450dc68c81f93bca7827cfbb42a53a5f7737",
-                "shasum": ""
-            },
-            "require": {
-                "cakephp/utility": "^3.6.0",
-                "php": ">=5.6.0"
-            },
-            "suggest": {
-                "cakephp/cache": "To use Configure::store() and restore().",
-                "cakephp/event": "To use PluginApplicationInterface or plugin applications."
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Cake\\Core\\": "."
-                },
-                "files": [
-                    "functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "CakePHP Community",
-                    "homepage": "https://github.com/cakephp/core/graphs/contributors"
-                }
-            ],
-            "description": "CakePHP Framework Core classes",
-            "homepage": "https://cakephp.org",
-            "keywords": [
-                "cakephp",
-                "core",
-                "framework"
-            ],
-            "time": "2020-06-16T00:54:28+00:00"
-        },
-        {
-            "name": "cakephp/utility",
-            "version": "3.9.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/utility/zipball/27d9c7409ad89272e2483e3196aabc47385d3db6",
-                "reference": "27d9c7409ad89272e2483e3196aabc47385d3db6",
-                "shasum": ""
-            },
-            "require": {
-                "cakephp/core": "^3.6.0",
-                "php": ">=5.6.0"
-            },
-            "suggest": {
-                "ext-intl": "To use Text::transliterate() or Text::slug()",
-                "lib-ICU": "To use Text::transliterate() or Text::slug()"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Cake\\Utility\\": "."
-                },
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "CakePHP Community",
-                    "homepage": "https://github.com/cakephp/utility/graphs/contributors"
-                }
-            ],
-            "description": "CakePHP Utility classes such as Inflector, String, Hash, and Security",
-            "homepage": "https://cakephp.org",
-            "keywords": [
-                "cakephp",
-                "hash",
-                "inflector",
-                "security",
-                "string",
-                "utility"
-            ],
-            "time": "2020-06-14T02:01:05+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -801,62 +708,6 @@
                 "yii2"
             ],
             "time": "2017-12-05T00:55:45+00:00"
-        },
-        {
-            "name": "craftcms/feed-me",
-            "version": "4.2.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/feed-me/zipball/3871dfadaac0619c99f825d63dba5a7f1485100b",
-                "reference": "3871dfadaac0619c99f825d63dba5a7f1485100b",
-                "shasum": ""
-            },
-            "require": {
-                "cakephp/utility": "^3.3.12",
-                "craftcms/cms": "^3.4.0",
-                "jakeasmith/http_build_url": "^1.0",
-                "league/csv": "^8.2 || ^9.0",
-                "nesbot/carbon": "^1.22 || ^2.10",
-                "ralouphie/mimey": "^1.0",
-                "seld/jsonlint": "^1.7"
-            },
-            "require-dev": {
-                "codeception/codeception": "~2.3.3"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Feed Me",
-                "handle": "feed-me",
-                "documentationUrl": "https://docs.craftcms.com/feed-me/v4/"
-            },
-            "autoload": {
-                "psr-4": {
-                    "craft\\feedme\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Pixel & Tonic",
-                    "homepage": "https://pixelandtonic.com/"
-                },
-                {
-                    "name": "Verbb",
-                    "homepage": "https://verbb.io"
-                }
-            ],
-            "description": "Import content from XML, RSS, CSV or JSON feeds into entries, categories, Craft Commerce products, and more.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "feed me"
-            ],
-            "time": "2020-05-12T19:20:49+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -2446,34 +2297,6 @@
             "time": "2019-09-09T11:59:51+00:00"
         },
         {
-            "name": "jakeasmith/http_build_url",
-            "version": "1.0.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jakeasmith/http_build_url/zipball/93c273e77cb1edead0cf8bcf8cd2003428e74e37",
-                "reference": "93c273e77cb1edead0cf8bcf8cd2003428e74e37",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/http_build_url.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jake A. Smith",
-                    "email": "theman@jakeasmith.com"
-                }
-            ],
-            "description": "Provides functionality for http_build_url() to environments without pecl_http.",
-            "time": "2017-05-01T15:36:40+00:00"
-        },
-        {
             "name": "justinrainbow/json-schema",
             "version": "5.2.10",
             "dist": {
@@ -2851,58 +2674,6 @@
                 "zf"
             ],
             "time": "2020-05-20T16:45:56+00:00"
-        },
-        {
-            "name": "league/csv",
-            "version": "8.2.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/csv/zipball/d2aab1e7bde802582c3879acf03d92716577c76d",
-                "reference": "d2aab1e7bde802582c3879acf03d92716577c76d",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^1.9",
-                "phpunit/phpunit": "^4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "8.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Csv\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ignace Nyamagana Butera",
-                    "email": "nyamsprod@gmail.com",
-                    "homepage": "https://github.com/nyamsprod/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Csv data manipulation made easy in PHP",
-            "homepage": "http://csv.thephpleague.com",
-            "keywords": [
-                "csv",
-                "export",
-                "filter",
-                "import",
-                "read",
-                "write"
-            ],
-            "time": "2018-02-06T08:27:03+00:00"
         },
         {
             "name": "league/flysystem",
@@ -4353,41 +4124,6 @@
             ],
             "description": "A polyfill for getallheaders.",
             "time": "2019-03-08T08:55:37+00:00"
-        },
-        {
-            "name": "ralouphie/mimey",
-            "version": "1.0.8",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ralouphie/mimey/zipball/d69688d4856daa13a9124c819d148ccc2235dea2",
-                "reference": "d69688d4856daa13a9124c819d148ccc2235dea2",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3|^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7.0",
-                "satooshi/php-coveralls": ">=1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Mimey\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ralph Khattar",
-                    "email": "ralph.khattar@gmail.com"
-                }
-            ],
-            "description": "PHP package for converting file extensions to MIME types and vice versa.",
-            "time": "2017-01-27T20:57:22+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -7075,7 +6811,216 @@
             "time": "2018-09-23T22:00:47+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "cakephp/core",
+            "version": "3.9.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/core/zipball/76b9450dc68c81f93bca7827cfbb42a53a5f7737",
+                "reference": "76b9450dc68c81f93bca7827cfbb42a53a5f7737",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/utility": "^3.6.0",
+                "php": ">=5.6.0"
+            },
+            "suggest": {
+                "cakephp/cache": "To use Configure::store() and restore().",
+                "cakephp/event": "To use PluginApplicationInterface or plugin applications."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cake\\Core\\": "."
+                },
+                "files": [
+                    "functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/core/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP Framework Core classes",
+            "homepage": "https://cakephp.org",
+            "keywords": [
+                "cakephp",
+                "core",
+                "framework"
+            ],
+            "time": "2020-06-16T00:54:28+00:00"
+        },
+        {
+            "name": "cakephp/utility",
+            "version": "3.9.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/utility/zipball/27d9c7409ad89272e2483e3196aabc47385d3db6",
+                "reference": "27d9c7409ad89272e2483e3196aabc47385d3db6",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/core": "^3.6.0",
+                "php": ">=5.6.0"
+            },
+            "suggest": {
+                "ext-intl": "To use Text::transliterate() or Text::slug()",
+                "lib-ICU": "To use Text::transliterate() or Text::slug()"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cake\\Utility\\": "."
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/utility/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP Utility classes such as Inflector, String, Hash, and Security",
+            "homepage": "https://cakephp.org",
+            "keywords": [
+                "cakephp",
+                "hash",
+                "inflector",
+                "security",
+                "string",
+                "utility"
+            ],
+            "time": "2020-06-14T02:01:05+00:00"
+        },
+        {
+            "name": "jakeasmith/http_build_url",
+            "version": "1.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jakeasmith/http_build_url/zipball/93c273e77cb1edead0cf8bcf8cd2003428e74e37",
+                "reference": "93c273e77cb1edead0cf8bcf8cd2003428e74e37",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/http_build_url.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jake A. Smith",
+                    "email": "theman@jakeasmith.com"
+                }
+            ],
+            "description": "Provides functionality for http_build_url() to environments without pecl_http.",
+            "time": "2017-05-01T15:36:40+00:00"
+        },
+        {
+            "name": "league/csv",
+            "version": "8.2.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/d2aab1e7bde802582c3879acf03d92716577c76d",
+                "reference": "d2aab1e7bde802582c3879acf03d92716577c76d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.9",
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Csv\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://github.com/nyamsprod/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Csv data manipulation made easy in PHP",
+            "homepage": "http://csv.thephpleague.com",
+            "keywords": [
+                "csv",
+                "export",
+                "filter",
+                "import",
+                "read",
+                "write"
+            ],
+            "time": "2018-02-06T08:27:03+00:00"
+        },
+        {
+            "name": "ralouphie/mimey",
+            "version": "1.0.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ralouphie/mimey/zipball/d69688d4856daa13a9124c819d148ccc2235dea2",
+                "reference": "d69688d4856daa13a9124c819d148ccc2235dea2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3|^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7.0",
+                "satooshi/php-coveralls": ">=1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mimey\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
+                }
+            ],
+            "description": "PHP package for converting file extensions to MIME types and vice versa.",
+            "time": "2017-01-27T20:57:22+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],

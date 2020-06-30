@@ -5,7 +5,6 @@
     "craftcms/cms": "3.4.25",
     "craftcms/contact-form": "2.2.7",
     "craftcms/contact-form-honeypot": "^1.0",
-    "craftcms/feed-me": "^4.2",
     "craftcms/redactor": "2.6.1",
     "drewm/mailchimp-api": "^2.5",
     "hybridinteractive/craft-contact-form-extensions": "1.2.1",
