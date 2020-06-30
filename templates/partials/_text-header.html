@@ -4,7 +4,11 @@
 
     <div class="wrap -reveal">
       <div class="header-wrap">
-        <h3 class="divot">{{ entry.pageHeader.subhead }}</h3>
+        {% if entry.pageHeader.subhead %}
+          <h3 class="divot">{{ entry.pageHeader.subhead }}</h3>
+        {% else %}
+          <div class="divot"></div>
+        {% endif %}
         <h2 class="h1">{{ entry.pageHeader.headline }}</h2>
       </div>
 

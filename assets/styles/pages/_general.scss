@@ -1,0 +1,54 @@
+// General pages (/privacy, /solidarity, etc)
+
+.general-page {
+  div.divot {
+    background: color(pink);
+  }
+  // Keep text readable with ~70-80 chars per line
+  .page-blocks .-inner {
+    max-width: 675px;
+  }
+
+  // Disable reveals
+  .-reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  // Space out header
+  .text-header {
+    padding-top: grid(4);
+    div.divot {
+      margin-bottom: grid(4);
+    }
+  }
+
+  // Desktop styles
+  @include media-md {
+    .text-header {
+      div.divot {
+        margin-bottom: grid(6);
+      }
+    }
+    .user-content {
+      ol,
+      ul,
+      p {
+        @include p3;
+        strong {
+          letter-spacing: 0;
+        }
+      }
+      h2 {
+        @include h2;
+        font-weight: bold;
+        margin-top: grid(4);
+        letter-spacing: -0.02em;
+      }
+    }
+    .text-header {
+      padding-top: grid(10);
+    }
+  }
+
+}

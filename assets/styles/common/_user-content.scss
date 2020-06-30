@@ -41,9 +41,9 @@
     @include p2;
     padding: 0 0 0 3em;
     li {
-      margin: 0 0 grid(0.5);
+      margin: 0 0 0.5em;
       > ul {
-        margin-top: grid(0.5);
+        margin-top: 0.5em;
       }
     }
   }

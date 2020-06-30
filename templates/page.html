@@ -1,7 +1,7 @@
 {% extends (craft.app.request.isAjax and not craft.app.request.isLivePreview) ? 'layouts/_ajax-layout' : 'layouts/_layout' %}
 
 {% set title = entry.title %}
-{% set bodyClass = 'common-page' %}
+{% set bodyClass = 'general-page' %}
 {% if entry.seoTitle %}{% set seoTitle = entry.seoTitle %}{% endif %}
 {% if entry.seoDescription %}{% set seoDescription = entry.seoDescription %}{% endif %}
 {% if entry.shareImage|length %}{% set shareImage = entry.shareImage.one() %}{% endif %}
@@ -12,6 +12,8 @@
   {% include 'partials/_text-header' %}
 
   {% include 'partials/_page-blocks' %}
+
+  {% include 'partials/_footer-outro' %}
 
   {% endcache %}
 {% endblock %}
