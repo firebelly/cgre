@@ -8,7 +8,8 @@
   text-align: left;
   line-height: 1.4;
   margin: 0;
-  padding: grid(1.5) grid(1);
+  // Make space for -> icon
+  padding: grid(1.5) grid(12) grid(1.5) grid(1);
   position: relative;
   width: 100%;
   border: 1px solid color(darkgray);
@@ -39,6 +40,6 @@
 
   @include media-md {
     @include h4;
-    padding: grid(2) grid(3);
+    padding: grid(2) grid(10) grid(2) grid(3);
   }
 }
