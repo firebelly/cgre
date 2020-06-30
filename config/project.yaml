@@ -1,8 +1,18 @@
-dateModified: 1593555393
+dateModified: 1593555625
 email:
   fromEmail: nate@firebellydesign.com
   fromName: CGRE
-  transportType: craft\mail\transportadapters\Sendmail
+  replyToEmail: null
+  template: null
+  transportSettings:
+    encryptionMethod: ssl
+    host: $SMTP_HOST
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
+    timeout: '10'
+    useAuthentication: '1'
+    username: $SMTP_USER
+  transportType: craft\mail\transportadapters\Smtp
 fieldGroups:
   26de5c26-6c4a-4835-91a0-1713cf2be6c9:
     name: Globals
