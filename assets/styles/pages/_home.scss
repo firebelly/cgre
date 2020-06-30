@@ -154,7 +154,7 @@ body.page-home {
       display: block;
       width: 70px;
       left: 0;
-      bottom: grid(-16);
+      top: calc(100% + #{grid(5)});
     }
 
     .image-wrap {
@@ -166,7 +166,7 @@ body.page-home {
     .staggered-image:nth-child(2) {
       right: 0;
       width: columns(4);
-      bottom: grid(-14);
+      bottom: -125px;
     }
 
     .header-wrap {
