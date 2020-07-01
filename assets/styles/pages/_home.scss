@@ -13,6 +13,12 @@ body.page-home {
         margin-top: 52px;
       }
     }
+    @include media-nav {
+      .header .logo {
+        width: 80px;
+        height: 23px;
+      }
+    }
   }
   // Homepage gets different logo
   .header {

@@ -58,8 +58,6 @@ const common = {
     if (!appState.navOpen) {
       return;
     }
-    $('.site-nav li.open').removeClass('open');
-    // resetNav();
     document.body.classList.remove('nav-open');
     enableBodyScroll($siteNav[0]);
     $html.css('overflow', '');

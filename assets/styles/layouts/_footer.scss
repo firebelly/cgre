@@ -34,7 +34,7 @@ footer {
     border-bottom: 1px solid transparent;
     &:focus,
     &:hover {
-      outline: none;
+      // outline: none;
       border-bottom: 1px solid color(red);
     }
   }
@@ -52,7 +52,7 @@ footer {
       }
       &:focus,
       &:hover {
-        outline: none;
+        // outline: none;
         svg {
           fill: color(red);
         }
