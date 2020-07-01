@@ -160,6 +160,9 @@ body.nav-stuck {
 
 // Nav is open for hambusiness
 body.nav-open {
+  #adminbar {
+    display: none;
+  }
   .hamburger {
     opacity: 0;
   }
