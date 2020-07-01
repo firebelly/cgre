@@ -3,6 +3,11 @@
 .page-contact {
   @include page-colors(lavender, plum, plum);
 
+  // Plum!
+  .page-header {
+    color: color(plum);
+  }
+
   // Lines along right edge on mobile
   .lines.-one {
     top: grid(3);
@@ -26,7 +31,7 @@
     .notices {
       border: none;
       background: none;
-      color: color(darkgray);
+      color: color(plum);
       padding: 0;
       &::before {
         content: '';

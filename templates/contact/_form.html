@@ -10,7 +10,7 @@
 
 {% from _self import errorList %}
 
-<div class="contact-form -reveal -delay">
+<div class="contact-form-wrap -reveal -delay">
   <div class="container">
 
     <div class="form-wrap">
@@ -77,7 +77,7 @@
 
           {{ craft.contactFormExtensions.recaptcha | raw }}
 
-          <button class="button -white -small hollow">Submit <svg class="sprite sprite-arrow" aria-hidden="true"><use xlink:href="#sprite-arrow"/></svg></button>
+          <button type="submit" class="button -white -small hollow">Submit <svg class="sprite sprite-arrow" aria-hidden="true"><use xlink:href="#sprite-arrow"/></svg></button>
           <p class="recaptcha-note" style="font-size: 10px; color: #666; margin-top: 30px;">
             This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/terms">Terms of Service</a> apply.
           </p>

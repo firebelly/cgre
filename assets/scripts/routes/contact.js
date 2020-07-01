@@ -7,10 +7,16 @@ const contact = {
     // JavaScript to be fired on the contact page
 
     // Contact submit button changes text on hover
-    document.querySelector('#contact button[type=submit]').addEventListener('mouseover', e => {
+    document.querySelector('.contact-form-wrap button[type=submit]').addEventListener('mouseover', e => {
       e.target.textContent = 'Let’s Go';
     });
-    document.querySelector('#contact button[type=submit]').addEventListener('mouseout', e => {
+    document.querySelector('.contact-form-wrap button[type=submit]').addEventListener('focus', e => {
+      e.target.textContent = 'Let’s Go';
+    });
+    document.querySelector('.contact-form-wrap button[type=submit]').addEventListener('mouseout', e => {
+      e.target.textContent = 'Submit';
+    });
+    document.querySelector('.contact-form-wrap button[type=submit]').addEventListener('blur', e => {
       e.target.textContent = 'Submit';
     });
 
@@ -22,8 +28,8 @@ const contact = {
 
     // AJAXify contact form submission
     let form = $('#contact-form');
-    let formResponse = document.querySelector('#contact .form-response');
-    let formWrap = document.querySelector('#contact .form-wrap');
+    let formResponse = document.querySelector('.contact-form-wrap .form-response');
+    let formWrap = document.querySelector('.contact-form-wrap .form-wrap');
     form.submit(function(e) {
       e.preventDefault();
       $.ajax({
@@ -32,6 +38,7 @@ const contact = {
         dataType: 'html',
         data: form.serialize(),
         success: (result) => {
+          console.log(result);
           formResponse.innerHTML = result;
           if (result.match('success')) {
             formWrap.classList.add('-success');

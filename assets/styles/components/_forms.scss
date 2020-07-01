@@ -8,6 +8,7 @@ form {
     display: block;
     padding: 0 $global-padding 0 0;
     margin: 0;
+    color: color(plum);
 
     @include media-md {
       font-size: 21px;
@@ -57,7 +58,7 @@ form {
     font-size: 16px;
     line-height: 20px;
     background: none;
-    border: 1px solid color(darkgray);
+    border: 1px solid color(plum);
     border-radius: 0;
     padding: 5px 10px;
     width: 100%;
@@ -65,9 +66,10 @@ form {
 
     &:focus {
       outline: 0;
+      border-color: color(white);
     }
     &::placeholder {
-      color: rgba(color(darkgray), 0.3);
+      color: rgba(color(plum), 0.3);
     }
 
     @include media-md {
@@ -144,11 +146,11 @@ form {
     @include p1;
     font-size: 16px;
     background: none;
-    border: 1px solid color(darkgray);
+    border: 1px solid color(plum);
     padding: 5px 10px;
     display: block;
     width: 100%;
-    color: color(darkgray);
+    color: color(plum);
     border-radius: 0;
     cursor: pointer;
     outline: 0;
@@ -168,6 +170,7 @@ form {
 
   // Focus
   select:focus {
+    border-color: color(white);
     // box-shadow: 0 0 0 .075rem $gray, 0 0 0 .2rem $black;
   }
 

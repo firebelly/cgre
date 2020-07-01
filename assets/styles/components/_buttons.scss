@@ -21,11 +21,14 @@
   @include transition(background);
   background: transparent url('/assets/dist/images/arrow.svg') 83% 50% no-repeat;
 
+  &:focus,
   &:hover {
     background: color(pink) url('/assets/dist/images/arrow-white.svg') 95% 50% no-repeat;
     background-size: 53px 16px !important;
     color: color(white);
     text-decoration: none;
+    outline: none;
+    border: 1px solid color(white);
   }
   &:active {
     box-shadow: 0 0 0 rgba(0,0,0,0.25);
