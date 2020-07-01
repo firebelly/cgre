@@ -19,14 +19,6 @@ body.page-focus-areas {
     }
   }
 
-  // Spacious header
-  .text-header {
-    margin-top: grid(5);
-    @include media-md {
-      margin-top: grid(14);
-    }
-  }
-
   // Make room for lines on desktop
   .page-section.focus-areas {
     @include media-md {
