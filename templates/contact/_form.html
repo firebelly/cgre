@@ -72,8 +72,8 @@
           <input name="botsLoveTheHoney" type="text">
           <input type="hidden" name="action" value="contact-form/send">
           <input type="hidden" name="toEmail" value="{{ entry.contactFormOptions.toEmail ? entry.contactFormOptions.toEmail|hash : craft.app.getModule('contact-form').getSettings().toEmail|hash }}">
-          <input type="hidden" name="subject" value="Firebelly Contact Submission" data-original-value="Firebelly Contact Submission">
-          <input type="hidden" name="message[formName]" value="Firebelly Contact">
+          <input type="hidden" name="subject" value="CGRE Contact Submission" data-original-value="CGRE Contact Submission">
+          <input type="hidden" name="message[formName]" value="CGRE Contact">
 
           {{ craft.contactFormExtensions.recaptcha | raw }}
 
