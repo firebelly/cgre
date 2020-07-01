@@ -2,7 +2,7 @@
 
 .general-page {
   div.divot {
-    background: color(pink);
+    background: color(red);
   }
   // Keep text readable with ~70-80 chars per line
   .page-blocks .-inner {
@@ -17,7 +17,6 @@
 
   // Space out header
   .text-header {
-    padding-top: grid(4);
     div.divot {
       margin-bottom: grid(4);
     }
@@ -45,9 +44,6 @@
         margin-top: grid(4);
         letter-spacing: -0.02em;
       }
-    }
-    .text-header {
-      padding-top: grid(10);
     }
   }
 

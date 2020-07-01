@@ -2,7 +2,7 @@
 
 footer {
   @include clearfix;
-  background: color(darkgray);
+  background: color(teal);
   color: color(lightgray);
   padding: grid(4) 0 grid(8);
 
@@ -32,8 +32,10 @@ footer {
     @include transition(all);
     padding-bottom: 3px;
     border-bottom: 1px solid transparent;
+    &:focus,
     &:hover {
-      border-bottom: 1px solid color(pink);
+      outline: none;
+      border-bottom: 1px solid color(red);
     }
   }
 
@@ -48,10 +50,11 @@ footer {
         width: 10px;
         fill: color(lightgray);
       }
-
+      &:focus,
       &:hover {
+        outline: none;
         svg {
-          fill: color(pink);
+          fill: color(red);
         }
       }
     }
@@ -81,7 +84,7 @@ footer {
       display: block;
       width: 46px;
       height: 4px;
-      background: color(pink);
+      background: color(red);
       margin: grid(8) 0 grid(4);
     }
     .logo-stacked {

@@ -17,13 +17,13 @@ body.page-home {
   // Homepage gets different logo
   .header {
     .hamburger svg {
-      fill: color(pink);
+      fill: color(red);
     }
     .logo {
       width: 205px;
       height: 59px;
       svg {
-        fill: color(pink);
+        fill: color(red);
       }
 
       @include media-nav {
@@ -52,7 +52,7 @@ body.page-home {
   .page-blocks {
     background: color(lightgray);
     div.divot {
-      background: color(pink);
+      background: color(red);
     }
     @include media-md {
       padding-top: grid(12);
@@ -63,7 +63,7 @@ body.page-home {
   .footer-outro {
     .stats {
       dt {
-        color: color(darkgray);
+        color: color(teal);
       }
       .figure {
         margin-bottom: grid(3);
@@ -75,7 +75,7 @@ body.page-home {
         color: color(white);
         background: transparent url('/assets/dist/images/arrow-white.svg') 83% 50% no-repeat;
         &:hover {
-          background: color(darkgray) url('/assets/dist/images/arrow-white.svg') 95% 50% no-repeat;
+          background: color(teal) url('/assets/dist/images/arrow-white.svg') 95% 50% no-repeat;
         }
       }
     }
@@ -90,7 +90,7 @@ body.page-home {
     }
     .footer-outro {
       .lines.-two i {
-        border-color: color(darkgray);
+        border-color: color(teal);
       }
     }
   }
@@ -102,7 +102,7 @@ body.page-home {
   padding-bottom: grid(5);
 
   h3 {
-    color: color(pink);
+    color: color(red);
   }
   .image-wrap {
     margin-bottom: grid(3);
@@ -194,13 +194,13 @@ body.page-home {
 
 // Focus areas intro block only on homepage
 .focus-areas-intro {
-  background: color(darkgray);
+  background: color(teal);
   color: color(lightgray);
   @include clearfix;
   .header-wrap {
     div.divot {
       margin: grid(3) 0 grid(4);
-      background: color(pink);
+      background: color(red);
     }
   }
   .lines {
@@ -216,7 +216,7 @@ body.page-home {
         &::before {
           content: "0" counter(rotundog);
           @include h4-mobile;
-          color: color(pink);
+          color: color(red);
           display: block;
           margin: 0 0 grid(1);
         }
@@ -238,7 +238,7 @@ body.page-home {
       width: 100vw;
       left: 50%;
       transform: translate(-50vw, grid(8));
-      border-color: color(pink);
+      border-color: color(red);
     }
     .header-wrap {
       width: columns(4);

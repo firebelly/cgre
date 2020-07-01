@@ -12,9 +12,9 @@
   padding: grid(1.5) grid(12) grid(1.5) grid(1);
   position: relative;
   width: 100%;
-  border: 1px solid color(darkgray);
+  border: 1px solid color(teal);
   background: transparent;
-  color: color(darkgray);
+  color: color(teal);
   align-items: center;
   text-decoration: none;
   line-height: 1;
@@ -23,7 +23,7 @@
 
   &:focus,
   &:hover {
-    background: color(pink) url('/assets/dist/images/arrow-white.svg') 95% 50% no-repeat;
+    background: color(red) url('/assets/dist/images/arrow-white.svg') 95% 50% no-repeat;
     background-size: 53px 16px !important;
     color: color(white);
     text-decoration: none;

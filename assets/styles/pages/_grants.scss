@@ -10,13 +10,13 @@ body.page-grants {
     }
     &,
     h3 {
-      color: color(darkgray);
+      color: color(teal);
     }
   }
 
   // Logo color
   .header .logo svg {
-    fill: color(darkgray);
+    fill: color(teal);
   }
 
   // Grantees
@@ -36,12 +36,12 @@ body.page-grants {
   .image-header {
     .wrap {
       background: color(coolgray);
-      color: color(darkgray);
+      color: color(teal);
       h3.divot {
-        color: color(darkgray);
+        color: color(teal);
       }
       .lines i {
-        border-color: color(darkgray);
+        border-color: color(teal);
       }
     }
   }
@@ -55,11 +55,11 @@ body.page-grants {
     padding-top: grid(1);
     h4 {
       padding: grid(2) 0;
-      border-top: 1px solid color(darkgray);
+      border-top: 1px solid color(teal);
     }
     h3 {
       @include h3-mobile;
-      color: color(darkgray);
+      color: color(teal);
     }
     ul {
       @include p3;
@@ -84,7 +84,7 @@ body.page-grants {
         margin: 0 0 1px 5px;
         width: 12px;
         height: 12px;
-        stroke: color(darkgray);
+        stroke: color(teal);
         vertical-align: bottom;
       }
     }

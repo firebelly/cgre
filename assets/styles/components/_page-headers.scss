@@ -12,7 +12,7 @@
 .image-header {
   @include clearfix;
   h3.divot {
-    color: color(pink);
+    color: color(red);
   }
   .user-content {
     ul li {
@@ -47,7 +47,7 @@
   }
 
   .wrap {
-    background: color(darkgray);
+    background: color(teal);
     color: color(lightgray);
     position: relative;
 

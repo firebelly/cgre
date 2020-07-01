@@ -21,7 +21,7 @@
   }
 
   .header .logo svg {
-    fill: color(darkgray);
+    fill: color(teal);
   }
 
   .form-wrap {
@@ -47,7 +47,7 @@
         display: block;
         width: 46px;
         height: 4px;
-        background: color(pink);
+        background: color(red);
         margin: 0 0 grid(4);
       }
       p {

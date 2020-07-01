@@ -6,7 +6,7 @@ body.page-about {
   // Override divot color
   .page-blocks {
     div.divot {
-      background: color(pink);
+      background: color(red);
     }
   }
 
@@ -21,7 +21,7 @@ body.page-about {
 
   // Logo color
   .header .logo svg {
-    fill: color(darkgray);
+    fill: color(teal);
   }
 
   // Mobile-only styles
@@ -44,11 +44,13 @@ body.page-about {
           @include p3;
           display: flex;
           flex-flow: row nowrap;
-          border-top: 1px solid color(darkgray);
-          border-bottom: 1px solid color(darkgray);
+          border-top: 1px solid color(teal);
+          border-bottom: 1px solid color(teal);
           @include transition(all);
+          &:focus,
           &:hover {
-            background: color(darkgray);
+            outline: none;
+            background: color(teal);
             color: color(coolgray);
             svg {
               stroke: color(coolgray);
@@ -67,7 +69,7 @@ body.page-about {
           @include transition(stroke);
           width: 13px;
           height: 13px;
-          stroke: color(darkgray);
+          stroke: color(teal);
           vertical-align: middle;
         }
         + li a {
@@ -91,9 +93,9 @@ body.page-about {
   // Footer outro
   .footer-outro {
     background: color(coolgray);
-    color: color(darkgray);
+    color: color(teal);
     h3.divot {
-      color: color(pink);
+      color: color(red);
     }
   }
 }
@@ -102,7 +104,7 @@ body.page-about {
 .history-values.page-section {
   @include clearfix;
   h3.divot {
-    color: color(pink);
+    color: color(red);
   }
 
   // Logos block
@@ -162,7 +164,7 @@ body.page-about {
 
   // Opposite layout of .image-header
   .wrap {
-    background: color(darkgray);
+    background: color(teal);
     color: color(lightgray);
     position: relative;
 
@@ -207,7 +209,7 @@ body.page-about {
 
 // Our Team
 .our-team {
-  background: color(darkgray);
+  background: color(teal);
   color: color(lightgray);
   @include smooth;
   h3.divot {

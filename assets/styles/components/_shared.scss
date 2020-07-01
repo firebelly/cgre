@@ -60,7 +60,7 @@ p.cta {
   .figure {
     margin-bottom: grid(3);
     dt {
-      color: color(darkgray);
+      color: color(teal);
       @include stat;
       margin: 0 0 5px;
       .qualifier {
@@ -148,7 +148,7 @@ h3.divot {
   // Each <i> is a line
   i {
     display: block;
-    border-top: 1px solid color(pink);
+    border-top: 1px solid color(red);
     + i {
       margin-top: 29px;
     }

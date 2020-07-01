@@ -32,14 +32,14 @@
     svg {
       width: 100%;
       height: 100%;
-      fill: color(pink);
+      fill: color(red);
     }
   }
   .hamburger {
     svg {
       width: 100%;
       height: 100%;
-      fill: color(darkgray);
+      fill: color(teal);
     }
     width: 30px;
     height: 18px;
@@ -64,7 +64,13 @@
     svg {
       width: 100%;
       height: 100%;
-      fill: color(darkgray);
+      fill: color(teal);
+    }
+    &:focus {
+      outline: none;
+      svg {
+        fill: color(red);
+      }
     }
 
     @include media-nav {
@@ -194,7 +200,7 @@ body.nav-open {
     height: 100%;
     z-index: 1000;
     transform: translateX(-100%);
-    background: color(darkgray);
+    background: color(teal);
     padding: grid(3);
     margin: 0;
 
@@ -213,7 +219,7 @@ body.nav-open {
         left: 0;
         width: 60px;
         height: 5px;
-        background: color(pink);
+        background: color(red);
       }
     }
     ul {
@@ -260,7 +266,7 @@ body.nav-open {
         left: 50%;
         width: 20px;
         height: 0;
-        background: color(pink);
+        background: color(red);
         transform: translateX(-50%);
       }
       &:after {
@@ -287,6 +293,7 @@ body.nav-open {
       &:hover,
       &:focus,
       &.-active {
+        outline: none;
         span {
           &::after {
             letter-spacing: 0.25em;

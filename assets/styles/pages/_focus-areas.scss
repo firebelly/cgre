@@ -172,7 +172,7 @@ body.page-focus-areas {
     background: color(yellow);
     &,
     h3.divot {
-      color: color(darkgray);
+      color: color(teal);
     }
     .header-wrap {
       width: columns(5);
@@ -182,8 +182,8 @@ body.page-focus-areas {
     }
     p.cta {
       a {
-        border-color: color(darkgray);
-        color: color(darkgray);
+        border-color: color(teal);
+        color: color(teal);
         &:hover {
           color: color(white);
         }

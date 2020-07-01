@@ -101,7 +101,7 @@ form {
   .status {
     display: none;
     &.error {
-      color: color(pink);
+      color: color(red);
       margin: grid(2) 0 grid(4);
       display: block;
     }
