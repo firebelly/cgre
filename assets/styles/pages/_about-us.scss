@@ -1,7 +1,7 @@
 // About Us
 
 body.page-about {
-  @include page-colors(lightgray, darkgray, pink);
+  @include page-colors(lightgray, teal, pink);
 
   // Override divot color
   .page-blocks {
@@ -96,6 +96,15 @@ body.page-about {
     color: color(teal);
     h3.divot {
       color: color(red);
+    }
+    .lines.-one {
+      display: block;
+      i {
+        border-color: color(red);
+        &:nth-child(n+10) {
+          display: none;
+        }
+      }
     }
   }
 }

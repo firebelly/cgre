@@ -1,7 +1,7 @@
 // Focus Areas
 
 body.page-focus-areas {
-  @include page-colors(darkgray, white, yellow);
+  @include page-colors(teal, white, yellow);
   color: color(lightgray);
   .header .logo svg {
     fill: color(yellow);
