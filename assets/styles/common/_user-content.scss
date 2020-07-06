@@ -9,10 +9,20 @@
       margin-top: grid(2);
     }
   }
+  // Give headers more space
+  * + h2,
+  * + h3,
+  * + h4 {
+    margin-top: grid(3);
+    @include media-md {
+      margin-top: grid(5);
+    }
+  }
 
   h2 {
     font-weight: bold;
     letter-spacing: 0;
+    // First paragraph after h2
     + p:not(.cta) {
       margin-top: grid(1);
       @include media-md {
