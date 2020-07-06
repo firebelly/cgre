@@ -3,27 +3,16 @@
 .page-contact {
   @include page-colors(lavender, plum, plum);
 
-  // Plum!
+  // Plum it up
   .page-header {
     color: color(plum);
   }
-
-  // Lines along right edge on mobile
-  .lines.-one {
-    top: grid(3);
-    width: 30px;
-    position: absolute;
-    right: 50%;
-    transform: translate(50vw, grid(-6));
-    i:nth-child(n+4) {
-      display: none;
-    }
-  }
-
+  // Teal logo
   .header .logo svg {
     fill: color(teal);
   }
 
+  // Form wrapper
   .form-wrap {
     padding-top: grid(2);
     .button {
@@ -67,23 +56,27 @@
         }
       }
     }
+
     form {
       @include transition(max-height);
       width: 100%;
       overflow: hidden;
       max-height: 1500px;
     }
+    // Successfully submitted form
     &.-success {
       padding-top: 0;
       form {
         max-height: 0;
       }
     }
+    // Response text shown after submit
     .form-response {
       &.-active {
         display: block;
       }
     }
+    // Required note about captcha with links to privacy policy
     .captcha-note {
       font-size: 10px;
       margin-top: 30px;
@@ -92,16 +85,13 @@
         @include inline-link;
       }
     }
-
-    .lines {
-      display: none;
-    }
   }
 
   // Form buttons
   .actions {
     text-align: right;
   }
+  // Initial textarea height
   textarea {
     height: 150px;
   }
@@ -149,12 +139,16 @@
       }
     }
     // SVG along left edge
-    .lines.-one {
+    .lines {
+      display: block;
       width: 70px;
       position: absolute;
       left: 50%;
-      top: auto;
-      transform: translate(-50vw, grid(-6));
+      top: grid(6);
+      transform: translate(-50vw, 0);
+      i {
+        border-color: color(teal);
+      }
       i:nth-child(n+4) {
         display: block;
       }
@@ -165,27 +159,21 @@
         padding: 0 10px;
       }
     }
-
-    // Lines below form
+    // Adjust form layout for desktop
     .form-wrap {
       padding: grid(14) 0 grid(12) columns(2);
-      .lines {
-        display: block;
-        right: 0;
-        width: 180px;
-        position: absolute;
-        top: calc(100% - #{grid(8)});
-      }
     }
-
     .body-wrap {
       width: columns(3);
     }
+
+    // Taller textarea
     textarea {
       height: 220px;
     }
+
+    // Line up submit button with form fields
     .actions {
-      // Line up submit button with form fields
       .button {
         width: calc(50% - #{$gutter / 2});
       }
