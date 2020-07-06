@@ -44,13 +44,14 @@ body.page-about {
           @include p3;
           display: flex;
           flex-flow: row nowrap;
-          border-top: 1px solid color(teal);
-          border-bottom: 1px solid color(teal);
+          border-top: 1px solid color(red);
+          border-bottom: 1px solid color(red);
           @include transition(all);
           &:focus,
           &:hover {
             outline: none;
             background: color(teal);
+            border-color: color(teal);
             color: color(coolgray);
             svg {
               stroke: color(coolgray);
