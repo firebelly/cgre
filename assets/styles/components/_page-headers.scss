@@ -67,8 +67,8 @@
         }
         position: absolute;
         bottom: 0;
-        width: columns(5,8);
-        left: calc(100% - #{columns(1)});
+        width: calc(#{columns(5,8)} + #{$gutter});
+        left: calc(100% - #{columns(1)} - #{$gutter});
 
         .lines.-one {
           width: columns(4, 5);
