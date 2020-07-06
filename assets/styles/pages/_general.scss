@@ -21,6 +21,11 @@
       margin-bottom: grid(4);
     }
   }
+  .user-content {
+    h2 {
+      margin-top: 40px;
+    }
+  }
 
   // Desktop styles
   @include media-md {
@@ -41,7 +46,6 @@
       h2 {
         @include h2;
         font-weight: bold;
-        margin-top: grid(4);
         letter-spacing: -0.02em;
       }
     }
