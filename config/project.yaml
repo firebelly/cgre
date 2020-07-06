@@ -1,4 +1,4 @@
-dateModified: 1593556005
+dateModified: 1594072329
 email:
   fromEmail: nate@firebellydesign.com
   fromName: CGRE
@@ -47,6 +47,43 @@ fields:
     name: 'History + Values'
     searchable: true
     settings:
+      columns:
+        __assoc__:
+          -
+            - 196ade7d-725b-4f6e-a661-b5265d270f81
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - b444fb2d-e485-4363-b72c-744170084aa1
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 2707be17-9bbc-49e1-9de2-579319782fe7
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - cb99aaf0-43b6-4b37-979a-b8584b0c12be
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - c9859e5d-74da-4441-afe5-02dfdc627e7a
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
       contentTable: '{{%stc_historyvalues}}'
       fieldLayout: row
       maxRows: ''
@@ -585,32 +622,28 @@ fields:
     name: 'Advisory Committee'
     searchable: true
     settings:
-      columns:
-        __assoc__:
-          -
-            - a1a31f16-f3e7-468c-9c4d-a79917e0c2ca
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-          -
-            - 09d1ef74-170c-4ae7-81a7-36b62b1a0d17
-            -
-              __assoc__:
-                -
-                  - width
-                  - ''
-      contentTable: '{{%stc_advisorycommittee}}'
-      fieldLayout: table
-      maxRows: ''
-      minRows: ''
-      propagationMethod: all
-      selectionLabel: 'Add advisor'
-      staticField: ''
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:199d7fed-4975-4bfb-9491-54c6733697d0'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add logo'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:199d7fed-4975-4bfb-9491-54c6733697d0'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
     translationKeyFormat: null
     translationMethod: site
-    type: verbb\supertable\fields\SuperTableField
+    type: craft\fields\Assets
   f6d77802-a17d-4166-9ef6-49c1a2211990:
     contentColumnType: string
     fieldGroup: ee372277-a14e-4157-8a34-b211bca6618a
@@ -1975,15 +2008,12 @@ superTableBlockTypes:
               2707be17-9bbc-49e1-9de2-579319782fe7:
                 required: false
                 sortOrder: 3
-              3dc69e8a-f17c-415c-ace8-6dc51c42e13d:
-                required: false
-                sortOrder: 5
               b444fb2d-e485-4363-b72c-744170084aa1:
                 required: false
                 sortOrder: 2
               c9859e5d-74da-4441-afe5-02dfdc627e7a:
                 required: false
-                sortOrder: 6
+                sortOrder: 5
               cb99aaf0-43b6-4b37-979a-b8584b0c12be:
                 required: false
                 sortOrder: 4
@@ -2031,36 +2061,6 @@ superTableBlockTypes:
         translationKeyFormat: null
         translationMethod: none
         type: craft\redactor\Field
-      3dc69e8a-f17c-415c-ace8-6dc51c42e13d:
-        contentColumnType: string
-        fieldGroup: null
-        handle: logos
-        instructions: ''
-        name: Logos
-        searchable: true
-        settings:
-          allowSelfRelations: ''
-          allowedKinds:
-            - image
-          defaultUploadLocationSource: 'volume:199d7fed-4975-4bfb-9491-54c6733697d0'
-          defaultUploadLocationSubpath: ''
-          limit: ''
-          localizeRelations: false
-          restrictFiles: '1'
-          selectionLabel: 'Add logos'
-          showUnpermittedFiles: false
-          showUnpermittedVolumes: false
-          singleUploadLocationSource: 'volume:199d7fed-4975-4bfb-9491-54c6733697d0'
-          singleUploadLocationSubpath: ''
-          source: null
-          sources: '*'
-          targetSiteId: null
-          useSingleFolder: false
-          validateRelatedElements: ''
-          viewMode: large
-        translationKeyFormat: null
-        translationMethod: site
-        type: craft\fields\Assets
       b444fb2d-e485-4363-b72c-744170084aa1:
         contentColumnType: text
         fieldGroup: null

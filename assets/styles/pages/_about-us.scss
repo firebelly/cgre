@@ -117,28 +117,6 @@ body.page-about {
     color: color(red);
   }
 
-  // Logos block
-  .logos {
-    padding: grid(2) 0;
-    ul {
-      margin: 0 -20px;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      li {
-        flex: 0 1 50%;
-        padding: 10px 20px;
-      }
-    }
-    @include media-md {
-      ul {
-        li {
-          flex: 0 1 20%;
-        }
-      }
-    }
-  }
-
   .outro {
     @include media-md {
       margin: grid(5) 0;
@@ -228,9 +206,16 @@ body.page-about {
   h4 {
     color: color(yellow);
   }
-  h4.divider {
+  // h4.divider {
+  //   margin: grid(2) 0;
+  //   padding-bottom: grid(2);
+  //   border-bottom: 1px solid color(coolgray);
+  // }
+
+  .people {
     margin: grid(2) 0;
-    padding-bottom: grid(2);
+    padding: grid(3) 0 0;
+    border-top: 1px solid color(coolgray);
     border-bottom: 1px solid color(coolgray);
   }
 
@@ -260,36 +245,59 @@ body.page-about {
       }
     }
   }
-  // Our Committee
-  .committee {
-    margin-top: grid(6);
-    @include p4;
-    ul {
-      columns: 225px 2;
-      column-gap: $gutter;
-      li {
-        display: block;
-      }
-    }
-    a {
-      @include inline-link(span);
-      display: inline-block;
-      padding: 5px 0;
-      svg {
-        width: 12px;
-        height: 12px;
-        stroke: color(coolgray);
-        vertical-align: bottom;
-        margin: 0 0 2px 3px;
+
+  // Advisory Committee logos
+  .advisory-committee {
+
+    // Logos block
+    .logos {
+      padding: grid(2) 0 0;
+      ul {
+        margin: 0 -5px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        li {
+          flex: 0 1 50%;
+          padding: 10px 5px;
+          @include min-screen(500px) {
+            flex: 0 1 33.3%;
+          }
+          @include media-md {
+            flex: 0 1 20%;
+          }
+        }
       }
     }
 
-    // Desktop styles
-    @include media-md {
-      ul {
-        padding-right: columns(4);
-      }
-    }
+    // margin-top: grid(6);
+    // @include p4;
+    // ul {
+    //   columns: 225px 2;
+    //   column-gap: $gutter;
+    //   li {
+    //     display: block;
+    //   }
+    // }
+    // a {
+    //   @include inline-link(span);
+    //   display: inline-block;
+    //   padding: 5px 0;
+    //   svg {
+    //     width: 12px;
+    //     height: 12px;
+    //     stroke: color(coolgray);
+    //     vertical-align: bottom;
+    //     margin: 0 0 2px 3px;
+    //   }
+    // }
+
+    // // Desktop styles
+    // @include media-md {
+    //   ul {
+    //     padding-right: columns(4);
+    //   }
+    // }
   }
 
   // Desktop styles
@@ -300,6 +308,8 @@ body.page-about {
     .people {
       columns: 2;
       column-gap: $global-padding;
+      // margin: grid(6) 0;
+      padding: grid(3) 0 grid(6);
       .person {
         break-inside: avoid;
         margin-bottom: grid(6);
@@ -316,6 +326,11 @@ body.page-about {
           height: 1px;
           margin: grid(3) 0;
         }
+      }
+    }
+    .advisory-committee {
+      .logos {
+        padding: grid(6) 0 0;
       }
     }
   }

@@ -26,18 +26,17 @@
     </div>
 
     {% if entry.advisoryCommittee|length %}
-      <div class="committee">
+      <div class="advisory-committee">
         <h4 class="divider">advisory committee</h4>
 
-        <ul>
-          {% for advisor in entry.advisoryCommittee.all() %}
-            <li>
-              {% if advisor.advisorUrl %}<a rel="noopener" target="_blank" href="{{ advisor.advisorUrl }}"><span>{% endif -%}
-              {{ advisor.advisorName }}
-              {%- if advisor.advisorUrl %}</span> <svg class="sprite sprite-external-link" aria-hidden="true"><use xlink:href="#sprite-external-link"/></svg> </a>{% endif %}
-            </li>
+        <div class="logos">
+          <ul>
+          {% for logo in entry.advisoryCommittee.all() %}
+            <li><img src="{{ logo.getUrl() }}" alt="{{ logo.title }}"></li>
           {% endfor %}
-        </ul>
+          </ul>
+        </div>
+
       </div>
     {% endif %}
 

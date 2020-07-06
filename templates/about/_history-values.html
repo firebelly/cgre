@@ -44,16 +44,6 @@
 
   <div class="container">
 
-    {% if entry.historyValues.logos|length %}
-      <div class="logos">
-        <ul>
-        {% for logo in entry.historyValues.logos.all() %}
-          <li><img src="{{ logo.getUrl() }}" alt="{{ logo.title }}"></li>
-        {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
-
     {% if entry.historyValues.outro %}
       <div class="outro">
         {{ entry.historyValues.outro }}
