@@ -9,9 +9,6 @@ body.page-focus-areas {
   h3 {
     color: color(yellow);
   }
-  p {
-    @extend %smooth;
-  }
 
   .header {
     .hamburger svg {

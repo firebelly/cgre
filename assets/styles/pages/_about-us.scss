@@ -221,7 +221,6 @@ body.page-about {
 .our-team {
   background: color(teal);
   color: color(lightgray);
-  @include smooth;
   h3.divot {
     margin-bottom: grid(4);
   }

@@ -60,7 +60,6 @@ p.cta {
   .figure {
     margin-bottom: grid(3);
     dt {
-      @include smooth;
       color: color(teal);
       @include stat;
       margin: 0 0 5px;
