@@ -60,6 +60,7 @@ p.cta {
   .figure {
     margin-bottom: grid(3);
     dt {
+      @include smooth;
       color: color(teal);
       @include stat;
       margin: 0 0 5px;
@@ -70,8 +71,9 @@ p.cta {
           vertical-align: middle;
         }
       }
-      .percent {
-        font: normal 30px/30px $font-sans-serif;
+      .measure {
+        font: normal 40px/40px $font-sans-serif;
+        margin: 0 5px;
       }
     }
     dd {
@@ -201,15 +203,8 @@ h3.divot {
     transition: transform 2s $cubic-ease2, opacity 0.5s $cubic-ease2;
   }
 
-  // Delay classes for more control (.-delay1, .-delay2, etc)
-  // @for $i from 1 through 5 {
-  //   &.-delay#{$i} {
-  //     transition: transform 1.25s #{0.1 * $i}s $cubic-ease2, opacity 0.5s $cubic-ease2;
-  //   }
-  // }
-
   @include media-md {
-    transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 120px, 0);
   }
 
   &.-active {

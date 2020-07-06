@@ -1,7 +1,9 @@
 {% set substitutions = {
   '&lt;': '<span class="qualifier -lt"><svg class="sprite sprite-gt"><use xlink:href="#sprite-gt"/></svg></span>',
   '&gt;': '<span class="qualifier -gt"><svg class="sprite sprite-gt"><use xlink:href="#sprite-gt"/></svg></span>',
-  '%': '<span class="percent">%</span>'
+  '%': '<span class="measure">%</span>',
+  'x': '<span class="measure">X</span>',
+  'X': '<span class="measure">X</span>',
 } %}
 {% if entry.footerOutro.subhead or entry.footerOutro.headline or entry.footerOutro.body %}
   <div class="footer-outro page-section{{ entry.footerOutro.stats|length ? ' -has-stats' : '' }}">
