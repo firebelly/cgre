@@ -84,6 +84,14 @@
         display: block;
       }
     }
+    .captcha-note {
+      font-size: 10px;
+      margin-top: 30px;
+      color: color(plum);
+      a {
+        @include inline-link;
+      }
+    }
 
     .lines {
       display: none;
