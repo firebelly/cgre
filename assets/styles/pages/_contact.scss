@@ -26,33 +26,42 @@
     }
 
     // Form feedback
-    .notices {
-      border: none;
-      background: none;
-      color: color(plum);
-      padding: 0;
-      &::before {
-        content: '';
-        display: block;
-        width: 46px;
-        height: 4px;
-        background: color(red);
-        margin: 0 0 grid(4);
-      }
+    .form-response {
+      display: none;
       p {
         @include p3;
+        border: none;
+        background: none;
+        color: color(plum);
+        padding: 0;
+        &::before {
+          content: '';
+          display: block;
+          width: 46px;
+          height: 4px;
+          background: color(red);
+          margin: 0 0 grid(3);
+        }
+      }
+      // Response text shown after submit
+      &.-active {
+        display: block;
+        margin: grid(6) 0;
       }
 
       // Desktop styles
       @include media-md {
-        padding: 0 0 grid(8) columns(4, 8);
-        &::before {
-          width: 80px;
-          height: 10px;
-          margin: 0 0 grid(5);
+        &.-active {
+          margin: grid(10) 0 0;
         }
         p {
           @include p1;
+          padding: 0 0 grid(8) columns(4, 8);
+          &::before {
+            width: 80px;
+            height: 10px;
+            margin: 0 0 grid(5);
+          }
         }
       }
     }
@@ -63,6 +72,7 @@
       overflow: hidden;
       max-height: 1500px;
     }
+
     // Successfully submitted form
     &.-success {
       padding-top: 0;
@@ -70,12 +80,7 @@
         max-height: 0;
       }
     }
-    // Response text shown after submit
-    .form-response {
-      &.-active {
-        display: block;
-      }
-    }
+
     // Required note about captcha with links to privacy policy
     .captcha-note {
       font-size: 10px;
@@ -148,9 +153,6 @@
       transform: translate(-50vw, 0);
       i {
         border-color: color(teal);
-      }
-      i:nth-child(n+4) {
-        display: block;
       }
     }
     .grid-wrap {

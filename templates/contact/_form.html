@@ -18,7 +18,7 @@
     </div>
 
     <div class="form-wrap">
-      <div class="form-response"></div>
+      <div class="form-response"><p>{{ entry.contactFormOptions.successMessage ?? craft.app.getModule('contact-form').getSettings().successFlashMessage }}</p></div>
 
       <form class="-light" method="post" action="/contact" autocomplete="on" name="contact-form" id="contact-form">
         <fieldset>
@@ -68,8 +68,6 @@
             <textarea required rows="10" cols="40" id="message[Query]" name="message[Query]">{{ message.message.query ?? '' }}</textarea>
           </div>
         </fieldset>
-
-        <div class="status">{{ entry.contactFormOptions.successMessage ?? craft.app.getModule('contact-form').getSettings().successFlashMessage }}</div>
 
         <div class="actions">
           {{ csrfInput() }}

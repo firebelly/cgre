@@ -2,6 +2,7 @@
 
 .footer-outro {
   @include clearfix;
+  position: relative;
   background: color(red);
   color: color(white);
   padding: grid(4) 0;
