@@ -40,8 +40,8 @@
     background-image: linear-gradient(to bottom, color(yellow) 0%, color(yellow) 100%);
     background-repeat: repeat-x;
     background-position: 0% 100%;
-    background-size: 0px 0px;
-    text-decoration: underline;
+    background-size: 1px 1px;
+    text-decoration: none;
     @include transition(background-size);
   }
   &:hover,
