@@ -50,13 +50,16 @@
     background: color(teal);
     color: color(lightgray);
     position: relative;
+    h2.h1 {
+      margin: grid(1) 0 grid(3);
+    }
 
     @include media-md {
       width: columns(8);
       margin: grid(8) columns(-1);
       padding: grid(5) columns(2) grid(6) columns(1);
       h2.h1 {
-        margin: 50px 0;
+        margin: grid(5) 0;
       }
       .image-wrap {
         img {
