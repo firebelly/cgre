@@ -80,6 +80,7 @@ body.page-home {
         border-color: color(white);
         color: color(white);
         background: transparent url('/assets/dist/images/arrow-white.svg') 83% 50% no-repeat;
+        &:focus,
         &:hover {
           background: color(teal) url('/assets/dist/images/arrow-white.svg') 95% 50% no-repeat;
         }
