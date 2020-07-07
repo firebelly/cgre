@@ -10,7 +10,7 @@
   &.general-page .page-blocks {
     .user-content {
       a {
-        @include inline-link('&', red, white);
+        @include inline-link(red, white);
       }
       @include media-md {
         .-inner {

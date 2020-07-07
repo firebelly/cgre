@@ -96,7 +96,7 @@ body.page-about {
     background: color(coolgray);
     color: color(teal);
     .user-content a {
-      @include inline-link('&', red, white);
+      @include inline-link(red, white);
     }
     h3.divot {
       color: color(red);
@@ -121,6 +121,9 @@ body.page-about {
   }
 
   .outro {
+    a {
+      @include inline-link(red, white);
+    }
     @include media-md {
       margin: grid(5) 0;
       width: columns(5);
@@ -233,7 +236,7 @@ body.page-about {
     .bio {
       margin-top: grid(2);
       a {
-        @include inline-link('&', yellow, teal);
+        @include inline-link(yellow, teal);
       }
     }
     margin-bottom: grid(3);
