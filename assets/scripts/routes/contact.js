@@ -7,18 +7,20 @@ const contact = {
     // JavaScript to be fired on the contact page
 
     // Contact submit button changes text on hover
-    document.querySelector('.contact-form-wrap button[type=submit]').addEventListener('mouseover', e => {
-      e.target.textContent = 'Let’s Go';
+    let submitButton = document.querySelector('.contact-form-wrap button[type=submit]');
+    let submitButtonSpan = submitButton.querySelector('span');
+    submitButton.addEventListener('mouseover', e => {
+      submitButtonSpan.textContent = 'Let’s Go';
     });
-    document.querySelector('.contact-form-wrap button[type=submit]').addEventListener('mouseout', e => {
-      e.target.textContent = 'Submit';
+    submitButton.addEventListener('mouseout', e => {
+      submitButtonSpan.textContent = 'Submit';
     });
     // Focus/blur support
-    document.querySelector('.contact-form-wrap button[type=submit]').addEventListener('focus', e => {
-      e.target.textContent = 'Let’s Go';
+    submitButton.addEventListener('focus', e => {
+      submitButtonSpan.textContent = 'Let’s Go';
     });
-    document.querySelector('.contact-form-wrap button[type=submit]').addEventListener('blur', e => {
-      e.target.textContent = 'Submit';
+    submitButton.addEventListener('blur', e => {
+      submitButtonSpan.textContent = 'Submit';
     });
 
     // AJAXify contact form submission
