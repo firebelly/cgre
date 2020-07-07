@@ -28,6 +28,7 @@ footer {
     }
   }
 
+  ul a,
   p a {
     @include transition(all);
     padding-bottom: 3px;
