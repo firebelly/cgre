@@ -51,8 +51,9 @@ footer {
         @include transition(all);
         margin-left: 10px;
         vertical-align: middle;
-        width: 10px;
         fill: color(lightgray);
+        width: 10px;
+        height: 10px;
       }
       &:focus,
       &:hover {
