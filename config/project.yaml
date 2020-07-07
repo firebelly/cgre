@@ -1,4 +1,4 @@
-dateModified: 1594072329
+dateModified: 1594155636
 email:
   fromEmail: nate@firebellydesign.com
   fromName: CGRE
@@ -536,6 +536,19 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
+  e04fb68c-f09b-497a-879f-4d262f431e9e:
+    contentColumnType: string(255)
+    fieldGroup: ee372277-a14e-4157-8a34-b211bca6618a
+    handle: granteeUrl
+    instructions: 'Optional, if populated will link out'
+    name: 'Grantee URL'
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: 'e.g. https://cgre.org/'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
   e109fc30-ab27-4a4e-bb37-1a04dbc39738:
     contentColumnType: string
     fieldGroup: 26de5c26-6c4a-4835-91a0-1713cf2be6c9
@@ -1224,7 +1237,7 @@ sections:
         uriFormat: contact
     type: single
   b0daa6a3-d9f3-47ec-8e8c-266170a33924:
-    enableVersioning: true
+    enableVersioning: false
     entryTypes:
       c0662209-ee96-4ed1-90e5-39d315ddd817:
         fieldLayouts:
@@ -1235,6 +1248,9 @@ sections:
                   64da03ab-4a4e-41a0-886a-f76793fb1280:
                     required: false
                     sortOrder: 1
+                  e04fb68c-f09b-497a-879f-4d262f431e9e:
+                    required: false
+                    sortOrder: 2
                 name: Common
                 sortOrder: 1
         handle: grantees
@@ -2857,7 +2873,7 @@ superTableBlockTypes:
         translationMethod: none
         type: craft\fields\Table
 system:
-  edition: solo
+  edition: pro
   live: true
   name: CGRE
   schemaVersion: 3.4.10

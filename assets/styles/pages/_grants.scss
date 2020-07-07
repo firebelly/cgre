@@ -70,6 +70,10 @@ body.page-grants {
         + li {
           border-top: 1px solid color(yellow);
         }
+        // If link, padding is on <a>
+        &.-has-url {
+          padding: 0;
+        }
       }
       // Space between state/national lists
       + h3 {
@@ -77,15 +81,28 @@ body.page-grants {
       }
     }
     a {
-      @include inline-link();
-      display: inline-block;
-      padding: 5px 0;
+      display: block;
+      padding: grid(1);
+      position: relative;
+      @include transition(background);
       svg {
         margin: 0 0 1px 5px;
         width: 12px;
         height: 12px;
         stroke: color(teal);
         vertical-align: bottom;
+        position: absolute;
+        right: grid(1);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:focus,
+      &:hover {
+        outline: none;
+        background: color(yellow);
+        span {
+          border-bottom: 1px solid color(teal);
+        }
       }
     }
 
@@ -97,6 +114,9 @@ body.page-grants {
       h3 {
         @include h3;
       }
+      a {
+        padding: grid(2) grid(1);
+      }
       ul {
         margin: grid(2) 0;
         columns: 2;
@@ -106,6 +126,10 @@ body.page-grants {
           }
           border-bottom: 1px solid color(yellow);
           padding: grid(2) grid(1);
+          // If link, padding is on <a>
+          &.-has-url {
+            padding: 0;
+          }
         }
         // Space between state/national lists
         + h3 {

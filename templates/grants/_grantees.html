@@ -8,8 +8,12 @@
       <h3>State-based Partners</h3>
       <ul class="grantees -state">
       {% for grantee in grantees %}
-        <li>
-          {{ grantee.title }}
+        <li{{ grantee.granteeUrl ? ' class="-has-url"' : ''}}>
+          {% if grantee.granteeUrl %}
+            <a rel="noopener" target="_blank" href="{{ grantee.granteeUrl }}"><span>{{ grantee.title }}</span> <svg class="sprite sprite-external-link-clean" aria-hidden="true"><use xlink:href="#sprite-external-link-clean"/></svg></a>
+          {% else %}
+            {{ grantee.title }}
+          {% endif %}
         </li>
       {% endfor %}
       </ul>
@@ -20,8 +24,12 @@
       <h3>National-based Partners</h3>
       <ul class="grantees -state">
       {% for grantee in grantees %}
-        <li>
-          {{ grantee.title }}
+        <li{{ grantee.granteeUrl ? ' class="-has-url"' : ''}}>
+          {% if grantee.granteeUrl %}
+            <a rel="noopener" target="_blank" href="{{ grantee.granteeUrl }}"><span>{{ grantee.title }}</span> <svg class="sprite sprite-external-link-clean" aria-hidden="true"><use xlink:href="#sprite-external-link-clean"/></svg></a>
+          {% else %}
+            {{ grantee.title }}
+          {% endif %}
         </li>
       {% endfor %}
       </ul>
