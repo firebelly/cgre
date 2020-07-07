@@ -19,11 +19,22 @@
   text-decoration: none;
   line-height: 1;
   @include transition(background);
-  background: transparent url('/assets/dist/images/arrow.svg') 83% 50% no-repeat;
+  svg {
+    @include transition(all);
+    position: absolute;
+    top: 50%;
+    right: grid(5);
+    transform: translate(0, -50%);
+    fill: color(teal);
+  }
 
   &:focus,
   &:hover {
-    background: color(red) url('/assets/dist/images/arrow-white.svg') 95% 50% no-repeat;
+    svg {
+      transform: translate(100%, -50%);
+      fill: color(white);
+    }
+    background: color(red);
     background-size: 53px 16px !important;
     color: color(white);
     text-decoration: none;

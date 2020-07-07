@@ -17,6 +17,14 @@ const common = {
     // Duplicate footer logo into mobile nav
     $('footer .logo-stacked').clone().appendTo('.nav-main');
 
+    // Inject svg into cms-added p.cta
+    document.querySelectorAll('p.cta a').forEach(el => {
+      let svg = el.querySelector('svg');
+      if (!svg) {
+        $(el).append('<svg class="sprite sprite-arrow" aria-hidden="true"><use xlink:href="#sprite-arrow"/></svg>');
+      }
+    });
+
     // Mobile hamburger and X close icons toggle mobile nav
     $('.hamburger').on('click', function(e) {
       e.preventDefault();
