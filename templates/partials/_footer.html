@@ -1,40 +1,34 @@
 <footer id="footer" class="site-footer">
-    <div class="container">
-        <div class="block contact">
-            <h4 class="divot">contacts</h4>
+  <div class="container">
+    <div class="block contact">
+      <h4 class="divot">contacts</h4>
 
-            {{ siteOptions.footerInfo.contact }}
+      {{ siteOptions.footerInfo.contact }}
 
-            <p class="privacy">
-                <a href="/privacy-policy">Privacy Policy
-                    <svg width="21" height="16" viewBox="0 0 21 16" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM0 9H20V7H0V9Z" />
-                    </svg>
-                </a>
-            </p>
-        </div>
-        <div class="logo">
-            <div class="divot"></div>
-            <div class="logo-stacked">
-                <a href="/">
-                    <img src="/assets/dist/images/cgre-logo-left-aligned.svg" alt="CGRE logo">
-                </a>
-            </div>
-        </div>
-        {# <div class="block newsletter">
-            <h4 class="divot">newsletter</h4>
-            <form action="">
-                <fieldset class="-two-column">
-                    <div class="form-field">
-                        <input type="email" name="email" placeholder="Sign up to stay up to date with our news">
-                    </div>
-                    <div class="form-field">
-                        <button class="button">Submit</button>
-                    </div>
-                </fieldset>
-            </form>
-        </div> #}
+      {% if siteOptions.footerInfo.links|length %}
+        <ul class="footer-links">
+        {% for link in siteOptions.footerInfo.links %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}
+              <svg width="21" height="16" viewBox="0 0 21 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM0 9H20V7H0V9Z" />
+              </svg>
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
     </div>
+
+    <div class="logo">
+      <div class="divot"></div>
+      <div class="logo-stacked">
+        <a href="/">
+          <img src="/assets/dist/images/cgre-logo-left-aligned.svg" alt="CGRE logo">
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script async src="{{ rev('/scripts/manifest.js') }}"></script>

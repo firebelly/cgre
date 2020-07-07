@@ -6,9 +6,9 @@ footer {
   color: color(lightgray);
   padding: grid(4) 0 grid(8);
 
+  ul,
   p {
     @include p3;
-    @extend %smooth;
     font-size: 14px;
   }
 
@@ -34,14 +34,17 @@ footer {
     border-bottom: 1px solid transparent;
     &:focus,
     &:hover {
-      // outline: none;
       border-bottom: 1px solid color(red);
     }
   }
 
-  .privacy {
-    margin-top: grid(8);
+  ul.footer-links {
+    margin: grid(8) 0 0 0;
 
+    li {
+      margin: 0 0 5px;
+      padding: 0;
+    }
     a {
       svg {
         @include transition(all);
