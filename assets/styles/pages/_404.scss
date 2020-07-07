@@ -1,0 +1,26 @@
+// 404 page
+
+.page-404 {
+  #footer {
+    margin-top: grid(4);
+    @include media-md {
+      margin-top: grid(10);
+    }
+  }
+  &.general-page .page-blocks {
+    .user-content {
+      a {
+        @include inline-link('&', red, white);
+      }
+      @include media-md {
+        .-inner {
+          max-width: none;
+        }
+        p {
+          @include p1;
+        }
+      }
+    }
+  }
+}
+
