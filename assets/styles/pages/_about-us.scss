@@ -95,6 +95,9 @@ body.page-about {
   .footer-outro {
     background: color(coolgray);
     color: color(teal);
+    .user-content a {
+      @include inline-link('&', red, white);
+    }
     h3.divot {
       color: color(red);
     }
@@ -229,6 +232,9 @@ body.page-about {
     }
     .bio {
       margin-top: grid(2);
+      a {
+        @include inline-link('&', yellow, teal);
+      }
     }
     margin-bottom: grid(3);
     &::after {

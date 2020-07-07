@@ -35,18 +35,21 @@
 }
 
 // Animated hover for user-content links
-@mixin inline-link($slide-target:'&') {
+@mixin inline-link($slide-target:'&', $bg-color:'yellow', $hover-color:'inherit') {
   #{$slide-target} {
-    background-image: linear-gradient(to bottom, color(yellow) 0%, color(yellow) 100%);
+    background-image: linear-gradient(to bottom, color($bg-color) 0%, color($bg-color) 100%);
     background-repeat: repeat-x;
     background-position: 0% 100%;
     background-size: 1px 1px;
     text-decoration: none;
-    @include transition(background-size);
+    @include transition(background-size, color);
   }
   &:hover,
   &:focus {
     #{$slide-target} {
+      @if $hover-color != 'inherit' {
+        color: color($hover-color);
+      }
       background-size: 100% 100%;
       transition-delay: 0s;
     }
