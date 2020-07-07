@@ -3,8 +3,16 @@
 // Text headers
 .text-header {
   margin-top: grid(5);
+  h2.h1 {
+    margin: grid(1) 0 grid(3);
+  }
+
+  // Desktop styles
   @include media-md {
     margin-top: grid(14);
+    h2.h1 {
+      margin: grid(4) 0;
+    }
   }
 }
 
@@ -59,7 +67,7 @@
       margin: grid(8) columns(-1);
       padding: grid(5) columns(2) grid(6) columns(1);
       h2.h1 {
-        margin: grid(5) 0;
+        margin: grid(4) 0;
       }
       .image-wrap {
         img {
