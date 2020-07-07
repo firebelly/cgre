@@ -1,4 +1,13 @@
-// General pages (/privacy, /solidarity, etc)
+// General pages (/privacy, /solidarity, /404 etc)
+
+.page-404 {
+  #footer {
+    margin-top: grid(4);
+    @include media-md {
+      margin-top: grid(10);
+    }
+  }
+}
 
 .general-page {
   div.divot {
