@@ -59,20 +59,19 @@ body.page-grants {
     }
     h3 {
       @include h3-mobile;
+      margin: grid(2) 0;
       color: color(teal);
     }
     ul {
       @include p3;
       margin: 0;
-      li {
-        margin: 0;
-        padding: grid(1);
-        + li {
-          border-top: 1px solid color(yellow);
-        }
-        // If link, padding is on <a>
-        &.-has-url {
-          padding: 0;
+      // First item also has border on top on mobile
+      @include max-screen($breakpoint-md) {
+        li:nth-child(1) {
+          a,
+          span.-a {
+            border-top: 1px solid color(yellow);
+          }
         }
       }
       // Space between state/national lists
@@ -80,11 +79,16 @@ body.page-grants {
         margin-top: grid(4);
       }
     }
+    span.-a,
     a {
       display: block;
       padding: grid(1);
       position: relative;
-      @include transition(background);
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid color(yellow);
+    }
+    a {
+      @include transition(all);
       svg {
         margin: 0 0 1px 5px;
         width: 12px;
@@ -100,6 +104,8 @@ body.page-grants {
       &:hover {
         outline: none;
         background: color(yellow);
+        border-top: 1px solid color(teal) !important;
+        border-bottom: 1px solid color(teal);
         span {
           border-bottom: 1px solid color(teal);
         }
@@ -114,23 +120,13 @@ body.page-grants {
       h3 {
         @include h3;
       }
+      span.-a,
       a {
         padding: grid(2) grid(1);
       }
       ul {
         margin: grid(2) 0;
         columns: 2;
-        li {
-          + li {
-            border-top: none;
-          }
-          border-bottom: 1px solid color(yellow);
-          padding: grid(2) grid(1);
-          // If link, padding is on <a>
-          &.-has-url {
-            padding: 0;
-          }
-        }
         // Space between state/national lists
         + h3 {
           margin-top: grid(10);

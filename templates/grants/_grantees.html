@@ -12,7 +12,7 @@
           {% if grantee.granteeUrl %}
             <a rel="noopener" target="_blank" href="{{ grantee.granteeUrl }}"><span>{{ grantee.title }}</span> <svg class="sprite sprite-external-link-clean" aria-hidden="true"><use xlink:href="#sprite-external-link-clean"/></svg></a>
           {% else %}
-            {{ grantee.title }}
+            <span class="-a">{{ grantee.title }}</span>
           {% endif %}
         </li>
       {% endfor %}
@@ -28,7 +28,7 @@
           {% if grantee.granteeUrl %}
             <a rel="noopener" target="_blank" href="{{ grantee.granteeUrl }}"><span>{{ grantee.title }}</span> <svg class="sprite sprite-external-link-clean" aria-hidden="true"><use xlink:href="#sprite-external-link-clean"/></svg></a>
           {% else %}
-            {{ grantee.title }}
+            <span class="-a">{{ grantee.title }}</span>
           {% endif %}
         </li>
       {% endfor %}
