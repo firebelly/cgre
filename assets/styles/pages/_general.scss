@@ -5,7 +5,7 @@
     background: color(red);
   }
   // Keep text readable with ~70-80 chars per line
-  .page-blocks .-inner {
+  .page-blocks .-fullWidth .-inner {
     max-width: 675px;
   }
 
@@ -34,19 +34,23 @@
         margin-bottom: grid(6);
       }
     }
-    .user-content {
-      ol,
-      ul,
-      p {
-        @include p3;
-        strong {
-          letter-spacing: 0;
+
+    // Keep text small on privacy policy
+    &.page-privacy-policy {
+      .user-content {
+        ol,
+        ul,
+        p {
+          @include p3;
+          strong {
+            letter-spacing: 0;
+          }
         }
-      }
-      h2 {
-        @include h2;
-        font-weight: bold;
-        letter-spacing: -0.02em;
+        h2 {
+          @include h2;
+          font-weight: bold;
+          letter-spacing: -0.02em;
+        }
       }
     }
   }
