@@ -1,4 +1,4 @@
-dateModified: 1594155636
+dateModified: 1594234068
 email:
   fromEmail: nate@firebellydesign.com
   fromName: CGRE
@@ -753,28 +753,6 @@ matrixBlockTypes:
               __assoc__:
                 -
                   - label
-                  - 'Half Width'
-                -
-                  - value
-                  - halfWidth
-                -
-                  - default
-                  - ''
-            -
-              __assoc__:
-                -
-                  - label
-                  - 'Full Width'
-                -
-                  - value
-                  - fullWidth
-                -
-                  - default
-                  - ''
-            -
-              __assoc__:
-                -
-                  - label
                   - 'Half Width, On The Right'
                 -
                   - value
@@ -931,28 +909,6 @@ matrixBlockTypes:
         settings:
           optgroups: true
           options:
-            -
-              __assoc__:
-                -
-                  - label
-                  - 'Half Width'
-                -
-                  - value
-                  - halfWidth
-                -
-                  - default
-                  - ''
-            -
-              __assoc__:
-                -
-                  - label
-                  - 'Full width'
-                -
-                  - value
-                  - fullWidth
-                -
-                  - default
-                  - ''
             -
               __assoc__:
                 -
