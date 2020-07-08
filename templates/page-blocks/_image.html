@@ -1,29 +1,30 @@
-{% if image|length %}
-  {% set image = image.one() %}
-  {% set embeddedAsset = craft.embeddedAssets.get(image) %}
+{% if block.image|length %}
+  <div class="block-image -reveal -{{ block.width }}">
+    <div class="-inner">
+      {% set image = block.image[0] %}
+      {% if block.width matches '/halfWidth/' or block.width matches '/Padded/' %}
+        {% set imgSrcSets = [ { width: 1200 }, { width: 750, jpegQuality: 70 }, ]  %}
+        {% set imgSizes = '(max-width: 768px) 100vw, 50vw' %}
+      {% else %}
+        {% set imgSrcSets = [ { width: 1800 }, { width: 750, jpegQuality: 70 }, ]  %}
+        {% set imgSizes = '100vw' %}
+      {% endif %}
 
-  {% if embeddedAsset %}
-    <div class="embedded-asset">
-      {{ embeddedAsset.html }}
+      {% set embeddedAsset = craft.embeddedAssets.get(image) %}
+
+      {% if embeddedAsset %}
+        <div class="embedded-asset">
+          {{ embeddedAsset.html }}
+        </div>
+      {% else %}
+
+        {% include "partials/_picture" with {
+          image: image,
+          imgSrcSets: imgSrcSets,
+          imgSizes: imgSizes
+        } %}
+
+      {% endif %}
     </div>
-  {% else %}
-
-    {# Leave GIFs and PNGs alone #}
-    {% if image.filename matches '/(gif|png|svg)$/' %}
-      {% set treatedImage = image %}
-    {% else %}
-      {% set treatedImage = craft.imager.transformImage(image, imageOptions) %}
-    {% endif %}
-
-    {% if treatedImage %}
-      <figure class="image -reveal{% if caption is defined and caption != '' %} -has-caption{% endif %}">
-        <img src="{{ treatedImage.getUrl() }}" alt="{{ image.title }}">
-        {% if caption is defined and caption != '' %}
-          {% if caption %}
-            <figcaption>{{ caption }}</figcaption>
-          {% endif %}
-        {% endif %}
-      </figure>
-    {% endif %}
-  {% endif %}
+  </div>
 {% endif %}
