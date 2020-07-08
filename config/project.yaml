@@ -1,4 +1,4 @@
-dateModified: 1594234068
+dateModified: 1594244644
 email:
   fromEmail: nate@firebellydesign.com
   fromName: CGRE
@@ -909,6 +909,17 @@ matrixBlockTypes:
         settings:
           optgroups: true
           options:
+            -
+              __assoc__:
+                -
+                  - label
+                  - 'Full Width'
+                -
+                  - value
+                  - fullWidth
+                -
+                  - default
+                  - ''
             -
               __assoc__:
                 -
