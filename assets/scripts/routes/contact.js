@@ -57,6 +57,7 @@ const contact = {
         dataType: 'json',
         data: $form.serialize(),
         success: (response) => {
+          console.log(response);
           if (response.success) {
             formResponse.innerHTML = thanksHtml;
             formWrap.classList.add('-success');
@@ -67,10 +68,12 @@ const contact = {
           }
         },
         error: (response) => {
+          console.log(response);
           formResponse.innerHTML = response.error || '<p>There was an error, please try again.</p>';
           zenscroll.center(formResponse);
         }
       }).fail((response) => {
+        console.log(response);
         formResponse.innerHTML = response.error || '<p>There was an error, please try again.</p>';
         zenscroll.center(formResponse);
       }).always(() => {
