@@ -6,7 +6,6 @@
 {% if entry.shareImage|length %}{% set shareImage = entry.shareImage.one() %}{% endif %}
 
 {% block content %}
-  {% cache unless currentUser %}
 
   {% include 'partials/_text-header' %}
 
@@ -16,5 +15,4 @@
 
   {% include 'partials/_footer-outro' %}
 
-  {% endcache %}
 {% endblock content %}
