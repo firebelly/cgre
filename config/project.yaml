@@ -1,4 +1,4 @@
-dateModified: 1594244644
+dateModified: 1594308503
 email:
   fromEmail: nate@firebellydesign.com
   fromName: CGRE
@@ -975,10 +975,10 @@ plugins:
     schemaVersion: 1.0.0
     settings:
       allowAttachments: ''
-      prependSender: 'On behalf of'
-      prependSubject: 'New message from CGRE'
+      prependSender: ''
+      prependSubject: ''
       successFlashMessage: 'Your message has been sent.'
-      toEmail: nate@firebellydesign.com
+      toEmail: info@cgre.org
   contact-form-extensions:
     edition: standard
     enabled: true
