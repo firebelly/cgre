@@ -6,6 +6,12 @@ const contact = {
   init() {
     // JavaScript to be fired on the contact page
 
+    // Contact message autoexpands
+    let contactText = document.querySelector('#contact-form textarea');
+    if (contactText) {
+      autosize(contactText);
+    }
+
     // Contact submit button changes text on hover
     let submitButton = document.querySelector('.contact-form-wrap button[type=submit]');
     let submitButtonSpan = submitButton.querySelector('span');
