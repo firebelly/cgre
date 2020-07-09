@@ -52,29 +52,23 @@ const contact = {
       appState.requestInProgress = true;
 
       // Submit form
-      $.post({
+      $.ajax({
         url: '/',
+        'type': 'POST',
         dataType: 'json',
         data: $form.serialize(),
         success: (response) => {
-          console.log(response);
           if (response.success) {
             formResponse.innerHTML = thanksHtml;
             formWrap.classList.add('-success');
             zenscroll.center(formResponse);
           } else {
-            formResponse.innerHTML = response.error || '<p>There was an error, please try again.</p>';
+            formResponse.innerHTML = response.error || '<p>There was an error, please refresh and <a href="/contact">try again</a>.</p>';
             zenscroll.center(formResponse);
           }
-        },
-        error: (response) => {
-          console.log(response);
-          formResponse.innerHTML = response.error || '<p>There was an error, please try again.</p>';
-          zenscroll.center(formResponse);
         }
-      }).fail((response) => {
-        console.log(response);
-        formResponse.innerHTML = response.error || '<p>There was an error, please try again.</p>';
+      }).fail(() => {
+        formResponse.innerHTML = '<p>There was an error, please refresh and <a href="/contact">try again</a>.</p>';
         zenscroll.center(formResponse);
       }).always(() => {
         formResponse.classList.add('-active');
