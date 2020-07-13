@@ -6,6 +6,9 @@ const contact = {
   init() {
     // JavaScript to be fired on the contact page
 
+    // Contact form
+    let $form = $('#contact-form');
+
     // Contact message autoexpands
     let contactText = document.querySelector('#contact-form textarea');
     if (contactText) {
@@ -16,21 +19,28 @@ const contact = {
     let submitButton = document.querySelector('.contact-form-wrap button[type=submit]');
     let submitButtonSpan = submitButton.querySelector('span');
     submitButton.addEventListener('mouseover', e => {
-      submitButtonSpan.textContent = 'Let’s Go';
+      if (!$form.hasClass('working')) {
+        submitButtonSpan.textContent = 'Let’s Go';
+      }
     });
     submitButton.addEventListener('mouseout', e => {
-      submitButtonSpan.textContent = 'Submit';
+      if (!$form.hasClass('working')) {
+        submitButtonSpan.textContent = 'Submit';
+      }
     });
     // Focus/blur support
     submitButton.addEventListener('focus', e => {
-      submitButtonSpan.textContent = 'Let’s Go';
+      if (!$form.hasClass('working')) {
+        submitButtonSpan.textContent = 'Let’s Go';
+      }
     });
     submitButton.addEventListener('blur', e => {
-      submitButtonSpan.textContent = 'Submit';
+      if (!$form.hasClass('working')) {
+        submitButtonSpan.textContent = 'Submit';
+      }
     });
 
     // AJAXify contact form submission
-    let $form = $('#contact-form');
     let formResponse = document.querySelector('.contact-form-wrap .form-response');
     let formWrap = document.querySelector('.contact-form-wrap .form-wrap');
 
