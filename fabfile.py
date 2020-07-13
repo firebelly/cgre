@@ -1,14 +1,14 @@
 from fabric.api import *
 import os
 
-env.hosts = ['cgre2020.opalstacked.com']
+env.hosts = ['staging.cgre.org']
 env.user = 'cgre2020'
 env.remotepath = '/home/cgre2020/apps/cgre-staging'
 env.git_branch = 'master'
 env.warn_only = True
 
 def production():
-  # env.hosts = ['cgre.org']
+  env.hosts = ['cgre.org']
   env.user = 'cgre2020'
   env.remotepath = '/home/cgre2020/apps/cgre-production'
   env.git_branch = 'master'
