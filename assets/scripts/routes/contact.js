@@ -51,6 +51,9 @@ const contact = {
       // Set appState flag to avoid multiple submits
       appState.requestInProgress = true;
 
+      $form.addClass('working');
+      submitButtonSpan.textContent = 'Working...';
+
       // Submit form
       $.ajax({
         url: '/',
@@ -71,6 +74,8 @@ const contact = {
         formResponse.innerHTML = '<p>There was an error, please refresh and <a href="/contact">try again</a>.</p>';
         zenscroll.center(formResponse);
       }).always(() => {
+        $form.removeClass('working');
+        submitButtonSpan.textContent = 'Submit';
         formResponse.classList.add('-active');
         appState.requestInProgress = false;
       });

@@ -78,6 +78,9 @@
       width: 100%;
       overflow: hidden;
       max-height: 1500px;
+      &.working {
+        opacity: 0.5;
+      }
     }
 
     // Successfully submitted form
