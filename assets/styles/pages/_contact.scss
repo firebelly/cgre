@@ -94,7 +94,7 @@
     // Required note about captcha with links to privacy policy
     .captcha-note {
       font-size: 10px;
-      margin-top: 30px;
+      margin: 30px 0;
       color: color(plum);
       a {
         @include inline-link;
