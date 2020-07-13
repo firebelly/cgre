@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "eaba31a6dba8a76ea289217b5aa6dc50",
+    "content-hash": "944da609cbbedc09c9b8824db866622e",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -200,6 +200,48 @@
                 "sdk"
             ],
             "time": "2020-06-12T18:16:31+00:00"
+        },
+        {
+            "name": "carlcs/craft-diywidget",
+            "version": "2.0.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/carlcs/craft-diywidget/zipball/f16d585982d673703dcd98c046933abdbd7f7c0b",
+                "reference": "f16d585982d673703dcd98c046933abdbd7f7c0b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Do It Yourself widget",
+                "handle": "diy-widget",
+                "changelogUrl": "https://github.com/carlcs/craft-diywidget/raw/v2/CHANGELOG.md",
+                "downloadUrl": "https://github.com/carlcs/craft-diywidget/archive/v2.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "carlcs\\diywidget\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "carlcs",
+                    "homepage": "https://github.com/carlcs"
+                }
+            ],
+            "description": "Do It Yourself widget for Craft CMS",
+            "keywords": [
+                "craftcms",
+                "diy",
+                "widget"
+            ],
+            "time": "2020-04-02T08:23:03+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -1045,6 +1087,52 @@
                 "php"
             ],
             "time": "2019-06-08T11:03:04+00:00"
+        },
+        {
+            "name": "doublesecretagency/craft-cpcss",
+            "version": "2.2.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doublesecretagency/craft-cpcss/zipball/e80b0ecf49d473b0e79f0c716693bc92f3f3ad86",
+                "reference": "e80b0ecf49d473b0e79f0c716693bc92f3f3ad86",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.5"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Control Panel CSS",
+                "handle": "cp-css",
+                "schemaVersion": "2.0.0",
+                "changelogUrl": "https://raw.githubusercontent.com/doublesecretagency/craft-cpcss/v2/CHANGELOG.md",
+                "class": "doublesecretagency\\cpcss\\CpCss"
+            },
+            "autoload": {
+                "psr-4": {
+                    "doublesecretagency\\cpcss\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Double Secret Agency",
+                    "homepage": "https://www.doublesecretagency.com/plugins"
+                }
+            ],
+            "description": "Add custom CSS to your Control Panel.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "cp-css",
+                "craft-plugin",
+                "craftcms",
+                "css"
+            ],
+            "time": "2020-04-04T21:55:05+00:00"
         },
         {
             "name": "drewm/mailchimp-api",
@@ -4363,16 +4451,16 @@
         },
         {
             "name": "spicyweb/craft-embedded-assets",
-            "version": "2.2.7",
+            "version": "2.3.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/3bd64b206b5b7510aeff2e8fb90face755f9a468",
-                "reference": "3bd64b206b5b7510aeff2e8fb90face755f9a468",
+                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/fd424ddd24c92980450612e12454ef627a05aa16",
+                "reference": "fd424ddd24c92980450612e12454ef627a05aa16",
                 "shasum": ""
             },
             "require": {
-                "craftcms/cms": "^3.1.0",
-                "embed/embed": "^3.4.5"
+                "craftcms/cms": "^3.4.0",
+                "embed/embed": "^3.4.8"
             },
             "type": "craft-plugin",
             "extra": {
@@ -4415,7 +4503,7 @@
                 "docs": "https://github.com/spicywebau/craft-embedded-assets/wiki",
                 "rss": "https://github.com/spicywebau/craft-embedded-assets/commits/master.atom"
             },
-            "time": "2020-07-01T12:34:29+00:00"
+            "time": "2020-07-10T10:29:00+00:00"
         },
         {
             "name": "ssnepenthe/color-utils",
@@ -6809,6 +6897,11 @@
         {
             "name": "cakephp/core",
             "version": "3.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/core.git",
+                "reference": "76b9450dc68c81f93bca7827cfbb42a53a5f7737"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/cakephp/core/zipball/76b9450dc68c81f93bca7827cfbb42a53a5f7737",
@@ -6832,6 +6925,7 @@
                     "functions.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6853,6 +6947,11 @@
         {
             "name": "cakephp/utility",
             "version": "3.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/utility.git",
+                "reference": "27d9c7409ad89272e2483e3196aabc47385d3db6"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/cakephp/utility/zipball/27d9c7409ad89272e2483e3196aabc47385d3db6",
@@ -6876,6 +6975,7 @@
                     "bootstrap.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6900,6 +7000,11 @@
         {
             "name": "jakeasmith/http_build_url",
             "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jakeasmith/http_build_url.git",
+                "reference": "93c273e77cb1edead0cf8bcf8cd2003428e74e37"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/jakeasmith/http_build_url/zipball/93c273e77cb1edead0cf8bcf8cd2003428e74e37",
@@ -6912,6 +7017,7 @@
                     "src/http_build_url.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6927,6 +7033,11 @@
         {
             "name": "league/csv",
             "version": "8.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/csv.git",
+                "reference": "d2aab1e7bde802582c3879acf03d92716577c76d"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/csv/zipball/d2aab1e7bde802582c3879acf03d92716577c76d",
@@ -6936,6 +7047,10 @@
             "require": {
                 "ext-mbstring": "*",
                 "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.9",
+                "phpunit/phpunit": "^4.0"
             },
             "type": "library",
             "extra": {
@@ -6948,6 +7063,7 @@
                     "League\\Csv\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6974,6 +7090,11 @@
         {
             "name": "ralouphie/mimey",
             "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ralouphie/mimey.git",
+                "reference": "d69688d4856daa13a9124c819d148ccc2235dea2"
+            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/ralouphie/mimey/zipball/d69688d4856daa13a9124c819d148ccc2235dea2",
@@ -6983,12 +7104,17 @@
             "require": {
                 "php": "^5.3|^7.0"
             },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7.0",
+                "satooshi/php-coveralls": ">=1.0"
+            },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Mimey\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],

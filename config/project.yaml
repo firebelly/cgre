@@ -1,9 +1,9 @@
-dateModified: 1594308503
+dateModified: 1594678954
 email:
-  fromEmail: nate@firebellydesign.com
+  fromEmail: info@cgre.org
   fromName: CGRE
   replyToEmail: null
-  template: null
+  template: ''
   transportSettings:
     encryptionMethod: ssl
     host: $SMTP_HOST
@@ -1003,10 +1003,23 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+    settings:
+      honeypotParam: botsLoveTheHoney
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      additionalCss: ".redactor-styles p.cta a {\r\n  display: inline-block;\r\n  padding: 10px;\r\n  border: 1px solid #3397ff;\r\n}"
+      cssFile: ''
   cp-field-inspect:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  diy-widget:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.1
   embeddedassets:
     edition: standard
     enabled: true
