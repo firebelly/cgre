@@ -6,7 +6,7 @@
   'X': '<span class="measure">X</span>',
 } %}
 {% if entry.footerOutro.subhead or entry.footerOutro.headline or entry.footerOutro.body %}
-  <div class="footer-outro page-section{{ entry.footerOutro.stats|length ? ' -has-stats' : '' }}">
+  <div class="footer-outro page-section{{ entry.footerOutro.stats|length > 1 ? ' -has-stats' : '' }}">
     <div class="container">
 
       <div class="lines -one" aria-hidden="true">
