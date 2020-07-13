@@ -171,8 +171,19 @@ body.page-focus-areas {
     h3.divot {
       color: color(teal);
     }
+    .user-content {
+      h2,
+      h3,
+      h4 {
+        color: color(teal);
+      }
+    }
     .header-wrap {
-      width: columns(5);
+      margin-bottom: grid(2);
+      padding-right: $global-padding;
+      @include media-md {
+        width: columns(5);
+      }
     }
     h2.h1 {
       color: color(white);
