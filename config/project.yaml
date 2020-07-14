@@ -1,4 +1,4 @@
-dateModified: 1594678954
+dateModified: 1594741813
 email:
   fromEmail: info@cgre.org
   fromName: CGRE
@@ -1010,7 +1010,7 @@ plugins:
     enabled: true
     schemaVersion: 2.0.0
     settings:
-      additionalCss: ".redactor-styles p.cta a {\r\n  display: inline-block;\r\n  padding: 10px;\r\n  border: 1px solid #3397ff;\r\n}"
+      additionalCss: "/* simply style for p.cta links in redactor blocks */\r\n.redactor-styles p.cta a {\r\n  display: inline-block;\r\n  padding: 10px;\r\n  border: 1px solid #3397ff;\r\n}\r\n\r\n/* hide name since it's redundant with logo */\r\n#system-name h2 {\r\n  display: none;\r\n}\r\n#site-icon img, #site-icon svg {\r\n  width: 52px;\r\n}\r\n#system-info {\r\n  padding-left: 20px;\r\n  grid-template-columns: 64px auto;\r\n}"
       cssFile: ''
   cp-field-inspect:
     edition: standard
