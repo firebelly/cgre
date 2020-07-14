@@ -127,6 +127,9 @@ body.page-grants {
       ul {
         margin: grid(2) 0;
         columns: 2;
+        li {
+          break-inside: avoid;
+        }
         // Space between state/national lists
         + h3 {
           margin-top: grid(10);
