@@ -208,7 +208,7 @@ h3.divot {
     // Delay classes for more control (.-delay1, .-delay2, etc)
     @for $i from 1 through 5 {
       &.-delay#{$i} {
-        transition: transform 1.25s #{0.1 * $i}s $cubic-ease2, opacity 0.5s $cubic-ease2;
+        transition: transform 1.25s #{0.05 * $i}s $cubic-ease2, opacity 0.5s #{0.05 * $i}s $cubic-ease2;
       }
     }
   }
