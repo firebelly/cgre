@@ -1,4 +1,4 @@
-dateModified: 1594741813
+dateModified: 1594841844
 email:
   fromEmail: info@cgre.org
   fromName: CGRE
@@ -965,6 +965,35 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.1.0
+    settings:
+      customCss: ''
+      customLinks:
+        -
+          __assoc__:
+            -
+              - linkLabel
+              - 'Site Options'
+            -
+              - linkUrl
+              - /admin/globals/siteOptions
+            -
+              - adminOnly
+              - ''
+      displayDashboardLink: true
+      displayDefaultEditSection: true
+      displayEditAuthor: true
+      displayEditDate: true
+      displayGreeting: true
+      displayGuideLink: true
+      displayLogout: true
+      displayRevisionNote: true
+      displaySettingsLink: true
+      enableMobileMenu: true
+      widgets:
+        __assoc__:
+          -
+            - admin-bar_edit-links
+            - ''
   assetrev:
     edition: standard
     enabled: true
