@@ -32,7 +32,7 @@
         {% if entry.footerOutro.stats|length %}
         <div class="stats">
           {% for stat in entry.footerOutro.stats %}
-            <dl class="figure -reveal">
+            <dl class="figure -reveal -delay{{ loop.index }}">
               <dt{{ stat.figure|length > 8 ? ' class="-verbose"' : '' }}>{{ stat.figure|escape|replace(substitutions)|raw }}</dt>
               <dd>{{ stat.label }}</dd>
             </dl>
