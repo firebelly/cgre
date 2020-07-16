@@ -198,12 +198,13 @@ h3.divot {
   transition: transform 1.25s $cubic-ease2, opacity 0.5s $cubic-ease2;
   will-change: transform, opacity;
 
-  &.-delay {
-    transition: transform 2s $cubic-ease2, opacity 0.5s $cubic-ease2;
-  }
-
   @include media-md {
     transform: translate3d(0, 120px, 0);
+
+    // General delayed/staggered animation (two elements sliding up at same time look odd at same speed)
+    &.-delay {
+      transition: transform 1.25s 0.1s $cubic-ease2, opacity 0.5s 0.1s $cubic-ease2;
+    }
 
     // Delay classes for more control (.-delay1, .-delay2, etc)
     @for $i from 1 through 5 {
