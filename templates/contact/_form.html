@@ -10,14 +10,14 @@
 
 {% from _self import errorList %}
 
-<div class="contact-form-wrap -reveal -delay">
+<div class="contact-form-wrap">
   <div class="container">
 
     <div class="lines -one" aria-hidden="true">
       {%- for i in 1..19 %}<i></i>{% endfor -%}
     </div>
 
-    <div class="form-wrap">
+    <div class="form-wrap -reveal -delay">
       <div class="form-response"><p>{{ entry.contactFormOptions.successMessage ?? craft.app.getModule('contact-form').getSettings().successFlashMessage }}</p></div>
 
       <form class="-light" method="post" action="/contact" autocomplete="on" name="contact-form" id="contact-form">
