@@ -2,14 +2,14 @@
 
 // Text headers
 .text-header {
-  margin-top: grid(5);
+  padding-top: grid(5);
   h2.h1 {
     margin: grid(1) 0 grid(3);
   }
 
   // Desktop styles
   @include media-md {
-    margin-top: grid(14);
+    padding-top: grid(14);
     h2.h1 {
       margin: grid(4) 0;
     }
