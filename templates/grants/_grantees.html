@@ -22,7 +22,7 @@
     {% set grantees = craft.entries.section('grantees').organizationType('national').orderBy('title').all() %}
     {% if grantees|length %}
       <h3>National-based Partners</h3>
-      <ul class="grantees -state">
+      <ul class="grantees -national">
       {% for grantee in grantees %}
         <li{{ grantee.granteeUrl ? ' class="-has-url"' : ''}}>
           {% if grantee.granteeUrl %}
