@@ -3,7 +3,7 @@
 
     <h4>organizations currently funded</h4>
 
-    {% set grantees = craft.entries.section('grantees').organizationType('state').order('title').all() %}
+    {% set grantees = craft.entries.section('grantees').organizationType('state').orderBy('title').all() %}
     {% if grantees|length %}
       <h3>State-based Partners</h3>
       <ul class="grantees -state">
@@ -19,7 +19,7 @@
       </ul>
     {% endif %}
 
-    {% set grantees = craft.entries.section('grantees').organizationType('national').order('title').all() %}
+    {% set grantees = craft.entries.section('grantees').organizationType('national').orderBy('title').all() %}
     {% if grantees|length %}
       <h3>National-based Partners</h3>
       <ul class="grantees -state">
