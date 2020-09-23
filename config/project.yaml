@@ -1,4 +1,4 @@
-dateModified: 1594841844
+dateModified: 1598392851
 email:
   fromEmail: info@cgre.org
   fromName: CGRE
@@ -372,7 +372,7 @@ fields:
     translationMethod: site
     type: verbb\supertable\fields\SuperTableField
   7d53de82-4751-47b4-ae8b-a6b8c5c6e02c:
-    contentColumnType: string(620)
+    contentColumnType: string(640)
     fieldGroup: eb163625-fc07-4c73-8e79-9978cead673f
     handle: seoDescription
     instructions: 'Used for meta description to improve SEO'
@@ -380,7 +380,7 @@ fields:
     searchable: true
     settings:
       byteLimit: null
-      charLimit: 155
+      charLimit: 160
       code: ''
       columnType: null
       initialRows: '2'
