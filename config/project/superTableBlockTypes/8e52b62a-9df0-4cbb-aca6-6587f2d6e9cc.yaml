@@ -1,0 +1,220 @@
+field: ce5255b2-006f-4091-8619-fd4ecd65b470
+fieldLayouts:
+  b3ca7969-4123-4cc3-8723-4f13ea4d13a5:
+    tabs:
+      -
+        fields:
+          422b16fc-b862-4ed4-a29c-99907c04bb1c:
+            required: false
+            sortOrder: 2
+          435a75af-57c2-46ba-b6f1-e431df0a401e:
+            required: false
+            sortOrder: 1
+          64ed007c-e49e-4575-b27a-ab52e6b74bae:
+            required: false
+            sortOrder: 5
+          c0ae6f3d-b185-4bcf-a480-9e8d82e29d7f:
+            required: false
+            sortOrder: 6
+          d4ce905d-f073-47c7-9e51-b1d64b45cc46:
+            required: false
+            sortOrder: 4
+          eb1f1d0e-ba82-4b13-a377-bd7b417a0d07:
+            required: false
+            sortOrder: 3
+        name: Content
+        sortOrder: 1
+fields:
+  422b16fc-b862-4ed4-a29c-99907c04bb1c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: headline
+    instructions: ''
+    name: Headline
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  435a75af-57c2-46ba-b6f1-e431df0a401e:
+    contentColumnType: text
+    fieldGroup: null
+    handle: subhead
+    instructions: ''
+    name: Subhead
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  64ed007c-e49e-4575-b27a-ab52e6b74bae:
+    contentColumnType: text
+    fieldGroup: null
+    handle: ctaIntro
+    instructions: ''
+    name: 'CTA Intro'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c0ae6f3d-b185-4bcf-a480-9e8d82e29d7f:
+    contentColumnType: text
+    fieldGroup: null
+    handle: cta
+    instructions: ''
+    name: CTA
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Text
+                -
+                  - handle
+                  - text
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - URL
+                -
+                  - handle
+                  - url
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+      maxRows: '1'
+      minRows: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  d4ce905d-f073-47c7-9e51-b1d64b45cc46:
+    contentColumnType: text
+    fieldGroup: null
+    handle: stats
+    instructions: ''
+    name: Stats
+    searchable: true
+    settings:
+      addRowLabel: 'Add a stat'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Figure
+                -
+                  - handle
+                  - figure
+                -
+                  - width
+                  - 25%
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Label
+                -
+                  - handle
+                  - label
+                -
+                  - width
+                  - 75%
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  eb1f1d0e-ba82-4b13-a377-bd7b417a0d07:
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: ''
+    name: Body
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field

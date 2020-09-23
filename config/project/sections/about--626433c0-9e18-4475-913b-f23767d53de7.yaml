@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: about
+name: 'About Us'
+propagationMethod: all
+siteSettings:
+  0bbdcfe9-e293-43dc-abc6-1fe5b2139880:
+    enabledByDefault: true
+    hasUrls: true
+    template: about/index
+    uriFormat: about
+type: single

@@ -1,0 +1,15 @@
+fieldLayouts:
+  283b2910-199e-447a-8269-3f92767104ea:
+    tabs:
+      -
+        fields:
+          7adfab5a-12fa-4f92-bf54-97820c39a63d:
+            required: false
+            sortOrder: 2
+          e109fc30-ab27-4a4e-bb37-1a04dbc39738:
+            required: false
+            sortOrder: 1
+        name: 'Site Options'
+        sortOrder: 1
+handle: siteOptions
+name: 'Site Options'

@@ -1,0 +1,25 @@
+fieldLayouts:
+  dbebfad5-6a95-4d20-bc6e-602135eff12f:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 64da03ab-4a4e-41a0-886a-f76793fb1280
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: e04fb68c-f09b-497a-879f-4d262f431e9e
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Common
+        sortOrder: 1
+handle: grantees
+hasTitleField: true
+name: Grantees
+section: b0daa6a3-d9f3-47ec-8e8c-266170a33924
+sortOrder: 1
+titleFormat: ''

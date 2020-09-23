@@ -1,0 +1,119 @@
+field: 654fd8ac-22ad-476c-8d65-e126d8553609
+fieldLayouts:
+  2e83b986-83e0-4b49-9ef5-22c898960416:
+    tabs:
+      -
+        fields:
+          126363bf-8d7e-47fc-b8ef-b65399d3c146:
+            required: false
+            sortOrder: 4
+          331e9e56-cb1c-4d20-abc4-eb23639b3f8a:
+            required: false
+            sortOrder: 2
+          c026e3a3-d1b5-40f1-b4b4-03c1790b24f1:
+            required: false
+            sortOrder: 1
+          fec75edb-bbd1-45b9-b34c-2589d0dd9a04:
+            required: false
+            sortOrder: 3
+        name: Content
+        sortOrder: 1
+fields:
+  126363bf-8d7e-47fc-b8ef-b65399d3c146:
+    contentColumnType: text
+    fieldGroup: null
+    handle: focusOptions
+    instructions: 'Shown in dropdown on contact form'
+    name: 'Focus Options'
+    searchable: true
+    settings:
+      addRowLabel: 'Add option'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Option
+                -
+                  - handle
+                  - option
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  331e9e56-cb1c-4d20-abc4-eb23639b3f8a:
+    contentColumnType: text
+    fieldGroup: null
+    handle: successMessage
+    instructions: ''
+    name: 'Success Message'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  c026e3a3-d1b5-40f1-b4b4-03c1790b24f1:
+    contentColumnType: text
+    fieldGroup: null
+    handle: toEmail
+    instructions: 'Where to send submissions, separate multiple emails with comma'
+    name: 'To Email'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: info@cgre.com
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  fec75edb-bbd1-45b9-b34c-2589d0dd9a04:
+    contentColumnType: text
+    fieldGroup: null
+    handle: noteToSubmitter
+    instructions: 'Shown at top of confirmation email sent to submitter'
+    name: 'Note to Submitter'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field

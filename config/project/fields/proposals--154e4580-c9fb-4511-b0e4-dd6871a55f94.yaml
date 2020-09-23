@@ -1,0 +1,17 @@
+contentColumnType: string
+fieldGroup: ee372277-a14e-4157-8a34-b211bca6618a
+handle: proposals
+instructions: ''
+name: Proposals
+searchable: true
+settings:
+  contentTable: '{{%stc_proposals}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

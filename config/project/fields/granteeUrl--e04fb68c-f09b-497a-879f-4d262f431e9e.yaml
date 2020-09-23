@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: ee372277-a14e-4157-8a34-b211bca6618a
+handle: granteeUrl
+instructions: 'Optional, if populated will link out'
+name: 'Grantee URL'
+searchable: true
+settings:
+  maxLength: '255'
+  placeholder: 'e.g. https://cgre.org/'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

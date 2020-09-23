@@ -1,0 +1,54 @@
+contentColumnType: string
+fieldGroup: ee372277-a14e-4157-8a34-b211bca6618a
+handle: historyValues
+instructions: ''
+name: 'History + Values'
+searchable: true
+settings:
+  columns:
+    __assoc__:
+      -
+        - 196ade7d-725b-4f6e-a661-b5265d270f81
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - b444fb2d-e485-4363-b72c-744170084aa1
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2707be17-9bbc-49e1-9de2-579319782fe7
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - cb99aaf0-43b6-4b37-979a-b8584b0c12be
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - c9859e5d-74da-4441-afe5-02dfdc627e7a
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_historyvalues}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

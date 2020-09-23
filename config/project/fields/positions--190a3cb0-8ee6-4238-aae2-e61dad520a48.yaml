@@ -1,0 +1,40 @@
+contentColumnType: string
+fieldGroup: ee372277-a14e-4157-8a34-b211bca6618a
+handle: positions
+instructions: ''
+name: Positions
+searchable: true
+settings:
+  columns:
+    __assoc__:
+      -
+        - eca2b5a8-de84-4234-b077-ced9b11735a2
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - b0259338-7ef8-48e9-b1bd-25b5ae81b6f5
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 05b1d9ff-0725-45bc-ab1a-209350aa44e1
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_positions}}'
+  fieldLayout: table
+  maxRows: ''
+  minRows: ''
+  propagationMethod: all
+  selectionLabel: 'Add position'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

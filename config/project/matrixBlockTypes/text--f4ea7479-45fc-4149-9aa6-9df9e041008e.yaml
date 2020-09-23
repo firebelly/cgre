@@ -1,0 +1,102 @@
+field: cc9514d4-46fa-4dff-b225-ead0b5471f76
+fieldLayouts:
+  c9f34a2b-d414-4447-a954-a371d834f0d4:
+    tabs:
+      -
+        fields:
+          1573161a-b3bc-4227-bcc7-6031f3a2b028:
+            required: false
+            sortOrder: 1
+          23020eed-3148-4ea3-a345-636040c0cef5:
+            required: false
+            sortOrder: 2
+          8d900849-d244-437d-8449-7d0824800b35:
+            required: false
+            sortOrder: 3
+        name: Content
+        sortOrder: 1
+fields:
+  1573161a-b3bc-4227-bcc7-6031f3a2b028:
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: ''
+    name: Body
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  23020eed-3148-4ea3-a345-636040c0cef5:
+    contentColumnType: string
+    fieldGroup: null
+    handle: width
+    instructions: ''
+    name: Width
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Full Width'
+            -
+              - value
+              - fullWidth
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Half Width, On The Left'
+            -
+              - value
+              - halfWidthOnTheLeft
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Half Width, On The Right'
+            -
+              - value
+              - halfWidthOnTheRight
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  8d900849-d244-437d-8449-7d0824800b35:
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: accent
+    instructions: 'Shows bar above block'
+    name: Accent
+    searchable: true
+    settings:
+      default: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+handle: text
+name: Text
+sortOrder: 1

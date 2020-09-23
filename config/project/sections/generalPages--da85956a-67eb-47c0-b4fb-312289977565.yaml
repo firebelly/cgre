@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: generalPages
+name: 'General Pages'
+propagationMethod: all
+siteSettings:
+  0bbdcfe9-e293-43dc-abc6-1fe5b2139880:
+    enabledByDefault: true
+    hasUrls: true
+    template: page
+    uriFormat: '{slug}'
+structure:
+  maxLevels: null
+  uid: e733a9bc-3449-4a08-90c8-e1ae46ff529f
+type: structure

@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: 26de5c26-6c4a-4835-91a0-1713cf2be6c9
+handle: footerInfo
+instructions: ''
+name: 'Footer Info'
+searchable: true
+settings:
+  columns:
+    __assoc__:
+      -
+        - 4009b480-99d2-4d3c-a5f8-94e1e40fb943
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 02eaaeb3-698b-44db-ba1c-dcc478340cf3
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_footerinfo}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

@@ -1,0 +1,67 @@
+field: 190a3cb0-8ee6-4238-aae2-e61dad520a48
+fieldLayouts:
+  cb43521d-512f-4c32-baf6-46950908fa5f:
+    tabs:
+      -
+        fields:
+          05b1d9ff-0725-45bc-ab1a-209350aa44e1:
+            required: false
+            sortOrder: 3
+          b0259338-7ef8-48e9-b1bd-25b5ae81b6f5:
+            required: false
+            sortOrder: 2
+          eca2b5a8-de84-4234-b077-ced9b11735a2:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  05b1d9ff-0725-45bc-ab1a-209350aa44e1:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: positionUrl
+    instructions: ''
+    name: URL
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  b0259338-7ef8-48e9-b1bd-25b5ae81b6f5:
+    contentColumnType: text
+    fieldGroup: null
+    handle: details
+    instructions: 'e.g. Remote, Full-time'
+    name: Details
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  eca2b5a8-de84-4234-b077-ced9b11735a2:
+    contentColumnType: text
+    fieldGroup: null
+    handle: positionTitle
+    instructions: ''
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

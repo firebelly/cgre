@@ -1,0 +1,147 @@
+dateModified: 1600878597
+email:
+  fromEmail: info@cgre.org
+  fromName: CGRE
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    encryptionMethod: ssl
+    host: $SMTP_HOST
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
+    timeout: '10'
+    useAuthentication: '1'
+    username: $SMTP_USER
+  transportType: craft\mail\transportadapters\Smtp
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+plugins:
+  admin-bar:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.0
+    settings:
+      customCss: ''
+      customLinks:
+        -
+          __assoc__:
+            -
+              - linkLabel
+              - 'Site Options'
+            -
+              - linkUrl
+              - /admin/globals/siteOptions
+            -
+              - adminOnly
+              - ''
+      displayDashboardLink: true
+      displayDefaultEditSection: true
+      displayEditAuthor: true
+      displayEditDate: true
+      displayGreeting: true
+      displayGuideLink: true
+      displayLogout: true
+      displayRevisionNote: true
+      displaySettingsLink: true
+      enableMobileMenu: true
+      widgets:
+        __assoc__:
+          -
+            - admin-bar_edit-links
+            - ''
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: ''
+      prependSubject: ''
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: info@cgre.org
+  contact-form-extensions:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+    settings:
+      confirmationSubject: 'CGRE Contact'
+      confirmationTemplate: contact/contact-email.html
+      enableConfirmationEmail: '1'
+      enableDatabase: '1'
+      enableTemplateOverwrite: '1'
+      notificationTemplate: contact/contact-email-shop.html
+      recaptcha: '1'
+      recaptchaDataBadge: bottomright
+      recaptchaDebug: ''
+      recaptchaHideBadge: '1'
+      recaptchaSecretKey: $RECAPTCHA_SECRET_KEY
+      recaptchaSiteKey: $RECAPTCHA_SITE_KEY
+      recaptchaThreshold: '0.5'
+      recaptchaTimeout: '5'
+      recaptchaVersion: '3'
+  contact-form-honeypot:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      honeypotParam: botsLoveTheHoney
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      additionalCss: "/* simply style for p.cta links in redactor blocks */\r\n.redactor-styles p.cta a {\r\n  display: inline-block;\r\n  padding: 10px;\r\n  border: 1px solid #3397ff;\r\n}\r\n\r\n/* hide name since it's redundant with logo */\r\n#system-name h2 {\r\n  display: none;\r\n}\r\n#site-icon img, #site-icon svg {\r\n  width: 52px;\r\n}\r\n#system-info {\r\n  padding-left: 20px;\r\n  grid-template-columns: 64px auto;\r\n}"
+      cssFile: ''
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  diy-widget:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.1
+  embeddedassets:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      expandSingles: '1'
+      redirectToEntry: '1'
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.1
+system:
+  edition: pro
+  live: true
+  name: CGRE
+  schemaVersion: 3.5.13
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

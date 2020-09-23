@@ -1,0 +1,53 @@
+fieldLayouts:
+  b72ea2e2-a014-436e-9233-9063129e43ef:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: ''
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 19e0a2c5-e675-4b45-8d70-1983eed42b14
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 8d4b0f65-292c-4909-9f5e-c04c9f23d4e2
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 7ff43ff1-16e7-4395-b3da-3424c7ee2aeb
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: cc9514d4-46fa-4dff-b225-ead0b5471f76
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ce5255b2-006f-4091-8619-fd4ecd65b470
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Common
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 7d53de82-4751-47b4-ae8b-a6b8c5c6e02c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 7ee2b741-9530-4f2a-9190-3b3db19483b4
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 616f87de-8628-44c9-95b3-6a72a6292585
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: SEO
+        sortOrder: 2
+handle: focusAreas
+hasTitleField: false
+name: 'Focus Areas'
+section: b11c0690-3acc-40ce-b7ee-f64487b268df
+sortOrder: 1
+titleFormat: '{section.name|raw}'

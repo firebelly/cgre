@@ -1,0 +1,89 @@
+field: 7ff43ff1-16e7-4395-b3da-3424c7ee2aeb
+fieldLayouts:
+  1f0e478e-e5f7-4ab9-b0be-9b87fae1ec93:
+    tabs:
+      -
+        fields:
+          39421712-83e0-40be-b6d3-4170ddd8dbf6:
+            required: false
+            sortOrder: 1
+          87792ec4-f334-4c36-a6e0-e734b551eb92:
+            required: false
+            sortOrder: 2
+          e9783091-b224-4fe0-ab8f-1b2496650e7a:
+            required: false
+            sortOrder: 3
+        name: Content
+        sortOrder: 1
+fields:
+  39421712-83e0-40be-b6d3-4170ddd8dbf6:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'If two images are chosen, the second is used for mobile breakpoints'
+    name: Image
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:199d7fed-4975-4bfb-9491-54c6733697d0'
+      defaultUploadLocationSubpath: ''
+      limit: '2'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:199d7fed-4975-4bfb-9491-54c6733697d0'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  87792ec4-f334-4c36-a6e0-e734b551eb92:
+    contentColumnType: text
+    fieldGroup: null
+    handle: headline
+    instructions: ''
+    name: Headline
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e9783091-b224-4fe0-ab8f-1b2496650e7a:
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: ''
+    name: Body
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field

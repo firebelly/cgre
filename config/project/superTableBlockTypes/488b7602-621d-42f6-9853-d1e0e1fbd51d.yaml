@@ -1,0 +1,98 @@
+field: e3bc5ee3-1e9f-4a10-b2b4-364640a88fe9
+fieldLayouts:
+  764348b8-32ed-41b2-a39d-afb4fa34d1f3:
+    tabs:
+      -
+        fields:
+          2e2a44e9-1692-4aee-b34f-f568253c4d48:
+            required: false
+            sortOrder: 3
+          66092484-50b8-4555-a5dd-cbd238caad60:
+            required: false
+            sortOrder: 2
+          7aa68f08-b5f1-4ebd-8562-cc9cea147ca3:
+            required: false
+            sortOrder: 4
+          7d24b43f-0917-4e27-8609-464835da63f7:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  2e2a44e9-1692-4aee-b34f-f568253c4d48:
+    contentColumnType: text
+    fieldGroup: null
+    handle: personTitle
+    instructions: ''
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  66092484-50b8-4555-a5dd-cbd238caad60:
+    contentColumnType: text
+    fieldGroup: null
+    handle: pronouns
+    instructions: ''
+    name: Pronouns
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7aa68f08-b5f1-4ebd-8562-cc9cea147ca3:
+    contentColumnType: text
+    fieldGroup: null
+    handle: bio
+    instructions: ''
+    name: Bio
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  7d24b43f-0917-4e27-8609-464835da63f7:
+    contentColumnType: text
+    fieldGroup: null
+    handle: personName
+    instructions: ''
+    name: Name
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

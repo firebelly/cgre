@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: ee372277-a14e-4157-8a34-b211bca6618a
+handle: pageBlocks
+instructions: ''
+name: 'Page Blocks'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_pageblocks}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

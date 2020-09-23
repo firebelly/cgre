@@ -1,0 +1,14 @@
+enableVersioning: false
+handle: grantees
+name: Grantees
+propagationMethod: all
+siteSettings:
+  0bbdcfe9-e293-43dc-abc6-1fe5b2139880:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: ''
+structure:
+  maxLevels: null
+  uid: ed8d2846-6092-4105-8b80-31b16c990b9d
+type: structure

@@ -1,0 +1,33 @@
+contentColumnType: string
+fieldGroup: ee372277-a14e-4157-8a34-b211bca6618a
+handle: consultants
+instructions: ''
+name: Consultants
+searchable: true
+settings:
+  columns:
+    __assoc__:
+      -
+        - 1505c1bb-d543-46fa-a3cf-df1f319fe044
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - cd76a07e-b6e8-4a2a-96f2-f13f09e5aecc
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_consultants}}'
+  fieldLayout: matrix
+  maxRows: ''
+  minRows: ''
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

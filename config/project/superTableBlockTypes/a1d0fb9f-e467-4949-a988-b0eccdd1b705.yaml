@@ -1,0 +1,96 @@
+field: 7adfab5a-12fa-4f92-bf54-97820c39a63d
+fieldLayouts:
+  120583b0-b282-40c7-9d4e-08b51edb72a0:
+    tabs:
+      -
+        fields:
+          02eaaeb3-698b-44db-ba1c-dcc478340cf3:
+            required: false
+            sortOrder: 2
+          4009b480-99d2-4d3c-a5f8-94e1e40fb943:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  02eaaeb3-698b-44db-ba1c-dcc478340cf3:
+    contentColumnType: text
+    fieldGroup: null
+    handle: links
+    instructions: ''
+    name: Links
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Title
+                -
+                  - handle
+                  - title
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - URL
+                -
+                  - handle
+                  - url
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  4009b480-99d2-4d3c-a5f8-94e1e40fb943:
+    contentColumnType: text
+    fieldGroup: null
+    handle: contact
+    instructions: ''
+    name: Contact
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field

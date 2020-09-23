@@ -1,0 +1,47 @@
+contentColumnType: string
+fieldGroup: ee372277-a14e-4157-8a34-b211bca6618a
+handle: focusAreasIntro
+instructions: ''
+name: 'Focus Areas Intro'
+searchable: true
+settings:
+  columns:
+    __assoc__:
+      -
+        - 59b90a23-5978-4415-b81b-862cf635fa3d
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 36419058-c5ff-4009-9634-ab842c127362
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 055ba65e-1e74-43f0-ac37-7667601eb49f
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - ab584a80-604e-49f9-93a0-731a8ee47445
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_focusareasintro}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

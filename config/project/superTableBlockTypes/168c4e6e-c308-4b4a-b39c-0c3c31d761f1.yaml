@@ -1,0 +1,204 @@
+field: 19e0a2c5-e675-4b45-8d70-1983eed42b14
+fieldLayouts:
+  03f48be7-8a97-4202-87f7-d12abcdd463a:
+    tabs:
+      -
+        fields:
+          1508a9f6-1c22-4f4f-86a2-029436c05de7:
+            required: false
+            sortOrder: 1
+          25489c96-6617-4744-8e91-bf876c283486:
+            required: false
+            sortOrder: 2
+          261c1f22-713d-46f5-96a1-e200e907f4cf:
+            required: false
+            sortOrder: 3
+          3d8f4d15-89b3-45a6-9893-331f8a89b29c:
+            required: false
+            sortOrder: 5
+          59c1c115-2dce-4292-b48a-6be67a7d76bd:
+            required: false
+            sortOrder: 6
+          8f00adc1-e40b-40b5-8cce-38327f81d7ba:
+            required: false
+            sortOrder: 4
+        name: Content
+        sortOrder: 1
+fields:
+  1508a9f6-1c22-4f4f-86a2-029436c05de7:
+    contentColumnType: text
+    fieldGroup: null
+    handle: subhead
+    instructions: ''
+    name: Subhead
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  25489c96-6617-4744-8e91-bf876c283486:
+    contentColumnType: text
+    fieldGroup: null
+    handle: headline
+    instructions: ''
+    name: Headline
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '2'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  261c1f22-713d-46f5-96a1-e200e907f4cf:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'If two images are chosen, the second is used for mobile breakpoints'
+    name: Image
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:199d7fed-4975-4bfb-9491-54c6733697d0'
+      defaultUploadLocationSubpath: ''
+      limit: '2'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:199d7fed-4975-4bfb-9491-54c6733697d0'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  3d8f4d15-89b3-45a6-9893-331f8a89b29c:
+    contentColumnType: text
+    fieldGroup: null
+    handle: body
+    instructions: ''
+    name: Body
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  59c1c115-2dce-4292-b48a-6be67a7d76bd:
+    contentColumnType: text
+    fieldGroup: null
+    handle: cta
+    instructions: ''
+    name: CTA
+    searchable: true
+    settings:
+      addRowLabel: 'Add a row'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Text
+                -
+                  - handle
+                  - text
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - URL
+                -
+                  - handle
+                  - url
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+      maxRows: '1'
+      minRows: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  8f00adc1-e40b-40b5-8cce-38327f81d7ba:
+    contentColumnType: string
+    fieldGroup: null
+    handle: secondaryImage
+    instructions: 'If two images are chosen, the second is used for mobile breakpoints'
+    name: 'Secondary Image'
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:199d7fed-4975-4bfb-9491-54c6733697d0'
+      defaultUploadLocationSubpath: ''
+      limit: '2'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:199d7fed-4975-4bfb-9491-54c6733697d0'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets

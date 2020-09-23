@@ -1,0 +1,65 @@
+fieldLayouts:
+  ae2a7e0b-36f7-4a33-ab33-525792e73cfb:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: ''
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 19e0a2c5-e675-4b45-8d70-1983eed42b14
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: cc9514d4-46fa-4dff-b225-ead0b5471f76
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 17fe5426-abac-43d0-9371-cc34f664b438
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: e3bc5ee3-1e9f-4a10-b2b4-364640a88fe9
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 5a9f3bed-6ba0-408c-a159-b6b0d6bbf392
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: e85ee5bb-9dd9-418f-a4d6-963796d00864
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: ce5255b2-006f-4091-8619-fd4ecd65b470
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 190a3cb0-8ee6-4238-aae2-e61dad520a48
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Common
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 7d53de82-4751-47b4-ae8b-a6b8c5c6e02c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 7ee2b741-9530-4f2a-9190-3b3db19483b4
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 616f87de-8628-44c9-95b3-6a72a6292585
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: SEO
+        sortOrder: 2
+handle: about
+hasTitleField: false
+name: 'About Us'
+section: 626433c0-9e18-4475-913b-f23767d53de7
+sortOrder: 1
+titleFormat: '{section.name|raw}'

@@ -1,0 +1,17 @@
+contentColumnType: string(276)
+fieldGroup: eb163625-fc07-4c73-8e79-9978cead673f
+handle: seoTitle
+instructions: 'Custom title override to improve SEO'
+name: 'SEO Title'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 69
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

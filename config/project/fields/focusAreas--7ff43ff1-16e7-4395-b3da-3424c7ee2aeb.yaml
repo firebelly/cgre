@@ -1,0 +1,40 @@
+contentColumnType: string
+fieldGroup: ee372277-a14e-4157-8a34-b211bca6618a
+handle: focusAreas
+instructions: ''
+name: 'Focus Areas'
+searchable: true
+settings:
+  columns:
+    __assoc__:
+      -
+        - 39421712-83e0-40be-b6d3-4170ddd8dbf6
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 87792ec4-f334-4c36-a6e0-e734b551eb92
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - e9783091-b224-4fe0-ab8f-1b2496650e7a
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_focusareas}}'
+  fieldLayout: matrix
+  maxRows: ''
+  minRows: ''
+  propagationMethod: all
+  selectionLabel: 'Add Focus Area'
+  staticField: ''
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

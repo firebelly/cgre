@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: ee372277-a14e-4157-8a34-b211bca6618a
+handle: focusAreasHeadline
+instructions: ''
+name: 'Focus Areas Headline'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '2'
+  multiline: '1'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

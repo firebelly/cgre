@@ -1,0 +1,49 @@
+field: cc9514d4-46fa-4dff-b225-ead0b5471f76
+fieldLayouts:
+  6a05cf0f-b023-473a-a954-5080ada20834:
+    tabs:
+      -
+        fields:
+          cc2a1a27-0458-4256-a719-304b113d8723:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  cc2a1a27-0458-4256-a719-304b113d8723:
+    contentColumnType: string
+    fieldGroup: null
+    handle: textBlocks
+    instructions: ''
+    name: 'Text Blocks'
+    searchable: true
+    settings:
+      columns:
+        __assoc__:
+          -
+            - c9a7c5a7-a5e7-423f-82a1-61039473eda2
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+          -
+            - 6ed63b23-6500-417e-b56c-01a633351784
+            -
+              __assoc__:
+                -
+                  - width
+                  - ''
+      contentTable: '{{%stc_3_textblocks}}'
+      fieldLayout: row
+      maxRows: ''
+      minRows: ''
+      propagationMethod: all
+      selectionLabel: ''
+      staticField: ''
+    translationKeyFormat: null
+    translationMethod: site
+    type: verbb\supertable\fields\SuperTableField
+handle: textGrid
+name: 'Text Grid'
+sortOrder: 3

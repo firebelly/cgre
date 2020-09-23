@@ -1,0 +1,83 @@
+field: cc9514d4-46fa-4dff-b225-ead0b5471f76
+fieldLayouts:
+  c9c99294-4dd6-4c22-a395-2c5efe44e609:
+    tabs:
+      -
+        fields:
+          2d5d9a69-c27b-44ed-93f1-d477b905654c:
+            required: false
+            sortOrder: 2
+          9d7e7d8d-48fd-4838-a47d-855b6e908520:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  2d5d9a69-c27b-44ed-93f1-d477b905654c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: width
+    instructions: ''
+    name: Width
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - 'Half Width, On The Right'
+            -
+              - value
+              - halfWidthOnTheRight
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - 'Half Width, On The Left'
+            -
+              - value
+              - halfWidthOnTheLeft
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  9d7e7d8d-48fd-4838-a47d-855b6e908520:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: ''
+    name: Image
+    searchable: true
+    settings:
+      allowSelfRelations: ''
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:199d7fed-4975-4bfb-9491-54c6733697d0'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:199d7fed-4975-4bfb-9491-54c6733697d0'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: image
+name: Image
+sortOrder: 2
