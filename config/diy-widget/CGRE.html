@@ -1,7 +1,7 @@
 <p>Most content can be edited via main pages:</p>
 
 <ul class="main-pages">
-  {% for entry in craft.entries.section('and, not grantees, not generalPages').order('lft asc').all() %}
+  {% for entry in craft.entries.section('and, not grantees, not generalPages').orderBy('lft asc').all() %}
     <li><a href="{{ entry.getCpEditUrl() }}">{{ entry.title }}</a></li>
   {% endfor %}
 </ul>
@@ -14,7 +14,7 @@
 
 <h3>Recently Edited:</h3>
 <ul class="recent-grantees">
-  {% for entry in craft.entries.section('grantees').order('dateUpdated desc').limit(5).all() %}
+  {% for entry in craft.entries.section('grantees').orderBy('dateUpdated desc').limit(5).all() %}
     <li><a href="{{ entry.getCpEditUrl() }}">{{ entry.title }}</a></li>
   {% endfor %}
 </ul>
