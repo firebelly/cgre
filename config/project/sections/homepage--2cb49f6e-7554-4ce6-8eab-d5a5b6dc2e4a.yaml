@@ -1,6 +1,18 @@
 enableVersioning: true
 handle: homepage
 name: Homepage
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - Homepage
+      -
+        - urlFormat
+        - /
+      -
+        - refresh
+        - '1'
 propagationMethod: all
 siteSettings:
   0bbdcfe9-e293-43dc-abc6-1fe5b2139880:

@@ -1,6 +1,18 @@
 enableVersioning: true
 handle: generalPages
 name: 'General Pages'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - Preview
+      -
+        - urlFormat
+        - '{slug}'
+      -
+        - refresh
+        - '1'
 propagationMethod: all
 siteSettings:
   0bbdcfe9-e293-43dc-abc6-1fe5b2139880:

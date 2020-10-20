@@ -1,6 +1,18 @@
 enableVersioning: true
 handle: focusAreas
 name: 'Focus Areas'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Focus Areas'
+      -
+        - urlFormat
+        - focus-areas
+      -
+        - refresh
+        - '1'
 propagationMethod: all
 siteSettings:
   0bbdcfe9-e293-43dc-abc6-1fe5b2139880:
